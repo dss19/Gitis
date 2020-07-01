@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
+const pug = require("gulp-pug");
 const cleanCSS = require("gulp-clean-css");
-const htmlmin = require('gulp-htmlmin');
 const imagemin = require("gulp-imagemin");
 const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
@@ -14,8 +14,8 @@ const plumber = require("gulp-plumber");
 /* Options
  * ------ */
 const options = {
-	html: {
-		src: "app/html/**/*.html",
+	pug: {
+		src: "app/pug/**/*.pug",
 		dest: "public"
 	},
 	scripts: {
@@ -23,7 +23,7 @@ const options = {
 		dest: "public/scripts"
 	},
 	styles: {
-		src: "app/styles/**/*.sass",
+		src: "app/styles/**/*.+(sass|scss)",
 		dest: "public/styles"
 	},
 	images: {
@@ -111,16 +111,11 @@ function scripts() {
 
 function minify() {
 	return gulp
-		.src(options.html.src)
-		.pipe(htmlmin({
-			collapseWhitespace: true
+		.src(options.pug.src)
+		.pipe(pug({
+			pretty: true
 		}))
-		.pipe(gulp.dest(options.html.dest))
-		.pipe(
-			browsersync.reload({
-				stream: true
-			})
-		);
+		.pipe(gulp.dest(options.pug.dest));
 }
 
 /* Images
@@ -154,7 +149,7 @@ async function clean() {
 }
 
 function watchFiles() {
-	gulp.watch(options.html.src, minify);
+	gulp.watch(options.pug.src, minify);
 	gulp.watch(options.styles.src, styles);
 	gulp.watch(options.scripts.src, scripts);
 	gulp.watch(options.fonts.src, fonts);
