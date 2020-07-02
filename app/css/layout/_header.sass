@@ -73,6 +73,43 @@
       list-style: none
       a
         color: $black
+  &-aside
+    position: absolute
+    top: 0
+    right: 0
+    li 
+      list-style: none
+    &-item
+      display: flex
+      align-items: center
+      justify-content: center 
+      width: 100px
+      &-ticket
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        height: 250px
+        background: $red
+        padding: 34px 0
+        span
+          +norm
+          text-transform: uppercase
+          color: $white
+          font-size: 18px
+          font-weight: 600
+          line-height: 20px
+          writing-mode: tb-rl
+          transform: rotate(180deg)
+      &-blind
+        height: 100px
+        background: $grey             
+    &-social
+      display: flex
+      flex-direction: column
+      padding-top: 22px
+      &-link
+        padding: 20px 0 
+        
 
 
 
