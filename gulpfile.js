@@ -15,7 +15,7 @@ const plumber = require("gulp-plumber");
  * ------ */
 const options = {
 	pug: {
-		src: "app/pug/**/*.pug",
+		src: "app/pug/*.pug",
 		dest: "public"
 	},
 	scripts: {

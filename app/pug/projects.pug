@@ -1,0 +1,84 @@
+doctype html
+html(lang='ru')
+
+include includes/head.pug
+
+body
+
+  include includes/header.pug
+
+  .projects
+    .projects-header
+      .container
+        ul.projects-breadcrumb
+          li
+            a(href="/", class="projects-breadcrumb-link") Главная  
+          li
+            a(href="/", class="projects-breadcrumb-link projects-breadcrumb-link-disable") Проекты
+        h1.projects-title Проекты
+      .projects-header-icon
+        img(src="images/images/rounds.svg", alt="круги")
+    
+    .projects-list
+      .container
+        .row
+          .projects-list-item.d-flex.col-6
+            .projects-list-item-date
+              p 25/05
+              span
+              p 25/07
+            .projects-list-item-info
+              img(src="images/images/project-1.jpg", alt="проект-1")
+              p.projects-list-item-title По дорогам фронтовых театров      
+          .projects-list-item.d-flex.col-6
+            .projects-list-item-date
+              p 30/10
+            .projects-list-item-info
+              img(src="images/images/project-2.jpg", alt="проект-2")
+              p.projects-list-item-title Театр ГИТИС и федеральная программа “Большие гастроли”      
+          .projects-list-item.d-flex.col-6
+            .projects-list-item-date
+              p 30/10
+            .projects-list-item-info
+              img(src="images/images/project-3.jpg", alt="проект-3")
+              p.projects-list-item-title Лаборатория будущего театра      
+          .projects-list-item.d-flex.col-6
+            .projects-list-item-date
+              p 25/05
+              span
+              p 25/07
+            .projects-list-item-info
+              img(src="images/images/project-4.jpg", alt="проект-4")
+              p.projects-list-item-title Акустическая читка      
+          .projects-list-item.d-flex.col-6
+            .projects-list-item-date
+              p 25/05
+              span
+              p 25/07
+            .projects-list-item-info
+              img(src="images/images/project-5.jpg", alt="проект-6")
+              p.projects-list-item-title По дорогам фронтовых театров      
+          .projects-list-item.d-flex.col-6
+            .projects-list-item-date
+              p 25/05
+              span
+              p 25/07
+            .projects-list-item-info
+              img(src="images/images/project-6.jpg", alt="проект-6")
+              p.projects-list-item-title По дорогам фронтовых театров      
+          .projects-list-item.d-flex.col-6
+            .projects-list-item-date
+              p 30/10
+            .projects-list-item-info
+              img(src="images/images/project-7.jpg", alt="проект-7")
+              p.projects-list-item-title Лаборатория будущего театра      
+          .projects-list-item.d-flex.col-6
+            .projects-list-item-date
+              p 30/10
+            .projects-list-item-info
+              img(src="images/images/project-8.jpg", alt="проект-8")
+              p.projects-list-item-title Лаборатория будущего театра
+        .projects-ellipse
+          img(src="images/images/ellipse.svg", alt="эллипс")
+
+  include includes/footer.pug                    
