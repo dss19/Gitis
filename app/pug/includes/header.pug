@@ -1,29 +1,43 @@
-include mixins.pug
 header.header
-  .header__info
+  .header-info
     .container
       .row.align-items-center.m-0
         a(href="/", class="logo header-logo")
           img(src="images/images/logo.png", alt="лого")
-        .header__scene.d-flex
-          .header__scene-title <span>основная</span><br><span>сцена</span>
-          .header__scene-info
-            a(href="tel:+74956298661") + 7 (495) 629-86-61<br>
-            span Б. Гнездниковский пер., 1
-        .header__scene.d-flex
-          .header__scene-title <span>новая</span><br><span>сцена</span>
-          .header__scene-info
-            a(href="tel:+74991347618") + 7 (499) 143-76-18<br>
-            span Ул. Академика Пилюгина, 2
-        a(class="header__study" href="#") <span>институт</span><br><span>гитис</span>
+        .header-scene.d-flex
+          .header-scene-title 
+            .header-scene-title-red основная
+            .header-scene-title-black сцена
+          .header-scene-info
+            .header-scene-info-phone
+              a(href="tel:+74956298661") + 7 (495) 629-86-61
+            .header-scene-info-adress Б. Гнездниковский пер., 1
+        .header-scene.d-flex
+          .header-scene-title 
+            .header-scene-title-red новая
+            .header-scene-title-black сцена
+          .header-scene-info
+            .header-scene-info-phone
+              a(href="tel:+74991347618") + 7 (499) 143-76-18
+            .header-scene-info-adress Б. Гнездниковский пер., 1        
+        a(class="header-study" href="#")
+          .header-study-text институт
+          .header-study-text гитис
   .header-menu
     .container      
-      .row.align-items-center.m-0
-        +headerMenuLink('#', 'афиша')(class="header-menu__link")
-        +headerMenuLink('#', 'репертуар')(class="header-menu__link")
-        +headerMenuLink('#', 'площадки')(class="header-menu__link")
-        +headerMenuLink('#', 'новости')(class="header-menu__link")
-        +headerMenuLink('#', 'партнеры')(class="header-menu__link")
-        +headerMenuLink('#', 'проекты')(class="header-menu__link")
-        +headerMenuLink('#', 'контакты')(class="header-menu__link")
+      ul.d-flex.align-items-center.m-0
+        li.header-menu-link
+          a(href="#") афиша
+        li.header-menu-link
+          a(href="#") репертуар
+        li.header-menu-link
+          a(href="#") площадки
+        li.header-menu-link
+          a(href="#") новости
+        li.header-menu-link
+          a(href="#") партнеры
+        li.header-menu-link
+          a(href="#") проекты
+        li.header-menu-link
+          a(href="#") контакты
       

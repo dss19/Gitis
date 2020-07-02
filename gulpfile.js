@@ -23,8 +23,8 @@ const options = {
 		dest: "public/scripts"
 	},
 	styles: {
-		src: "app/styles/**/*.+(sass|scss)",
-		dest: "public/styles"
+		src: "app/css/**/*.+(sass|scss)",
+		dest: "public/css"
 	},
 	images: {
 		src: "app/images/**/*.+(png|jpeg|jpg|gif|svg)",
