@@ -2,8 +2,9 @@ header.header
   .header-info
     .container
       .row.align-items-center.m-0
-        a(href="/", class="logo header-logo")
-          img(src="images/images/logo.png", alt="лого")
+        .logo
+          a(href="/")
+            img(src="images/images/logo.png", alt="лого")
         .header-scene
           .header-scene-title 
             .header-scene-title-red основная
@@ -12,7 +13,7 @@ header.header
             .header-scene-info-phone
               a(href="tel:+74956298661") + 7 (495) 629-86-61
             .header-scene-info-adress Б. Гнездниковский пер., 10
-        .header-scene
+        .header-scene.header-scene-second
           .header-scene-title 
             .header-scene-title-red новая
             .header-scene-title-black сцена
@@ -20,9 +21,10 @@ header.header
             .header-scene-info-phone
               a(href="tel:+74991347618") + 7 (499) 143-76-18
             .header-scene-info-adress Ул. Академика Пилюгина, 2       
-        a(class="header-study" href="#")
-          .header-study-text институт
-          .header-study-text гитис
+        .header-study
+          a(href="#")
+            .header-study-text институт
+            .header-study-text гитис
   .header-menu
     .container      
       ul.header-menu-list

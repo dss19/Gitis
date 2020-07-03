@@ -10,6 +10,8 @@ img
 ul, li, p, h1, h2, h3, button
   margin: 0
   padding: 0 
+ul, li 
+  list-style: none  
 form, input, button
   border: none
   outline: none
@@ -19,3 +21,47 @@ button
 .logo
   width: 301px
   height: 29px
+
+.page
+  &-header  
+    position: relative
+    height: 250px
+    background: url(../images/hd/projects-cover.jpg) no-repeat
+    background-size: cover
+    padding-top: 81px
+    &-icon
+      position: absolute
+      bottom: -44px
+      right: 150px
+  &-title
+    +norm
+    font-size: 60px
+    line-height: 65px
+    color: $white
+    transform: translate(-5px, -11px)    
+.breadcrumbs
+  display: flex
+  li 
+    list-style: none
+  &-link
+    position: relative
+    +norm
+    font-size: 12px
+    line-height: 20px
+    font-weight: 300
+    color: $white
+    text-decoration: underline
+    margin-right: 21px
+    &::after
+      position: absolute
+      content: '/'
+      top: -3px
+      right: -13px
+    &-disable
+      text-decoration: none
+      pointer-events: none
+      cursor: default 
+      &::after
+        display: none 
+
+                 

@@ -2,13 +2,13 @@
   position: relative
   &-info    
     border-bottom: 1px solid $black
-    padding: 26px 0 23px
+    padding: 21px 0 23px
   &-scene
     display: flex
     margin-left: 85px
-    transform: translateY(2px)
-    &:nth-of-type(2)
-      margin-left: 48px      
+    transform: translateY(6px)
+    &-second
+      margin-left: 58px      
     &-title
       position: relative
       +norm
@@ -23,36 +23,40 @@
         position: absolute
         content: ''
         right: -20px
-        top: 50%
+        top: 21px
         transform: translateY(-50%)
         width: 1px
-        height: 34px
+        height: 35px
         background: $black
     &-info
       margin-left: 38px
-      a
-        display: block
-        +norm
-        font-size: 16px
-        font-weight: 600
-        line-height: 22px
-        color: $black
-      span
+      transform: translateY(-3px)
+      &-phone
+        a
+          +norm
+          font-size: 16px
+          font-weight: 600
+          line-height: 22px
+          color: $black
+      &-adress
         display: block
         +norm
         font-size: 14px
         line-height: 22px
         font-weight: 300
-        color: $black 
+        color: $black
+        transform: translateY(-1px) 
   &-study
     position: relative
-    +norm
-    font-weight: 600
-    font-size: 15px
-    line-height: 20px
-    color: $red
-    text-transform: uppercase
     margin-left: 110px
+    transform: translateY(3px)
+    a
+      +norm
+      font-weight: 600
+      font-size: 15px
+      line-height: 20px
+      color: $red
+      text-transform: uppercase      
     &::after
       position: absolute
       content: ''
@@ -75,16 +79,13 @@
       text-transform: uppercase
       padding: 32px 0 27px
       margin-right: 82px
-      list-style: none
       a
         color: $black
   &-aside
     position: absolute
     top: 0
     right: 0
-    z-index: 1
-    li 
-      list-style: none
+    z-index: 1    
     &-item
       display: flex
       align-items: center
@@ -96,7 +97,7 @@
         align-items: center
         height: 250px
         background: $red
-        padding: 34px 0
+        padding: 43px 0 34px
         span
           +norm
           text-transform: uppercase
