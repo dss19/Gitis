@@ -1,0 +1,64 @@
+doctype html
+html(lang='ru')
+
+include includes/head.pug
+
+body
+
+  include includes/header.pug
+  
+  .page-slider
+    .container
+      .slick-slider.project-slider
+        .slick-slider-slide.project-slider-slide
+          img(src="files/project-slide-1.jpg", alt="фото")
+        .slick-slider-slide.project-slider-slide
+          img(src="files/project-slide-1.jpg", alt="фото")
+
+  .page-content.project-content
+    .container
+      ul.breadcrumbs
+        li
+          a(href="/", class="breadcrumbs-link") Главная 
+        li
+          a(href="/gitis", class="breadcrumbs-link") Проекты
+        li
+          a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") По дорогам фронтовых театров
+      h1.page-content-title.project-content-title По дорогам фронтовых театров
+      .row
+        .col-4
+          .page-content-info
+            p.page-content-info-date 20/05
+            p.page-content-info-time 20:30/ ПТ
+            .page-content-info-views
+              img(src="images/images/views.svg", alt="views")
+              span 1 457 896
+            .page-content-info-social
+              .page-content-info-social-text Поделитесь:
+              div(class="page-content-info-social-list ya-share2" data-services="vkontakte,twitter,facebook,odnoklassniki")
+                <script src="https://yastatic.net/share2/share.js" async="async"></script>        
+        .col-8
+          .page-content-desc
+            p.page-content-desc-title
+              |Спектакль поставлен по комедии Карло Гольдони
+              |«Кьоджинские перепалки». Выпускная работа
+              |актерского факультета ГИТИСа, мастерской
+              |Андреева Владимира Алексеевича.
+            p.page-content-desc-text
+              |Действие происходит в маленьком городе Кьоджи, что в восьми милях от Венеции,
+              |населенном рыбаками и их семействами. 
+            p.page-content-desc-text
+              |Видимо, этот сюжет <span>Гольдони</span> взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить. 
+            p.page-content-desc-text.page-content-desc-text-bold
+              |Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?
+            p.page-content-desc-text  
+              |Гольдони взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! 
+            p.page-content-desc-text  
+              |Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.   
+
+
+
+
+
+
+  include includes/footer.pug

@@ -30,6 +30,10 @@ const options = {
 		src: "app/images/**/*.+(png|jpeg|jpg|gif|svg)",
 		dest: "public/images"
 	},
+	files: {
+		src: "app/files/**/*.+(png|jpeg|jpg|gif|svg)",
+		dest: "public/files"
+	},
 	fonts: {
 		src: "app/fonts/*",
 		dest: "public/fonts"
@@ -134,6 +138,19 @@ function images() {
 		.pipe(gulp.dest(options.images.dest));
 }
 
+function files() {
+	return gulp
+		.src(options.files.src)
+		.pipe(
+			cache(
+				imagemin({
+					interlaced: true
+				})
+			)
+		)
+		.pipe(gulp.dest(options.files.dest));
+}
+
 /* Fonts
  * ------ */
 
@@ -154,13 +171,14 @@ function watchFiles() {
 	gulp.watch(options.scripts.src, scripts);
 	gulp.watch(options.fonts.src, fonts);
 	gulp.watch(options.images.src, images);
+	gulp.watch(options.files.src, files);
 }
 
 /* Build
  * ------ */
 const build = gulp.series(
 	clean,
-	gulp.parallel(styles, minify, scripts, images, fonts)
+	gulp.parallel(styles, minify, scripts, images, files, fonts)
 );
 const watch = gulp.parallel(watchFiles, browserSync);
 // export tasks

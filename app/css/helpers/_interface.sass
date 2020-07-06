@@ -38,7 +38,74 @@ button
     font-size: 60px
     line-height: 65px
     color: $white
-    transform: translate(-5px, -11px)    
+    transform: translate(-5px, -11px) 
+  &-content
+    .breadcrumbs
+      margin: 21px 0 46px
+      &-link  
+        color: $black 
+    &-title
+      +bold
+      font-size: 60px
+      line-height: 65px
+      font-weight: 500
+      color: $black
+      transform: translateX(-5px)
+      margin-bottom: 40px
+    &-info
+      &-date
+        +lack
+        font-size: 60px
+        line-height: 35px
+        color: $black
+      &-time 
+        +lack
+        font-size: 18px
+        line-height: 20px
+        color: $black
+        margin-bottom: 35px
+      &-views 
+        display: flex
+        align-items: center
+        img
+          width: 24px
+          height: 15px
+          margin-right: 11px
+        span 
+          +norm
+          font-size: 13px
+          font-weight: 300
+          line-height: 30px
+          color: $black 
+      &-social
+        display: flex
+        align-items: center
+        span 
+          +norm
+          font-size: 13px
+          line-height: 30px
+          font-weight: 300
+          color: $black
+          margin-bottom: 7px
+        a 
+          display: flex
+          align-items: center
+          justify-content: center             
+    &-desc
+      &-title
+        +norm
+        font-size: 30px
+        line-height: 40px
+        color: $black
+      &-text 
+        +norm
+        font-size: 18px
+        line-height: 32px
+        color: $black
+        &-bold
+          +bold
+        span 
+          color: $red    
 .breadcrumbs
   display: flex
   li 
@@ -63,5 +130,38 @@ button
       cursor: default 
       &::after
         display: none 
+
+.slick-slider
+  &-slide
+    img 
+      width: 100%
+.slick-arrow
+  position: absolute
+  font-size: 0
+  line-height: 0
+  width: 150px
+  height: 150px
+  background: $red 
+  border: none
+  outline: none
+  z-index: 20
+  &:focus
+    outline: none 
+.slick-next  
+  bottom: 0
+  right: 0
+  &::before
+    position: absolute
+    content: url(../images/images/next-small.svg) 
+    top: 62px
+    right: 43px   
+.slick-prev
+  bottom: 0
+  right: 150px
+  &::before
+    position: absolute
+    content: url(../images/images/prev-small.svg) 
+    top: 62px
+    left: 43px             
 
                  

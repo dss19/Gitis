@@ -21,24 +21,27 @@
       &:nth-of-type(2)
         padding-left: 15px         
     &-phone a, &-adress, &-time
-      display: block
       margin-bottom: 10px
       +norm 
       font-size: 16px
       line-height: 26px
       color: $white
-    &-map      
-      margin-top: 32px
-      &-icon
-        width: 15px
-        height: 20px
-        margin-right: 12px
-      &-link 
-        display: flex
+    &-phone
+      margin-bottom: 10px  
+    &-map     
+      margin-top: 30px
+      &-link
+        position: relative
         +norm
         font-size: 16px
         font-weight: 300
-        color: $red  
+        color: $red
+        padding-left: 28px
+        &::before
+          position: absolute
+          top: 0
+          left: 0
+          content: url(../images/images/point.svg)
   &-social
     &-text
       +norm
@@ -69,23 +72,24 @@
       max-width: 320px
       margin-bottom: 10px
   &-menu
-    &-link
-      display: block
-      +norm
-      font-size: 20px
-      line-height: 30px
-      color: $white 
+    &-link       
       margin-bottom: 15px
+      a 
+        +norm
+        font-size: 20px
+        line-height: 30px
+        color: $white
       &-study
-        position: relative
         margin-top: 107px
-        color: $red
-        padding-left: 20px
-        &::before
-          position: absolute
-          content: '/'
-          left: 0
-          top: 0
+        a
+          position: relative
+          color: $red
+          padding-left: 20px
+          &::before
+            position: absolute
+            content: '/'
+            left: 0
+            top: -4px
   &-logo
     transform: translate(-19px, -13px)        
   &-tickets
