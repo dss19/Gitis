@@ -1,8 +1,1 @@
-$(document).ready(function () {
-  // Project Slider
-  $('.project-slider').slick({    
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    rows: 0
-  });
-})
+"use strict";$(document).ready(function(){$(".slider-countable").each(function(){$(this).on("init",function(){var s=$(this),i=$(this).find(".slick-slide.slick-active").length,l=$(this).find(".slick-slide.slick-current").data("slick-index")/i+1,e=Math.round($(this).find(".slick-slide").not(".slick-cloned").length/i);s.closest(".slider-wrapper").append('<div class="slider-count"><span class="slider-count-cur">'+("0"+l).slice(-2)+'</span><span class="slider-count-sep">/</span><span class="slider-count-total">'+("0"+e).slice(-2)+"</span></div>"),1==e&&s.closest(".slider-wrapper").find(".slider-count").hide()}),$(this).on("beforeChange",function(s,i,l,e){var c=$(this),t=e/$(this).find(".slick-slide.slick-active").length+1;c.closest(".slider-wrapper").find(".slider-count-cur").html(("0"+t).slice(-2))})}),$(".project-slider-top").slick({slidesToShow:1,slidesToScroll:1,rows:0}),$(".project-slider-bottom").slick({slidesToShow:2,slidesToScroll:2,rows:0})});

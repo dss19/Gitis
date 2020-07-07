@@ -63,35 +63,25 @@ button
         font-size: 18px
         line-height: 20px
         color: $black
-        margin-bottom: 35px
-      &-views 
-        display: flex
-        align-items: center
-        img
-          width: 24px
-          height: 15px
-          margin-right: 11px
-        span 
-          +norm
-          font-size: 13px
-          font-weight: 300
-          line-height: 30px
-          color: $black 
+        margin-bottom: 35px       
       &-social
         display: flex
         align-items: center
-        span 
+        &-text 
           +norm
           font-size: 13px
           line-height: 30px
           font-weight: 300
           color: $black
           margin-bottom: 7px
-        a 
-          display: flex
-          align-items: center
-          justify-content: center             
+        // .ya-share2__badge
+        //   background: transparent    
+        // a 
+        //   display: flex
+        //   align-items: center
+        //   justify-content: center             
     &-desc
+      margin-bottom: 40px
       &-title
         +norm
         font-size: 30px
@@ -105,7 +95,158 @@ button
         &-bold
           +bold
         span 
-          color: $red    
+          color: $red
+    &-quote
+      display: flex
+      border-top: 1px solid $black      
+      border-bottom: 1px solid $black
+      padding: 40px 0 
+      margin-bottom: 30px
+      &-img
+        margin-right: 81px
+      &-text
+        padding-top: 5px 
+        +norm
+        font-size: 30px
+        line-height: 40px
+        color: $black
+    &-director
+      display: flex
+      justify-content: flex-end
+      text-align: right
+      margin-bottom: 47px
+      &-info
+        max-width: 580px
+      &-name
+        +norm
+        font-size: 20px
+        line-height: 30px
+        color: $black
+        margin-bottom: 15px
+      &-about
+        +norm
+        font-size: 13px
+        line-height: 24px
+        font-weight: 300
+        color: $black 
+      &-foto
+        width: 100px
+        height: 100px
+        margin-left: 30px
+        img 
+          width: 100%      
+    &-about
+      +norm
+      font-size: 18px
+      line-height: 32px
+      color: $black 
+      margin-bottom: 82px
+    &-media
+      margin-bottom: 86px
+      &-title
+        +norm
+        font-size: 50px
+        line-height: 60px
+        font-weight: 500
+        margin-bottom: 32px
+      &-desc
+        position: relative
+        +norm
+        font-size: 14px
+        line-height: 24px
+        font-weight: 300
+        padding-left: 30px
+        &::before
+          position: absolute
+          content: ''
+          top: 5px
+          left: 0
+          width: 1px
+          height: 50px
+          background: $black
+      &-movie
+        position: relative
+        margin-bottom: 48px
+        &-clip
+          img 
+            width: 100%
+        &-pause, &-full
+          position: absolute
+          bottom: 0
+          width: 150px
+          height: 150px
+          background: $red
+          display: flex
+          align-items: center
+          justify-content: center
+          cursor: pointer
+        &-pause
+          right: 150px
+        &-full 
+          right: 0
+      &-foto
+        margin-bottom: 80px    
+      &-text
+        +norm
+        font-size: 18px
+        line-height: 32px
+        color: $black        
+    &-gallery
+      margin-bottom: 118px
+      &-title
+        +norm
+        font-size: 50px
+        line-height: 60px
+        font-weight: 500
+        margin-bottom: 38px
+        color: $black
+      .col-6
+        &:nth-of-type(even)
+          transform: translateY(50px)  
+      &-item
+        margin-bottom: 30px
+        img 
+          width: 100%  
+    &-extra
+      margin-bottom: 30px
+      &-title
+        +norm
+        font-size: 40px
+        line-height: 50px
+        color: $black
+        margin-bottom: 34px
+      &-text
+        +norm
+        font-size: 18px
+        line-height: 32px
+        color: $black 
+        &-item
+          position: relative
+          padding-left: 30px
+          &::before
+            position: absolute
+            top: 12px
+            left: 0
+            content: ''
+            width: 6px
+            height: 6px
+            border-radius: 50%
+            background: $red
+        p
+          span 
+            +bold      
+    &-social
+      display: flex
+      justify-content: space-between
+      border-top: 1px solid $black
+      padding: 40px 0
+      margin-top: 100px
+  &-ellipse
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 36px 0 60px
+
 .breadcrumbs
   display: flex
   li 
@@ -130,38 +271,128 @@ button
       cursor: default 
       &::after
         display: none 
+.project-slider-top
+  .slick-slider
+    &-slide
+      img 
+        width: 100%
+  .slick-arrow
+    position: absolute
+    font-size: 0
+    line-height: 0
+    width: 150px
+    height: 150px
+    background: $red 
+    border: none
+    outline: none
+    z-index: 20
+    &:focus
+      outline: none 
+  .slick-next  
+    bottom: 0
+    right: 0
+    &::before
+      position: absolute
+      content: url(../images/images/next-small.svg) 
+      top: 62px
+      right: 43px   
+  .slick-prev
+    bottom: 0
+    right: 150px
+    &::before
+      position: absolute
+      content: url(../images/images/prev-small.svg) 
+      top: 62px
+      left: 43px 
 
-.slick-slider
-  &-slide
-    img 
-      width: 100%
-.slick-arrow
+.page-slider-bottom
+  padding: 100px 0 150px
+  background: #181818  
+  &-title
+    +norm
+    font-size: 60px
+    line-height: 65px
+    font-weight: 500
+    color: $white
+    margin-bottom: 60px
+
+.project-slider-bottom
+  .projects-list-item-date
+    p 
+      color: $white
+  .projects-list-item-title
+    color: $white
+    &::after
+      background: $white        
+  .slick-arrow
+    position: absolute
+    font-size: 0
+    line-height: 0
+    width: 100%
+    max-width: 533px
+    height: 25px 
+    background: #181818
+    border: none
+    outline: none
+    z-index: 20
+    &:focus
+      outline: none 
+  .slick-next  
+    bottom: -50px
+    right: 0
+    &::before
+      position: absolute
+      content: url(../images/images/next.svg) 
+      top: 0
+      right: 0   
+  .slick-prev
+    bottom: -50px
+    left: 0
+    &::before
+      position: absolute
+      content: url(../images/images/prev.svg) 
+      top: 0
+      left: 0
+
+.slider-wrapper
+  position: relative
+.slider-count
+  display: flex
   position: absolute
-  font-size: 0
-  line-height: 0
-  width: 150px
-  height: 150px
-  background: $red 
-  border: none
-  outline: none
+  bottom: -50px
+  left: 50%
+  transform: translateX(-50%)
   z-index: 20
-  &:focus
-    outline: none 
-.slick-next  
-  bottom: 0
-  right: 0
-  &::before
-    position: absolute
-    content: url(../images/images/next-small.svg) 
-    top: 62px
-    right: 43px   
-.slick-prev
-  bottom: 0
-  right: 150px
-  &::before
-    position: absolute
-    content: url(../images/images/prev-small.svg) 
-    top: 62px
-    left: 43px             
+  +lack 
+  &-cur
+    font-size: 40px
+    line-height: 35px
+    color: $white
+  &-sep, &-total
+    font-size: 14px
+    color: $red 
+
+.views 
+  display: flex
+  align-items: center
+  img
+    width: 24px
+    height: 15px
+    margin-right: 11px
+  span 
+    +norm
+    font-size: 13px
+    font-weight: 300
+    line-height: 30px
+    color: $black               
+
+// .page-content-info-social-list
+//   .ya-share2__item_service_vkontakte
+//     .ya-share2__link
+//       .ya-share2__badge
+//         .ya-share2__item
+//           background-img: url(../images/images/vk.svg)      
+
+
 
                  
