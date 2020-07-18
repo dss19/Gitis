@@ -1,0 +1,225 @@
+include includes/head.pug
+
+body
+
+  include includes/header.pug
+
+  main
+    .page-header
+      .page-header-grad
+        .container
+          ul.breadcrumbs
+            li
+              a(href="/", class="breadcrumbs-link") Главная 
+            li
+              a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") Афиша
+          h1.page-title Афиша          
+      .page-header-icon
+        img(src="images/images/rounds.svg", alt="круги")
+
+    
+    .calendar
+      .container
+        .months
+          .months-prev
+            img(src="/images/images/calendar-prev.svg", alt="назад")
+          .months-current апрель <span>/</span> 2020
+          .months-next
+            img(src="/images/images/calendar-next.svg", alt="вперед")
+        .days
+          .day 1
+          .day 2
+          .day 3
+          .day.weekend 4
+          .day.weekend 5
+          .day 6
+          .day 7
+          .day 8
+          .day 9
+          .day 10
+          .day.weekend 11
+          .day.weekend 12
+          .day 13
+          .day 14
+          .day 15
+          .day 16
+          .day 17
+          .day.weekend 18
+          .day.weekend 19
+          .day 20
+          .day 21
+          .day 22
+          .day 23
+          .day 24
+          .day.weekend 25
+          .day.weekend 26
+          .day 27
+          .day 28
+          .day 29
+          .day 30
+          .day 31
+    .filter
+      .container
+        .filter-wrap
+          .row
+            .col-3
+              .filter-abc
+                .filter-abc-date.filter-abc-item.active 01-31
+                .filter-abc-abc.filter-abc-item а-я
+            .col-6
+              .filter-scene
+                .filter-scene-all.filter-scene-item.active все
+                .filter-scene-main.filter-scene-item основная сцена
+                .filter-scene-new.filter-scene-item новая сцена
+            .col-3
+              .filter-img
+                .filter-img-yes.filter-img-item.active
+                  img(src="/images/images/filter-img.svg", alt="с фото")
+                .filter-img-no.filter-img-item
+                  img(src="/images/images/filter-list.svg", alt="без фото")
+
+    .playbill.date.noimg
+      .container
+        .playbill-date
+          .row
+            .col-2
+              .playbill-day
+                .playbill-day-number 01/04
+                .playbill-day-name среда
+            .col-10
+              .playbill-item
+                .playbill-item-time
+                  .playbill-item-time-info 20:30
+                  .playbill-item-time-age 16+
+                .playbill-item-desc                  
+                  .playbill-item-title Романтический возраст
+                  .playbill-item-info Актерский факультет
+                  .playbill-item-scene Основная сцена
+                .playbill-item-ticket
+                  a(href="#")
+                    .playbill-item-ticket-text Купить билет
+                    .playbill-item-ticket-img 
+                      img(src="/images/images/bill-ticket.svg", alt="купить билет")  
+        .playbill-date
+          .row
+            .col-2
+              .playbill-day
+                .playbill-day-number 02/04
+                .playbill-day-name четверг
+            .col-10
+              .playbill-item
+                .playbill-item-time
+                  .playbill-item-time-info 20:30
+                  .playbill-item-time-age 16+
+                .playbill-item-desc
+                  .playbill-item-title Над пропастью во ржи: сеанс психоанализа, очень длинный заголовок спектакля
+                  .playbill-item-info Актерский факультет, Актерско-режиссерская мастерская А.С.Кончаловского
+                  .playbill-item-scene Основная сцена
+                .playbill-item-ticket
+                  a(href="#")
+                    .playbill-item-ticket-text Купить билет
+                    .playbill-item-ticket-img 
+                      img(src="/images/images/bill-ticket.svg", alt="купить билет")  
+              .playbill-item
+                .playbill-item-time
+                  .playbill-item-time-info 20:30
+                  .playbill-item-time-age 16+
+                .playbill-item-desc
+                  .playbill-item-title Романтический возраст
+                  .playbill-item-info Актерский факультет
+                  .playbill-item-scene Основная сцена
+                .playbill-item-ticket
+                  a(href="#")
+                    .playbill-item-ticket-text Купить билет
+                    .playbill-item-ticket-img 
+                      img(src="/images/images/bill-ticket.svg", alt="купить билет")  
+        .playbill-date
+          .row
+            .col-2
+              .playbill-day
+                .playbill-day-number 03/04
+                .playbill-day-name Пятница
+            .col-10
+              .playbill-item
+                .playbill-item-time
+                  .playbill-item-time-info 20:30
+                  .playbill-item-time-age 16+
+                .playbill-item-desc
+                  .playbill-item-title Выстрел
+                  .playbill-item-info Актерский факультет
+                  .playbill-item-scene Основная сцена
+                .playbill-item-ticket
+                  a(href="#")
+                    .playbill-item-ticket-text Купить билет
+                    .playbill-item-ticket-img 
+                      img(src="/images/images/bill-ticket.svg", alt="купить билет")
+        .playbill-date
+          .row
+            .col-2
+              .playbill-day.weekend
+                .playbill-day-number 04/04
+                .playbill-day-name Суббота
+            .col-10
+              .playbill-item
+                .playbill-item-time
+                  .playbill-item-time-info 20:30
+                  .playbill-item-time-age 16+
+                .playbill-item-desc
+                  .playbill-item-title Романтический возраст
+                  .playbill-item-info Актерский факультет
+                  .playbill-item-scene Основная сцена
+                .playbill-item-ticket
+                  a(href="#")
+                    .playbill-item-ticket-text Купить билет
+                    .playbill-item-ticket-img 
+                      img(src="/images/images/bill-ticket.svg", alt="купить билет")
+              .playbill-item
+                .playbill-item-time
+                  .playbill-item-time-info 20:30
+                  .playbill-item-time-age 16+
+                .playbill-item-desc
+                  .playbill-item-title Выстрел
+                  .playbill-item-info Актерский факультет
+                  .playbill-item-scene Основная сцена
+                .playbill-item-ticket
+                  a(href="#")
+                    .playbill-item-ticket-text Купить билет
+                    .playbill-item-ticket-img 
+                      img(src="/images/images/bill-ticket.svg", alt="купить билет")
+              .playbill-item
+                .playbill-item-time
+                  .playbill-item-time-info 20:30
+                  .playbill-item-time-age 16+
+                .playbill-item-desc
+                  .playbill-item-title Над пропастью во ржи: сеанс психоанализа
+                  .playbill-item-info Актерский факультет
+                  .playbill-item-scene Основная сцена
+                .playbill-item-ticket
+                  a(href="#")
+                    .playbill-item-ticket-text Купить билет
+                    .playbill-item-ticket-img 
+                      img(src="/images/images/bill-ticket.svg", alt="купить билет")
+        .playbill-date
+          .row
+            .col-2
+              .playbill-day.weekend
+                .playbill-day-number 05/04
+                .playbill-day-name воскресенье
+            .col-10
+              .playbill-item
+                .playbill-item-time
+                  .playbill-item-time-info 20:30
+                  .playbill-item-time-age 16+
+                .playbill-item-desc
+                  .playbill-item-title Романтический возраст
+                  .playbill-item-info Актерский факультет
+                  .playbill-item-scene Основная сцена
+                .playbill-item-ticket
+                  a(href="#")
+                    .playbill-item-ticket-text Купить билет
+                    .playbill-item-ticket-img 
+                      img(src="/images/images/bill-ticket.svg", alt="купить билет")
+        .page-ellipse
+          img(src="images/images/ellipse.svg", alt="эллипс")
+
+  include includes/footer.pug

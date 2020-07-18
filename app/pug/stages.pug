@@ -1,0 +1,43 @@
+doctype html
+html(lang='ru')
+
+include includes/head.pug
+
+body
+
+  include includes/header.pug
+
+  main
+    .page-header.stages-header
+      .page-header-grad
+        .container
+          ul.breadcrumbs
+            li
+              a(href="/", class="breadcrumbs-link") Главная 
+            li
+              a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") Площадки
+          h1.page-title Площадки
+          .page-subtitle Вы ищете площадку для интересного мероприятия? Театр ГИТИС готов вам помочь, это текст подводка
+      .page-header-icon
+        img(src="images/images/rounds.svg", alt="круги")
+
+    .stages
+      .container 
+        .row  
+          .col-12
+            .stages-item
+              .stages-item-img
+                img(src="/images/images/stage-1.jpg", alt="alt")
+              .stages-item-cover
+                .stages-item-name Основная сцена
+                .stages-item-link Подробнее о площадке     
+          .col-12
+            .stages-item
+              .stages-item-img
+                img(src="/images/images/stage-2.jpg", alt="alt")
+              .stages-item-cover
+                .stages-item-name Новая сцена
+                .stages-item-link Подробнее о площадке     
+
+
+  include includes/footer.pug 

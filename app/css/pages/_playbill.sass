@@ -1,0 +1,131 @@
+.playbill
+  &-date
+    padding: 50px 0
+    border-bottom: 1px solid $black
+  &-day
+    padding-top: 6px 
+    color: $black
+    &-number
+      +lack
+      font-size: 60px
+      line-height: 35px
+      text-transform: uppercase
+      margin-bottom: 14px
+    &-name
+      +lack 
+      font-size: 18px
+      line-height: 20px
+      text-transform: uppercase
+    &.weekend
+      color: $red          
+  &-item
+    position: relative
+    display: flex
+    padding-left: 30px
+    margin-bottom: 42px
+    &:before 
+      position: absolute
+      content: ''
+      top: 0
+      left: 0
+      width: 1px
+      height: 50px
+      background: $black
+      transition: 0.3s
+    &:last-of-type
+      margin-bottom: 0
+    &-img
+      position: relative
+      width: 100%
+      max-width: 287px
+      margin-right: 48px
+      height: min-content
+      img 
+        width: 100%      
+      &::after
+        position: absolute
+        width: 100%
+        height: 100%
+        content: ''
+        top: 0
+        left: 0
+        background: $grad   
+    &-desc
+      width: 100%
+      max-width: 450px
+    &-time
+      display: flex
+      margin-bottom: 16px
+      +lack
+      font-size: 18px
+      line-height: 20px
+      text-transform: uppercase
+      &-info
+        color: $black
+        margin-right: 8px
+      &-age
+        position: relative
+        color: $grey2
+        padding-left: 12px
+        &::before
+          position: absolute
+          content: '/'
+          color: $grey2
+          left: 0
+          top: 0
+    &-title
+      +norm
+      font-size: 30px
+      line-height: 40px
+      color: $black      
+      margin-bottom: 10px
+    &-info, &-scene
+      +norm
+      font-weight: 300
+      font-size: 13px
+      line-height: 20px
+      margin-bottom: 4px
+    &-ticket
+      margin-left: auto
+      a
+        display: flex
+      &-text
+        display: none
+        +norm
+        font-size: 18px
+        line-height: 16px
+        color: $red
+      &-img
+        margin-left: 28px
+        transform: translateY(-7px)    
+
+.playbill.date.noimg
+  .playbill-item-time
+    display: block
+    margin-right: 64px
+  .playbill-item-time-info
+    font-size: 30px
+    margin: 0 0 14px 0
+  .playbill-item-desc
+    max-width: 640px
+  .playbill-item-title
+    line-height: 24px
+
+.playbill.abc.img
+  .playbill-item-time-info
+    position: relative
+    margin-left: 19px
+    margin-right: 0
+    &:first-child
+      margin-left: 0
+      &::before
+        display: none       
+    &::before
+      position: absolute
+      content: '/'
+      top: 0
+      left: -14px    
+  .playbill-item-time-age
+    margin-left: 4px      
+          
+

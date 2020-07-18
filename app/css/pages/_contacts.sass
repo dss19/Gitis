@@ -1,0 +1,99 @@
+.contacts
+  padding: 40px 0 107px
+  &-item
+    position: relative
+    height: 730px
+    &-right
+      padding-left: 30px
+    &-left
+      padding-right: 25px 
+      .contacts-img 
+        right: 25px 
+  &-title
+    padding-top: 4px
+    margin-bottom: 25px
+    p 
+      +bold
+      font-weight: 500
+      font-size: 50px
+      line-height: 55px
+      color: $black
+      margin-bottom: 0
+  &-phone
+    position: relative
+    padding-left: 49px
+    margin-bottom: 10px
+    a 
+      +norm
+      font-size: 16px
+      line-height: 26px
+      color: $black
+    &::before
+      position: absolute
+      top: 4px
+      left: 0
+      content: url(/images/images/phone.svg)  
+  &-adress
+    position: relative
+    padding-left: 49px    
+    +norm
+    font-size: 16px
+    line-height: 26px
+    color: $black
+    margin-bottom: 10px
+    &::before
+      position: absolute
+      top: 1px
+      left: 0
+      content: url(/images/images/point-b.svg)  
+  &-time
+    position: relative
+    padding-left: 49px
+    margin-bottom: 10px    
+    p 
+      +norm
+      font-size: 16px
+      line-height: 26px
+      color: $black
+      margin-bottom: 0
+    &::before
+      position: absolute
+      top: 1px
+      left: 0
+      content: url(/images/images/clock.svg)  
+  &-email
+    position: relative
+    padding-left: 49px
+    margin-bottom: 10px    
+    &-block
+      a 
+        +norm
+        font-size: 16px
+        line-height: 26px
+        color: $red     
+    &::before
+      position: absolute
+      top: 6px
+      left: 0
+      content: url(/images/images/mail.svg) 
+  &-img
+    position: absolute
+    top: 46px
+    right: 0
+    width: 317px
+    border-bottom: 30px solid $white 
+    border-left: 32px solid $white 
+    z-index: 2
+    img 
+      width: 100%  
+  &-map
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 580px
+    height: 350px
+    background: $red 
+    z-index: 1
+  &-map#map-2
+    left: 25px 
+           

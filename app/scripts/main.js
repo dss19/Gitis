@@ -37,5 +37,28 @@ $(document).ready(function () {
     rows: 0
   });
 
+  // Карты на странице контактов
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map-1', {
+      center: [55.76343811803522, 37.60576528406144],
+      zoom: 17
+    }),
+      myPlacemark = new ymaps.Placemark([55.76343811803522, 37.60576528406144], null, {
+        iconLayout: 'default#image',
+        iconImageHref: './images/images/pin.svg'
+      });
+    myMap.geoObjects.add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom');    
+    var myMap2 = new ymaps.Map('map-2', {
+      center: [55.67402156903472, 37.542329499999994],
+      zoom: 17
+    }),
+      myPlacemark2 = new ymaps.Placemark([55.67402156903472, 37.542329499999994], null, {
+        iconLayout: 'default#image',
+        iconImageHref: './images/images/pin.svg'
+      });
+    myMap2.geoObjects.add(myPlacemark2);
+    myMap2.behaviors.disable('scrollZoom');    
+  });
 
 });

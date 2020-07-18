@@ -1,0 +1,61 @@
+html(lang='ru')
+
+include includes/head.pug
+
+body
+
+  include includes/header.pug
+
+  main 
+    .page-header
+      .page-header-grad
+        .container
+          ul.breadcrumbs
+            li
+              a(href="/", class="breadcrumbs-link") Главная 
+            li
+              a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") Контакты
+          h1.page-title Контакты
+      .page-header-icon
+        img(src="images/images/rounds.svg", alt="круги")
+
+    .contacts
+      .container
+        .row  
+          .col-6
+            .contacts-item.contacts-item-left
+              .contacts-title
+                p Основная 
+                p сцена 
+              .contacts-phone
+                a(href="tel:+74956297087") +7 (495) 629-70-87
+              .contacts-adress Б. Гнездниковский пер., 10
+              .contacts-time
+                p Время работы кассы:
+                p 18:00-21:00
+              .contacts-email
+                .contacts-email-block
+                  a(href="mailto:teatr@gitis.ne") teatr@gitis.ne
+                .contacts-email-block
+                  a(href="mailto:gitistheatre@gmail.com") gitistheatre@gmail.com
+              #map.contacts-map
+              .contacts-img
+                img(src="/images/hd/gitis-main-scene.jpg", alt="Основная сцена")
+          .col-6
+            .contacts-item.contacts-item-right
+              .contacts-title
+                p Новая 
+                p сцена 
+              .contacts-phone
+                a(href="tel:+74991347618") +7 (499) 134-76-18
+              .contacts-adress Ул. Академика Пилюгина, 2
+              .contacts-email
+                .contacts-email-block
+                  a(href="mailto:teatr@gitis.ne") teatr@gitis.ne
+                .contacts-email-block
+                  a(href="mailto:gitistheatre@gmail.com") gitistheatre@gmail.com
+              #map-2.contacts-map
+              .contacts-img
+                img(src="/images/hd/gitis-new-scene.jpg", alt="Новая сцена")
+
+  include includes/footer.pug

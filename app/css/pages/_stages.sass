@@ -1,0 +1,58 @@
+.stages
+  padding: 50px 0 65px
+  &-item
+    position: relative
+    margin-bottom: 30px
+    &-img
+      position: relative
+      width: 100%
+      img 
+        width: 100%
+      &::before 
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%)  
+      &::after         
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: linear-gradient(143.16deg, rgba(255, 0, 0, 0.4) 0.37%, rgba(36, 0, 255, 0.084) 56.41%, rgba(255, 0, 229, 0) 98.44%)  
+    &-cover 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 450px
+      padding-top: 248px
+      padding-left: 94px
+    &-name
+      +norm
+      font-size: 50px
+      line-height: 60px
+      color: $white
+      font-weight: 500
+      border-bottom: 5px solid $white
+      max-width: 817px
+      padding-bottom: 37px
+      margin-bottom: 41px
+    &-link
+      position: relative
+      +norm
+      font-size: 16px
+      line-height: 16px
+      color: $red
+      &::after
+        position: absolute
+        content: url(/images/images/arrow-stages.svg)
+        top: -5px
+        left: 206px
+
+
+

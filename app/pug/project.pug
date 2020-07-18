@@ -7,121 +7,55 @@ body
 
   include includes/header.pug
   
-  .page-slider-top
-    .container
-      .slick-slider.project-slider-top
-        .slick-slider-slide.project-slider-top-slide
-          img(src="files/project-slide-1.jpg", alt="фото")
-        .slick-slider-slide.project-slider-top-slide
-          img(src="files/project-slide-1.jpg", alt="фото")
+  main
+    .page-slider-top
+      .container
+        .slick-slider.project-slider-top
+          .slick-slider-slide.project-slider-top-slide
+            img(src="files/project-slide-1.jpg", alt="фото")
+          .slick-slider-slide.project-slider-top-slide
+            img(src="files/project-slide-1.jpg", alt="фото")
 
-  .page-content.project-content
-    .container
-      ul.breadcrumbs
-        li
-          a(href="/", class="breadcrumbs-link") Главная 
-        li
-          a(href="/gitis", class="breadcrumbs-link") Проекты
-        li
-          a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") По дорогам фронтовых театров
-      h1.page-content-title.project-content-title По дорогам фронтовых театров
-      .row
-        .col-4
-          .page-content-info
-            p.page-content-info-date 20/05
-            p.page-content-info-time 20:30/ ПТ
-            .page-content-info-views.views
-              img(src="images/images/views.svg", alt="views")
-              span 1 457 896
-            .page-content-info-social
-              .page-content-info-social-text Поделитесь:
-              div(class="page-content-info-social-list ya-share2" data-services="vkontakte,twitter,facebook,odnoklassniki")
-                <script src="https://yastatic.net/share2/share.js" async="async"></script>        
-        .col-8
-          .page-content-desc
-            p.page-content-desc-title
-              |Спектакль поставлен по комедии Карло Гольдони
-              |«Кьоджинские перепалки». Выпускная работа
-              |актерского факультета ГИТИСа, мастерской
-              |Андреева Владимира Алексеевича.
-            p.page-content-desc-text
-              |Действие происходит в маленьком городе Кьоджи, что в восьми милях от Венеции,
-              |населенном рыбаками и их семействами. 
-            p.page-content-desc-text
-              |Видимо, этот сюжет <span>Гольдони</span> взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить. 
-            p.page-content-desc-text.page-content-desc-text-bold
-              |Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?
-            p.page-content-desc-text  
-              |Гольдони взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! 
-            p.page-content-desc-text  
-              |Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.   
-      .row
-        .offset-md-2
-        .col-10
-          .page-content-quote
-            .page-content-quote-img
-              img(src="images/images/quote.svg", alt="цитата")
-            .page-content-quote-text
-              |Для ГИТИСа каждый год – это Год театра. Мы запускаем
-              |сейчас проект «театральных уроков», на которых в
-              |школах наши мастера будут рассказывать и об истории
-              |русского театра, и о тех профессиях, которым мы учим
-              |в ГИТИСа
-          .page-content-director
-            .page-content-director-info
-              .page-content-director-name Григорий Анатольевич Заславский
-              .page-content-director-about Российский театральный критик, ректор Российского института театрального искусства — ГИТИСа с 2016 года, кандидат филологических наук.
-            .page-content-director-foto
-              img(src="images/hd/director.jpg", alt="Заславский")    
-      .row
-        .offset-md-4
-        .col-8
-          .page-content-about
-            |Действие происходит в маленьком городе Кьоджи, что в восьми милях от Венеции, населенном рыбаками и их семействами Видимо, этот сюжет Гольдони взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. 
-      .page-content-media
-        h3.page-content-media-title Видео о проекте
+    .page-content.project-content
+      .container
+        ul.breadcrumbs
+          li
+            a(href="/", class="breadcrumbs-link") Главная 
+          li
+            a(href="/gitis", class="breadcrumbs-link") Проекты
+          li
+            a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") По дорогам фронтовых театров
+        h1 По дорогам фронтовых театров
         .row
-          .col-2
-            .page-content-media-desc
-              |Подпись к видео о проекте, заголовок может быть очень длинным, его может вообще не быть
-          .col-10  
-            .page-content-media-movie
-              .page-content-media-movie-clip
-                img(src="images/hd/video.jpg", alt="видео")
-              .page-content-media-movie-pause
-                img(src="images/images/pause.svg", alt="пауза")  
-              .page-content-media-movie-full  
-                img(src="images/images/full-screen.svg", alt="во весь экран")
-        .row    
-          .offset-md-4
-          .col-8
-            .page-content-media-text
-              |Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.  Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?     
-      .page-content-gallery
-        h3.page-content-gallery-title Дополнительный вид галереи плиткой
-        .row
-          .col-6
-            .page-content-gallery-item
-              img(src="images/hd/gallery-1.jpg", alt="галерея")
-          .col-6
-            .page-content-gallery-item
-              img(src="images/hd/gallery-2.jpg", alt="галерея")
-          .col-6
-            .page-content-gallery-item
-              img(src="images/hd/gallery-3.jpg", alt="галерея")
-          .col-6
-            .page-content-gallery-item
-              img(src="images/hd/gallery-1.jpg", alt="галерея")
-      .page-content-idea
-        h3.page-content-gallery-title Идея спектакля и творческая группа
-        .row
-          .offset-md-4
+          .col-4
+            .page-content-info
+              .page-content-info-date 20/05
+              .page-content-info-time 20:30/ ПТ
+              .page-content-info-views.views
+                img(src="images/images/views.svg", alt="views")
+                span 1 457 896
+              .page-content-info-social
+                .page-content-info-social-text Поделитесь:
+                div(class="page-content-info-social-list ya-share2" data-services="vkontakte,twitter,facebook,odnoklassniki")
+                  <script src="https://yastatic.net/share2/share.js" async="async"></script>        
           .col-8
             .page-content-desc
-              p.page-content-desc-text
-                |Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! 
-              p.page-content-desc-text  
-                |Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.  Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?
+              .page-content-desc-title
+                |Спектакль поставлен по комедии Карло Гольдони
+                |«Кьоджинские перепалки». Выпускная работа
+                |актерского факультета ГИТИСа, мастерской
+                |Андреева Владимира Алексеевича.
+              p
+                |Действие происходит в маленьком городе Кьоджи, что в восьми милях от Венеции,
+                |населенном рыбаками и их семействами. 
+              p
+                |Видимо, этот сюжет <a href="#">Гольдони</a> взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить. 
+              .page-content-desc-bold
+                |Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?
+              p  
+                |Гольдони взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! 
+              p  
+                |Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.   
         .row
           .offset-md-2
           .col-10
@@ -129,129 +63,196 @@ body
               .page-content-quote-img
                 img(src="images/images/quote.svg", alt="цитата")
               .page-content-quote-text
-                |Мы запускаем сейчас проект «театральных уроков», на которых в школах наши мастера будут рассказывать.
+                |Для ГИТИСа каждый год – это Год театра. Мы запускаем
+                |сейчас проект «театральных уроков», на которых в
+                |школах наши мастера будут рассказывать и об истории
+                |русского театра, и о тех профессиях, которым мы учим
+                |в ГИТИСа
             .page-content-director
               .page-content-director-info
                 .page-content-director-name Григорий Анатольевич Заславский
                 .page-content-director-about Российский театральный критик, ректор Российского института театрального искусства — ГИТИСа с 2016 года, кандидат филологических наук.
-      .row
-        .col-2
-          .page-content-media-desc
-            |Подпись к фото о проекте, заголовок может быть очень длинным, его может вообще не быть
-        .col-10  
-          .page-content-media-movie.page-content-media-foto
-            .page-content-media-movie-clip
-              img(src="images/hd/video.jpg", alt="фото")
-      .page-content-extra
-        h4.page-content-extra-title Мастерская Миндаугаса Карбаускиса
+              .page-content-director-foto
+                img(src="images/hd/director.jpg", alt="Заславский")    
         .row
           .offset-md-4
           .col-8
-            .page-content-extra-text
-              p.page-content-extra-text-item Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто!
-              p.page-content-extra-text-item Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. 
-              p.page-content-extra-text-item Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.  
-              p.page-content-extra-text-item Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?                             
-      .page-content-media
+            .page-content-about
+              |Действие происходит в маленьком городе Кьоджи, что в восьми милях от Венеции, населенном рыбаками и их семействами Видимо, этот сюжет Гольдони взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. 
+        .page-content-media
+          h3 Видео о проекте
+          .row
+            .col-2
+              .page-content-media-desc
+                |Подпись к видео о проекте, заголовок может быть очень длинным, его может вообще не быть
+            .col-10  
+              .page-content-media-movie
+                .page-content-media-movie-clip
+                  img(src="images/hd/video.jpg", alt="видео")
+                .page-content-media-movie-pause
+                  img(src="images/images/pause.svg", alt="пауза")  
+                .page-content-media-movie-full  
+                  img(src="images/images/full-screen.svg", alt="во весь экран")
+          .row    
+            .offset-md-4
+            .col-8
+              .page-content-media-text
+                |Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.  Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?     
+        .page-content-gallery
+          h3 Дополнительный вид галереи плиткой
+          .row
+            .col-6
+              .page-content-gallery-item
+                img(src="images/hd/gallery-1.jpg", alt="галерея")
+            .col-6
+              .page-content-gallery-item
+                img(src="images/hd/gallery-2.jpg", alt="галерея")
+            .col-6
+              .page-content-gallery-item
+                img(src="images/hd/gallery-3.jpg", alt="галерея")
+            .col-6
+              .page-content-gallery-item
+                img(src="images/hd/gallery-1.jpg", alt="галерея")
+        .page-content-idea
+          h3 Идея спектакля и творческая группа
+          .row
+            .offset-md-4
+            .col-8
+              .page-content-desc
+                p
+                  |Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! 
+                p  
+                  |Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.  Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?
+          .row
+            .offset-md-2
+            .col-10
+              .page-content-quote
+                .page-content-quote-img
+                  img(src="images/images/quote.svg", alt="цитата")
+                .page-content-quote-text
+                  |Мы запускаем сейчас проект «театральных уроков», на которых в школах наши мастера будут рассказывать.
+              .page-content-director
+                .page-content-director-info
+                  .page-content-director-name Григорий Анатольевич Заславский
+                  .page-content-director-about Российский театральный критик, ректор Российского института театрального искусства — ГИТИСа с 2016 года, кандидат филологических наук.
         .row
           .col-2
+            .page-content-media-desc
+              |Подпись к фото о проекте, заголовок может быть очень длинным, его может вообще не быть
           .col-10  
             .page-content-media-movie.page-content-media-foto
               .page-content-media-movie-clip
-                img(src="images/hd/foto.jpg", alt="фото")
-        .row    
-          .offset-md-4
-          .col-8
-            .page-content-media-text
-              p 
-                |Действие происходит в маленьком городе Кьоджи, что в восьми милях от Венеции, населенном рыбаками и их семействами Видимо, этот сюжет Гольдони взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. 
-              p
-                |Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.  Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?
-      .page-content-extra
-        h4.page-content-extra-title Мастерская Миндаугаса Карбаускиса сыграла премьеру в Театре Маяковского
-        .row
-          .offset-md-4
-          .col-8
-            .page-content-extra-text
-              p Либретто – <span>Антон Музыкантский, Дарья Аксёнова (с использованием переводов Марии Бар) В спектакле звучит музыка Кевина Мёрфи и Лоренсa О'Кифф из мюзикла «Heathers», а также авторские композиции Екатерины Гусар.</span>
-              p Автор идеи, режиссёр-постановщик, сценография, пластика – <span>Антон Музыкантский</span>
-              p Музыкальный руководитель – <span>Екатерина Гусар</span>
-              p Художники по костюмам – <span>Анастасия Пугашкина, Екатерина Гутовская</span>
-              p Хореограф – <span>Виктория Канаткина</span>
-              p Художественный руководитель курса – <span>Лика Рулла</span>
-      .page-content-social
-        .page-content-info-social
-          .page-content-info-social-text Поделитесь:
-          div(class="page-content-info-social-list ya-share2" data-services="vkontakte,twitter,facebook,odnoklassniki")
-            <script src="https://yastatic.net/share2/share.js" async="async"></script>                 
-        .page-content-social-views.views
-          img(src="images/images/views.svg", alt="views")
-          span 1 457 896
-  .page-slider-bottom
-    .container
-      .page-slider-bottom-title Смотрите также
-      .slider-wrapper
-        .slick-slider.project-slider-bottom.slider-countable
-          .slick-slider-slide.project-slider-bottom-slide          
-            .col-12
-              a(href="#", class="projects-list-item")
-                .projects-list-item-date
-                  p 25/05
-                  span
-                  p 25/07
-                .projects-list-item-info
-                  .projects-list-item-img
-                    img(src="images/hd/project-1.jpg", alt="проект-1")
-                  .projects-list-item-title По дорогам фронтовых театров
-          .slick-slider-slide.project-slider-bottom-slide            
-            .col-12
-              a(href="#", class="projects-list-item")
-                .projects-list-item-date
-                  p 30/10
-                .projects-list-item-info
-                  .projects-list-item-img
-                    img(src="images/hd/project-2.jpg", alt="проект-2")
-                  .projects-list-item-title Театр ГИТИС и федеральная программа “Большие гастроли”
-          .slick-slider-slide.project-slider-bottom-slide          
-            .col-12
-              a(href="#", class="projects-list-item")
-                .projects-list-item-date
-                  p 25/05
-                  span
-                  p 25/07
-                .projects-list-item-info
-                  .projects-list-item-img
-                    img(src="images/hd/project-1.jpg", alt="проект-1")
-                  .projects-list-item-title По дорогам фронтовых театров
-          .slick-slider-slide.project-slider-bottom-slide            
-            .col-12
-              a(href="#", class="projects-list-item")
-                .projects-list-item-date
-                  p 30/10
-                .projects-list-item-info
-                  .projects-list-item-img
-                    img(src="images/hd/project-2.jpg", alt="проект-2")
-                  .projects-list-item-title Театр ГИТИС и федеральная программа “Большие гастроли”
-          .slick-slider-slide.project-slider-bottom-slide          
-            .col-12
-              a(href="#", class="projects-list-item")
-                .projects-list-item-date
-                  p 25/05
-                  span
-                  p 25/07
-                .projects-list-item-info
-                  .projects-list-item-img
-                    img(src="images/hd/project-1.jpg", alt="проект-1")
-                  .projects-list-item-title По дорогам фронтовых театров
-          .slick-slider-slide.project-slider-bottom-slide            
-            .col-12
-              a(href="#", class="projects-list-item")
-                .projects-list-item-date
-                  p 30/10
-                .projects-list-item-info
-                  .projects-list-item-img
-                    img(src="images/hd/project-2.jpg", alt="проект-2")
-                  .projects-list-item-title Театр ГИТИС и федеральная программа “Большие гастроли”
+                img(src="images/hd/video.jpg", alt="фото")
+        .page-content-extra
+          h4 Мастерская Миндаугаса Карбаускиса
+          .row
+            .offset-md-4
+            .col-8
+              .page-content-extra-text
+                p Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто!
+                p Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. 
+                p Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.  
+                p Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?                             
+        .page-content-media
+          .row
+            .col-2
+            .col-10  
+              .page-content-media-movie.page-content-media-foto
+                .page-content-media-movie-clip
+                  img(src="images/hd/foto.jpg", alt="фото")
+          .row    
+            .offset-md-4
+            .col-8
+              .page-content-media-text
+                p 
+                  |Действие происходит в маленьком городе Кьоджи, что в восьми милях от Венеции, населенном рыбаками и их семействами Видимо, этот сюжет Гольдони взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. 
+                p
+                  |Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.  Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?
+        .page-content-extra
+          h4 Мастерская Миндаугаса Карбаускиса сыграла премьеру в Театре Маяковского
+          .row
+            .offset-md-4
+            .col-8
+              .page-content-extra-text
+                p Либретто – <span>Антон Музыкантский, Дарья Аксёнова (с использованием переводов Марии Бар) В спектакле звучит музыка Кевина Мёрфи и Лоренсa О'Кифф из мюзикла «Heathers», а также авторские композиции Екатерины Гусар.</span>
+                p Автор идеи, режиссёр-постановщик, сценография, пластика – <span>Антон Музыкантский</span>
+                p Музыкальный руководитель – <span>Екатерина Гусар</span>
+                p Художники по костюмам – <span>Анастасия Пугашкина, Екатерина Гутовская</span>
+                p Хореограф – <span>Виктория Канаткина</span>
+                p Художественный руководитель курса – <span>Лика Рулла</span>
+        .page-content-social
+          .page-content-info-social
+            .page-content-info-social-text Поделитесь:
+            div(class="page-content-info-social-list ya-share2" data-services="vkontakte,twitter,facebook,odnoklassniki")
+              <script src="https://yastatic.net/share2/share.js" async="async"></script>                 
+          .page-content-social-views.views
+            img(src="images/images/views.svg", alt="views")
+            span 1 457 896
+    .page-slider-bottom
+      .container
+        .page-slider-bottom-title Смотрите также
+        .slider-wrapper
+          .slick-slider.project-slider-bottom.slider-countable
+            .slick-slider-slide.project-slider-bottom-slide          
+              .col-12
+                a(href="#", class="projects-list-item")
+                  .projects-list-item-date
+                    p 25/05
+                    span
+                    p 25/07
+                  .projects-list-item-info
+                    .projects-list-item-img
+                      img(src="images/hd/project-1.jpg", alt="проект-1")
+                    .projects-list-item-title По дорогам фронтовых театров
+            .slick-slider-slide.project-slider-bottom-slide            
+              .col-12
+                a(href="#", class="projects-list-item")
+                  .projects-list-item-date
+                    p 30/10
+                  .projects-list-item-info
+                    .projects-list-item-img
+                      img(src="images/hd/project-2.jpg", alt="проект-2")
+                    .projects-list-item-title Театр ГИТИС и федеральная программа “Большие гастроли”
+            .slick-slider-slide.project-slider-bottom-slide          
+              .col-12
+                a(href="#", class="projects-list-item")
+                  .projects-list-item-date
+                    p 25/05
+                    span
+                    p 25/07
+                  .projects-list-item-info
+                    .projects-list-item-img
+                      img(src="images/hd/project-1.jpg", alt="проект-1")
+                    .projects-list-item-title По дорогам фронтовых театров
+            .slick-slider-slide.project-slider-bottom-slide            
+              .col-12
+                a(href="#", class="projects-list-item")
+                  .projects-list-item-date
+                    p 30/10
+                  .projects-list-item-info
+                    .projects-list-item-img
+                      img(src="images/hd/project-2.jpg", alt="проект-2")
+                    .projects-list-item-title Театр ГИТИС и федеральная программа “Большие гастроли”
+            .slick-slider-slide.project-slider-bottom-slide          
+              .col-12
+                a(href="#", class="projects-list-item")
+                  .projects-list-item-date
+                    p 25/05
+                    span
+                    p 25/07
+                  .projects-list-item-info
+                    .projects-list-item-img
+                      img(src="images/hd/project-1.jpg", alt="проект-1")
+                    .projects-list-item-title По дорогам фронтовых театров
+            .slick-slider-slide.project-slider-bottom-slide            
+              .col-12
+                a(href="#", class="projects-list-item")
+                  .projects-list-item-date
+                    p 30/10
+                  .projects-list-item-info
+                    .projects-list-item-img
+                      img(src="images/hd/project-2.jpg", alt="проект-2")
+                    .projects-list-item-title Театр ГИТИС и федеральная программа “Большие гастроли”
         
 
   include includes/footer.pug
