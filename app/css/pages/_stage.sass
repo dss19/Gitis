@@ -1,0 +1,97 @@
+.stage
+  &-name
+    +bold
+    font-size: 60px
+    line-height: 65px
+    color: $black
+    font-weight: 500
+    margin-bottom: 30px
+  &-downloads
+    display: flex
+    padding: 50px 0 13px
+    margin-top: 47px
+    width: 100%
+    max-width: 529px
+    border-top: 1px solid $black  
+    border-bottom: 5px solid $black
+    &-item
+      display: flex
+      margin-right: 45px
+      &:last-of-type
+        margin-right: 0
+      &-img 
+        margin-right: 30px
+      &-desc
+        transform: translateY(-5px)
+        p 
+          +bold
+          font-size: 20px
+          line-height: 26px
+          color: $black
+          font-weight: 500
+          margin-bottom: 0
+      &-buttons
+        display: flex
+        margin-top: 14px
+      &-button 
+        margin-right: 10px
+        opacity: 0
+  &-desc
+    padding: 13px 0 98px 
+    border-bottom: 5px solid $black
+    &-title
+      +norm
+      font-size: 30px
+      line-height: 40px
+      color: $black
+      margin-bottom: 27px
+    &-text 
+      +norm
+      font-size: 18px
+      line-height: 32px
+      color: $black
+      margin-bottom: 40px
+  &-parameters
+    &-title
+      +bold 
+      font-size: 50px
+      line-height: 60px
+      color: $black
+      margin-bottom: 27px
+    &-img 
+      margin-bottom: 36px
+      &:last-of-type
+        margin-bottom: 0
+  &-equipment                            
+    border-bottom: 5px solid $black
+    &-item
+      padding: 40px 0 42px
+      border-bottom: 1px solid $black
+      &:last-of-type
+        border: none
+      &-title 
+        +bold
+        font-weight: 500
+        font-size: 30px
+        line-height: 40px
+        color: $black 
+        margin-bottom: 15px 
+      &-row
+        margin-bottom: 15px
+        &:last-of-type
+          margin-bottom: 0
+      &-name
+        text-align: right
+        +norm
+        font-weight: 300
+        font-size: 15px
+        line-height: 26px
+        color: $black
+      &-desc
+        p 
+          +bold
+          font-weight: 500
+          font-size: 16px
+          line-height: 26px
+          color: $black 
+          margin-bottom: 0                                 

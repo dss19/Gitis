@@ -300,11 +300,20 @@ button
       cursor: default 
       &::after
         display: none 
-.project-slider-top
+.project-slider-top, .news-img-slider-top, .stage-slider-top
   .slick-slider
     &-slide
+      position: relative
       img 
         width: 100%
+      &::after
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: $grad  
   .slick-arrow
     position: absolute
     font-size: 0
@@ -345,7 +354,7 @@ button
     color: $white
     margin-bottom: 60px
 
-.project-slider-bottom
+.project-slider-bottom, .news-img-slider-bottom
   .projects-list-item-date
     p 
       color: $white

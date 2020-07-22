@@ -37,6 +37,27 @@ $(document).ready(function () {
     rows: 0
   });
 
+  // Верхний слайдер Новости
+  $('.news-img-slider-top').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    rows: 0
+  });
+
+  // Нижний слайдер Новости
+  $('.news-img-slider-bottom').slick({
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    rows: 0
+  });
+
+  // Верхний слайдер Площадки
+  $('.stage-slider-top').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    rows: 0
+  });
+
   // Карты на странице контактов
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map-1', {

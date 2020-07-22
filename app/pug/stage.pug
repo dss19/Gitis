@@ -1,0 +1,191 @@
+doctype html
+html(lang='ru')
+
+include includes/head.pug
+
+body
+
+  include includes/header.pug
+  
+  main
+    .page-slider-top
+      .container
+        .slick-slider.stage-slider-top
+          .slick-slider-slide.project-slider-top-slide
+            img(src="files/stage-slide-1.jpg", alt="фото")
+          .slick-slider-slide.project-slider-top-slide
+            img(src="files/stage-slide-1.jpg", alt="фото")
+
+    .page-content.project-content
+      .container
+        ul.breadcrumbs
+          li
+            a(href="/", class="breadcrumbs-link") Главная 
+          li
+            a(href="/gitis", class="breadcrumbs-link") Площадки
+          li
+            a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") Основная сцена
+
+    .stage
+      .container
+        .row 
+          .col-6
+            .stage-info
+              .stage-name Основная сцена
+              .contacts-phone
+                a(href="tel:+74956297087") +7 (495) 629-70-87
+              .contacts-adress Б. Гнездниковский пер., 10
+              .contacts-email
+                .contacts-email-block
+                  a(href="mailto:teatr@gitis.ne") teatr@gitis.ne
+              .contacts-email    
+                .contacts-email-block
+                  a(href="mailto:gitistheatre@gmail.com") gitistheatre@gmail.com
+              .stage-downloads
+                .stage-downloads-item
+                  .stage-downloads-item-img
+                    img(src="/images/images/pdf.svg", alt="alt")
+                  .stage-downloads-item-desc
+                    p Технический  
+                    p райдер
+                    .stage-downloads-item-buttons
+                      .stage-downloads-item-button
+                        img(src="/images/images/new-window.svg", alt="alt")  
+                      .stage-downloads-item-button
+                        img(src="/images/images/download.svg", alt="alt")  
+                .stage-downloads-item
+                  .stage-downloads-item-img
+                    img(src="/images/images/pdf.svg", alt="alt")
+                  .stage-downloads-item-desc
+                    p Схемы  
+                    p площадки
+                    .stage-downloads-item-buttons
+                      .stage-downloads-item-button
+                        img(src="/images/images/new-window.svg", alt="alt")  
+                      .stage-downloads-item-button
+                        img(src="/images/images/download.svg", alt="alt")
+          .col-6
+            .stage-desc
+              .stage-desc-title Построенный в 1913 году дом по адресу Большой Гнездниковский переулок, 10 считается первым столичным небоскрёбом.
+              .stage-desc-text В проекте немецкого архитектора Эрнста-Рихарда Карловича Нирнзее было целых две театральные площадки – в подвале и на крыше дома. Сцена на крыше скоро была закрыта, а в подвале первым в 1915 году расположился к тому времени уже знаменитый театр-кабаре «Летучая мышь» Никиты Балиева. Художник Сергей Судейкин расписал фойе, по его же эскизам сделали и занавес с гирляндами роз. Первое представление состоялось в сентябре 1915 года в присутствии Максима Горького и других известных гостей.
+              .stage-desc-img
+                img(src="/images/images/building-main.svg", alt="здание Гитис")
+        .row
+          .col-6
+            .stage-parameters
+              .stage-parameters-title Технические характеристики
+              .stage-parameters-img
+                img(src="/images/images/plan-1.jpg", alt="Вертикальный план") 
+              .stage-parameters-img
+                img(src="/images/images/plan-2.jpg", alt="горизонтальный план") 
+          .col-6
+            .stage-equipment
+              .stage-equipment-item
+                .stage-equipment-item-title Звук
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Микрофоны
+                  .col-8.stage-equipment-item-desc 
+                    p 10 головных гарнитур SHURE BLX1 M17 с оголовьями SM 35
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Гартнитура
+                  .col-8.stage-equipment-item-desc 
+                    p Beyerdinamics tg 100
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Ручные беспроводные микрофоны
+                  .col-8.stage-equipment-item-desc 
+                    p Audio-technica atw-t702 — 4 шт.
+                    p Seenheiser skm 35 handled transmitter — 3 шт.
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Подвесные микрофоны
+                  .col-8.stage-equipment-item-desc 
+                    p Audio-technica пушки — 3 шт,
+                    p Mini Disk/CD player TASCAM MD — CD 1
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Звуковой пульт
+                  .col-8.stage-equipment-item-desc 
+                    p Yamaha MG32/14 FX
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Звукоусиление Арьера
+                  .col-8.stage-equipment-item-desc 
+                    p VTC PRO AUDIO Inception N4
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Звукоусиление зала
+                  .col-8.stage-equipment-item-desc 
+                    p EAW LA-215
+              .stage-equipment-item
+                .stage-equipment-item-title Свет
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Пульт
+                  .col-8.stage-equipment-item-desc 
+                    p Compulite vector blue
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Ителлектуальное оборудование
+                  .col-8.stage-equipment-item-desc 
+                    p Clay Paky aLEDa WASH K10 cc — 6 шт.
+                    p Robe Robin 600 LED WASH — 6 шт.
+                    p Clay Paky Axcor Spot 300 — 2 шт.
+                    p Robe ColorSpot 575W — 4 шт.
+                    p Robe MSzoom 250at — 10 шт.
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Диммерное оборудование
+                  .col-8.stage-equipment-item-desc 
+                    p ETC Source Four Zoom 15-30 / 25-50 — 24 шт.
+                    p Spotlight vario 12 1200W — 28 шт.
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Фронтальная проекция
+                  .col-8.stage-equipment-item-desc 
+                    p CHRISTIE DWX951
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Рирпроекция
+                  .col-8.stage-equipment-item-desc 
+                    p Panasonic PT-EX600
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Генератор тумана
+                  .col-8.stage-equipment-item-desc 
+                    p Jem K1 Hazer — 2 шт.
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Дым машина
+                  .col-8.stage-equipment-item-desc 
+                    p Smoke factory Captain D
+              .stage-equipment-item
+                .stage-equipment-item-title Сцена
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Ширина зеркала сцены
+                  .col-8.stage-equipment-item-desc 
+                    p 9.1м
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Высота зеркала сцены
+                  .col-8.stage-equipment-item-desc 
+                    p 3.4м
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Глубина сцены
+                  .col-8.stage-equipment-item-desc 
+                    p 11.2м
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Ширина сцены
+                  .col-8.stage-equipment-item-desc 
+                    p 12.7м
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Высота сцены
+                  .col-8.stage-equipment-item-desc 
+                    p 4.2м
+                .row.stage-equipment-item-row 
+                  .col-4.stage-equipment-item-name Одежда сцены
+                  .col-8.stage-equipment-item-desc 
+                    p Три плана кулис
+                    p Черный кабинет
+                    p Черный или коричневый половик на планшет сцены
+                    p Свободный проход по заднему плану сцены из правого кармана сцены в левый (за задником)
+                    p Грузы (min.4шт, max. 10шт.)
+        .row.stage-photos
+          .col-6
+            .stage-photos-title Галерея площадки
+            .stage-photos-img
+              img(src="", alt="alt")
+            .stage-photos-img
+              img(src="", alt="alt")
+
+          
+
+
+  include includes/footer.pug
