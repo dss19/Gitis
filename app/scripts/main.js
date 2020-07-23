@@ -82,4 +82,13 @@ $(document).ready(function () {
     myMap2.behaviors.disable('scrollZoom');    
   });
 
+  // Скролл наверх 
+  $(".stage-history-on-top-button").click(function () {
+    $("html, body").animate({
+      scrollTop: 0,
+    },
+      1000
+    );
+  });
+
 });
