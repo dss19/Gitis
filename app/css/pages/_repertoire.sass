@@ -1,0 +1,133 @@
+.repertoire
+  &-filter
+    &-wrap
+      display: flex
+      padding: 32px 0 22px
+      border-bottom: 1px solid $black
+    &-item
+      +norm
+      font-weight: 500
+      font-size: 27px
+      line-height: 35px
+      text-transform: uppercase
+      color: $black
+      transition: 0.3s
+      margin-right: 46px
+      cursor: pointer
+      &:last-of-type
+        margin-right: 0
+    &-item.active
+      position: relative
+      color: $red
+      border-bottom: 1px solid $red
+  &-list
+    &-item
+      padding: 50px 0
+      border-bottom: 1px solid $black
+      &-img
+        position: relative
+        img
+          width: 100%
+        &::after
+          position: absolute
+          width: 100%
+          height: 100%
+          top: 0
+          left: 0
+          content: ''
+          background: $grad
+      &-desc
+        position: relative
+        padding: 0 20px
+        transform: translateY(-10px)
+        &::after
+          position: absolute
+          content: ''
+          top: 10px
+          right: 0
+          width: 1px
+          height: 100px
+          background: $black
+      &-title
+        +norm
+        font-size: 30px
+        line-height: 40px
+        color: $black
+        margin-bottom: 10px
+        max-width: 404px
+      &-subtitle
+        +bold
+        font-size: 16px
+        line-height: 28px
+        color: $black
+        margin-bottom: 15px
+        max-width: 404px
+      &-actors
+        margin-bottom: 8px
+        max-width: 404px
+        p 
+          +norm
+          font-weight: 300
+          font-size: 13px
+          line-height: 20px
+          color: $black
+          margin-bottom: 0
+      &-genre
+        +norm
+        font-weight: 300
+        font-size: 13px
+        line-height: 20px
+        color: $black
+        max-width: 404px        
+      &-info
+        transform: translateY(-10px)
+      &-length
+        +lack 
+        font-size: 18px
+        line-height: 35px
+        color: $black
+      &-interval
+        +norm
+        font-weight: 300
+        font-size: 13px
+        line-height: 16px
+        color: $black
+        margin-bottom: 30px
+      &-age
+        +lack 
+        font-size: 18px
+        line-height: 20px
+        color: $grey2
+      &-tickets
+        position: relative
+        display: flex
+        padding-left: 30px
+        &::before
+          position: absolute
+          content: ''
+          width: 1px
+          height: 100px
+          background: $black
+          top: 0
+          left: 0
+      &-date
+        transform: translateY(-10px)
+        p 
+          +lack
+          font-size: 30px
+          line-height: 40px
+          color: $black
+          margin-bottom: 0
+      &-buy
+        margin-left: auto
+        a
+          display: flex
+        &-text
+          display: none
+          +norm
+          font-size: 18px
+          line-height: 16px
+          color: $red
+        &-img
+          margin-left: 28px
+          transform: translateY(-7px)        
