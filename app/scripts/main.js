@@ -23,6 +23,13 @@ $(document).ready(function () {
     });
   });
 
+  // Верхний слайдер на Главной
+  $('.main-slider-top').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    rows: 0
+  });
+
   // Верхний слайдер
   $('.project-slider-top').slick({
     slidesToShow: 1,
@@ -50,6 +57,20 @@ $(document).ready(function () {
     slidesToScroll: 2,
     rows: 0
   });
+
+  // Верхний слайдер Спектакля
+  $('.show-slider-top').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    rows: 0
+  });
+
+  // Нижний слайдер Спектакля
+  // $('.show-slider-bottom').slick({
+  //   slidesToShow: 2,
+  //   slidesToScroll: 2,
+  //   rows: 0
+  // });
 
   // Верхний слайдер Площадки
   $('.stage-slider-top').slick({

@@ -1,0 +1,201 @@
+doctype html
+html(lang='ru')
+
+include includes/head.pug
+
+body
+
+  include includes/header.pug
+  
+  main
+    .page-slider-top
+      .container
+        .slick-slider.show-slider-top
+          .slick-slider-slide.show-slider-top-slide
+            img(src="files/show-slide-1.jpg", alt="фото")
+          .slick-slider-slide.show-slider-top-slide
+            img(src="files/show-slide-1.jpg", alt="фото")
+
+    .page-content.show-content
+      .container
+        ul.breadcrumbs
+          li
+            a(href="/", class="breadcrumbs-link") Главная 
+          li
+            a(href="/gitis", class="breadcrumbs-link") Афиша
+          li
+            a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") Над пропастью во ржи: сеанс психоанализа
+        h1 Название проекта театра или спектакля
+        .show-info
+          .row
+            .col-6
+              .show-info-actors
+                .show-info-actors-list
+                  p Актерский факультет, режиссерский факультет.
+                  p Актерско-режиссерская мастерская А.С. Кончаловского
+                .show-info-actors-genre  
+                  p <span>В жанре</span> Мелодрама, комедия
+            .col-6  
+              .show-info-about
+                .show-info-about-length <span>2 часа 10 минут</span> с одним антрактом
+                .show-info-about-age Возрастное ограничение <span>16+</span>              
+        .page-content-social.top
+          .page-content-info-social
+            .page-content-info-social-text Поделитесь:
+            div(class="page-content-info-social-list ya-share2" data-services="vkontakte,twitter,facebook,odnoklassniki")
+              <script src="https://yastatic.net/share2/share.js" async="async"></script>                 
+          .page-content-social-views.views
+            img(src="images/images/views.svg", alt="views")
+            span 1 457 896
+        .show-about
+          .row
+            .col-6 
+              .show-about-info Спектакль поставлен по комедии Карло Гольдони «Кьоджинские перепалки». Выпускная работа актерского факультета ГИТИСа, мастерской Андреева Владимира Алексеевича.
+            .col-6
+              .show-about-desc
+                p Действие происходит в маленьком городе Кьоджи, что в восьми милях от Венеции, населенном рыбаками и их семействами.
+                p Видимо, этот сюжет Гольдони взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить. 
+                p Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями? 
+                .show-about-desc-more
+                  img(src="images/images/more.svg", alt="читать больше")
+        .show-structure
+          .row
+            .col-6
+              .show-structure-title Постановка
+              .show-structure-production
+                .show-structure-production-block
+                  p Либретто – <span>Антон Музыкантский, Дарья Аксёнова</span>
+                  p (с использованием переводов Марии Бар) В спектакле звучит музыка Кевина Мёрфи и Лоренсa О'Кифф из мюзикла «Heathers», а также авторские композиции Екатерины Гусар.
+                .show-structure-production-block
+                  p Автор идеи, режиссёр-постановщик, сценография, пластика – <span>Антон Музыкантский</span>
+                .show-structure-production-block
+                  p Музыкальный руководитель – <span>Екатерина Гусар</span>
+                .show-structure-production-block
+                  p Художники по костюмам – <span>Анастасия Пугашкина, Екатерина Гутовская</span>
+                .show-structure-production-block
+                  p Хореограф – <span>Виктория Канаткина</span>
+                .show-structure-production-block
+                  p Художественный руководитель курса - <span>Лика Рулла</span>                
+            .col-6
+              .show-structure-title Актеры
+              .row
+                .col-6
+                  .show-structure-actors
+                    p Падрон Тони — <span>Евгений Сенин</span>
+                    p Мадонна Паскуа — <span>Шушан Джаноян</span>
+                    p Лучетта — <span>Ясмин Мамаева</span>
+                    p Тита-Нане — <span>Игорь Андреев</span>
+                    p Беппе — <span>Даниил Чуп</span>
+                    p Падрон Фортунато — <span>Евгений Кива</span>
+                    p Мадонна Либера — <span>Александра Белоглазова</span>
+                .col-6
+                  .show-structure-actors
+                    p Орсетта — <span>Мария Волошина</span>
+                    p Кекка — <span>Марина Курочка/ Елизавета Бурмакова</span>
+                    p Падрон Виченцо — <span>Килиан Росадо</span>
+                    p Тоффоло — <span>Эльдар Зверев</span>
+                    p Исидоро — <span>Владислав Логинов</span>
+                    p Коноккио — <span>Елизавета Бурмакова /Марина Курочка</span>
+                    p Командор — <span>Килиан Росадо</span>
+        .page-content-idea
+          h3 О спектакле (блок «Типографика»)
+          .row
+            .offset-md-4
+            .col-8
+              .page-content-desc
+                p
+                  |Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! 
+                p  
+                  |Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.  Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?
+          .row
+            .offset-md-2
+            .col-10
+              .page-content-quote
+                .page-content-quote-img
+                  img(src="images/images/quote.svg", alt="цитата")
+                .page-content-quote-text
+                  |Мы запускаем сейчас проект «театральных уроков», на которых в школах наши мастера будут рассказывать.
+              .page-content-director
+                .page-content-director-info
+                  .page-content-director-name Григорий Анатольевич Заславский
+                  .page-content-director-about Российский театральный критик, ректор Российского института театрального искусства — ГИТИСа с 2016 года, кандидат филологических наук.
+        .row
+          .col-2
+            .page-content-media-desc
+              |Подпись к фото о проекте, заголовок может быть очень длинным, его может вообще не быть
+          .col-10  
+            .page-content-media-movie.page-content-media-foto
+              .page-content-media-movie-clip
+                img(src="images/hd/video.jpg", alt="фото")
+        .page-content-extra
+          h4 Мастерская Миндаугаса Карбаускиса
+          .row
+            .offset-md-4
+            .col-8
+              .page-content-extra-text
+                p Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто!
+                p Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. 
+                p Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.  
+                p Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?                             
+        .page-content-media
+          .row
+            .col-2
+            .col-10  
+              .page-content-media-movie.page-content-media-foto
+                .page-content-media-movie-clip
+                  img(src="images/hd/foto.jpg", alt="фото")
+          .row    
+            .offset-md-4
+            .col-8
+              .page-content-media-text
+                p 
+                  |Действие происходит в маленьком городе Кьоджи, что в восьми милях от Венеции, населенном рыбаками и их семействами Видимо, этот сюжет Гольдони взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. 
+                p
+                  |Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить.  Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?        
+        .page-content-social
+          .page-content-info-social
+            .page-content-info-social-text Поделитесь:
+            div(class="page-content-info-social-list ya-share2" data-services="vkontakte,twitter,facebook,odnoklassniki")
+              <script src="https://yastatic.net/share2/share.js" async="async"></script>                 
+          .page-content-social-views.views
+            img(src="images/images/views.svg", alt="views")
+            span 1 457 896
+    .show-bottom
+      .container
+        .show-photos
+          .show-photos-title Дополнительный вид галереи плиткой
+          .row
+            .col-6
+              .page-content-gallery-item
+                img(src="images/images/show-1.jpg", alt="галерея")
+            .col-6
+              .page-content-gallery-item
+                img(src="images/images/show-2.jpg", alt="галерея")
+            .col-6
+              .page-content-gallery-item
+                img(src="images/images/show-3.jpg", alt="галерея")
+            .col-6
+              .page-content-gallery-item
+                img(src="images/images/show-4.jpg", alt="галерея")
+            .col-6
+              .page-content-gallery-item
+                img(src="images/images/show-5.jpg", alt="галерея")
+            .col-6
+              .page-content-gallery-item
+                img(src="images/images/show-6.jpg", alt="галерея")
+        .show-more
+          .show-more-title Смотрите также
+          .show-more-item.row
+            .col-2
+              .show-more-item-date
+                .show-more-item-date-number 11/04
+                .show-more-item-date-day среда
+            .col-3
+              .show-more-item-img
+                img(src="", alt="alt")
+            .col-7
+              .show-more-item-info
+                        
+
+
+  include includes/footer.pug     

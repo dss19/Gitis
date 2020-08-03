@@ -1,0 +1,107 @@
+.show
+  &-info
+    &-actors
+      &-list
+        margin-bottom: 10px
+        p 
+          +bold 
+          font-weight: 500
+          font-size: 16px
+          line-height: 30px
+          color: $black
+          margin-bottom: 0
+      &-genre
+        +bold 
+        font-weight: 500
+        font-size: 16px
+        line-height: 30px
+        color: $black
+        margin-bottom: 0
+        span 
+          +norm
+    &-about
+      display: flex
+      &-length, &-age 
+        +norm 
+        font-weight: 500
+        font-size: 16px
+        line-height: 30px
+        color: $black
+        span 
+          +bold 
+      &-length
+        margin-right: 40px
+  &-about
+    padding: 68px 0 100px
+    border-bottom: 1px solid $black
+    &-info
+      max-width: 530px
+      +norm
+      font-size: 30px
+      line-height: 40px
+      color: $black
+    &-desc
+      p
+        +norm
+        font-size: 18px
+        line-height: 32px
+        color: $black
+      &-more
+        cursor: pointer    
+  &-structure
+    padding: 93px 0
+    border-bottom: 1px solid $black
+    margin-bottom: 88px
+    &-title
+      +bold
+      font-weight: 500
+      font-size: 30px
+      line-height: 40px
+      color: $black
+      margin-bottom: 30px
+    &-production
+      max-width: 532px
+      &-block
+        margin-bottom: 15px
+        &:last-of-type
+          margin-bottom: 0
+        p 
+          +norm
+          font-weight: 300
+          font-size: 16px
+          line-height: 26px
+          color: $black
+          margin-bottom: 0
+          span 
+            +bold 
+    &-actors
+      p 
+        +norm
+        font-weight: 300
+        font-size: 16px
+        line-height: 26px
+        color: $black
+        span 
+          +bold 
+  &-bottom
+    background: #181818
+  &-photos
+    padding: 106px 0 126px
+    &-title
+      +norm
+      font-size: 50px
+      line-height: 45px
+      color: $white
+      margin-bottom: 44px
+    .col-6
+      &:nth-of-type(even)
+        transform: translateY(50px)    
+  &-more
+    &-title
+      +norm
+      font-size: 50px
+      line-height: 45px
+      color: $white
+      padding-bottom: 24px
+      border-bottom: 5px solid $white
+

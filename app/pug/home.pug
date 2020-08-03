@@ -1,0 +1,172 @@
+doctype html
+html(lang='ru')
+
+include includes/head.pug
+
+body
+
+  include includes/header.pug
+
+  main
+    .main-cover
+    .main-slider
+      .container
+        .slider-wrapper
+          .slick-slider.main-slider-top.slider-countable
+            .slick-slider-slide.main-slider-top-slide          
+              .row
+                .col-8
+                  .main-slider-top-img
+                    img(src="files/main-slide-1.jpg", alt="alt")
+                .col-4    
+                  .main-slider-top-info
+                    .main-slider-top-date 20/05  
+                    .main-slider-top-day 20:30 / пт
+                    .main-slider-top-name Над пропастью во ржи: сеанс психоанализа
+                    .main-slider-top-actors
+                      p Актерский факультет, режиссерский факультет.
+                      p Актерско-режиссерская мастерская А.С. Кончаловского
+                    .main-slider-top-age Возрастное ограничение <span>16+</span>
+                    .main-slider-top-ticket
+                      img(src="images/images/ticket-r.svg", alt="alt")
+            .slick-slider-slide.main-slider-top-slide          
+              .row
+                .col-8
+                  .main-slider-top-img
+                    img(src="files/main-slide-1.jpg", alt="alt")
+                .col-4    
+                  .main-slider-top-info
+                    .main-slider-top-date 20/05  
+                    .main-slider-top-day 20:30 / пт
+                    .main-slider-top-name Над пропастью во ржи: сеанс психоанализа
+                    .main-slider-top-actors
+                      p Актерский факультет, режиссерский факультет.
+                      p Актерско-режиссерская мастерская А.С. Кончаловского
+                    .main-slider-top-age Возрастное ограничение <span>16+</span>
+                    .main-slider-top-ticket
+                      img(src="images/images/ticket-r.svg", alt="alt")
+    .main-section.main-bill
+      .container
+        .main-section-title
+          .main-section-title-name Афиша
+          .main-section-title-link
+            a(href="#") Смотреть всю афишу
+        .main-section-content.main-bill-content
+          .row
+            .col-6
+              a(href="#", class="main-bill-item")
+                .main-bill-item-info
+                  .main-bill-item-date 25/05
+                  .main-bill-item-day пт, 20:30
+                  .main-bill-item-scene Основная сцена
+                  .main-bill-item-age 16+
+                .main-bill-item-cover
+                  .main-bill-item-img
+                    img(src="images/hd/main-bill-1.jpg", alt="проект-1")
+                  .main-bill-item-title Бешеные деньги     
+                  .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского     
+            .col-6
+              a(href="#", class="main-bill-item")
+                .main-bill-item-info
+                  .main-bill-item-date 25/05
+                  .main-bill-item-day пт, 20:30
+                  .main-bill-item-scene Новая сцена
+                  .main-bill-item-age 16+
+                .main-bill-item-cover
+                  .main-bill-item-img
+                    img(src="images/hd/main-bill-2.jpg", alt="проект-2")
+                  .main-bill-item-title Островский. Мечты     
+                  .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского     
+            .col-6
+              a(href="#", class="main-bill-item")
+                .main-bill-item-info
+                  .main-bill-item-date 25/05
+                  .main-bill-item-day пт, 20:30
+                  .main-bill-item-scene Основная сцена
+                  .main-bill-item-age 16+
+                .main-bill-item-cover
+                  .main-bill-item-img
+                    img(src="images/hd/main-bill-3.jpg", alt="проект-3")
+                  .main-bill-item-title Над пропастью во ржи: сеанс психоанализа     
+                  .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского     
+            .col-6
+              a(href="#", class="main-bill-item")
+                .main-bill-item-info
+                  .main-bill-item-date 25/05
+                  .main-bill-item-day пт, 20:30
+                  .main-bill-item-scene Основная сцена
+                  .main-bill-item-age 16+
+                .main-bill-item-cover
+                  .main-bill-item-img
+                    img(src="images/hd/main-bill-4.jpg", alt="проект-4")
+                  .main-bill-item-title Над пропастью во ржи: сеанс психоанализа     
+                  .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского     
+    .main-section.main-repertoire
+      .container
+        .main-section-title
+          .main-section-title-name Репертуар
+          .main-section-title-link
+            a(href="#") Смотреть весь репертуар
+        .main-section-content.main-repertoire-content
+          .row
+            .col-4
+              a(href="#", class="main-repertoire-item")
+                .main-repertoire-item-img
+                  img(src="images/hd/main-rep-1.jpg", alt="alt")
+                .main-repertoire-item-info
+                  .main-repertoire-item-age 18+
+                  .main-repertoire-item-desc
+                    .main-repertoire-item-name Над пропастью во ржи: сеанс психоанализа
+                    .main-repertoire-item-actors Актерско-режиссерская мастерская А.С. Кончаловского
+            .col-4
+              a(href="#", class="main-repertoire-item")
+                .main-repertoire-item-img
+                  img(src="images/hd/main-rep-2.jpg", alt="alt")
+                .main-repertoire-item-info
+                  .main-repertoire-item-age 16+
+                  .main-repertoire-item-desc
+                    .main-repertoire-item-name Выстрел
+                    .main-repertoire-item-actors Актерский факультет
+            .col-4
+              a(href="#", class="main-repertoire-item")
+                .main-repertoire-item-img
+                  img(src="images/hd/main-rep-3.jpg", alt="alt")
+                .main-repertoire-item-info
+                  .main-repertoire-item-age 12+
+                  .main-repertoire-item-desc
+                    .main-repertoire-item-name Романтический возраст
+                    .main-repertoire-item-actors Актерско-режиссерская мастерская А.С. Кончаловского
+            .col-4
+              a(href="#", class="main-repertoire-item")
+                .main-repertoire-item-img
+                  img(src="images/hd/main-rep-4.jpg", alt="alt")
+                .main-repertoire-item-info
+                  .main-repertoire-item-age 18+
+                  .main-repertoire-item-desc
+                    .main-repertoire-item-name Над пропастью во ржи: сеанс психоанализа
+                    .main-repertoire-item-actors Актерско-режиссерская мастерская А.С. Кончаловского
+            .col-4
+              a(href="#", class="main-repertoire-item")
+                .main-repertoire-item-img
+                  img(src="images/hd/main-rep-5.jpg", alt="alt")
+                .main-repertoire-item-info
+                  .main-repertoire-item-age 16+
+                  .main-repertoire-item-desc
+                    .main-repertoire-item-name Выстрел
+                    .main-repertoire-item-actors Актерский факультет
+            .col-4
+              a(href="#", class="main-repertoire-item")
+                .main-repertoire-item-img
+                  img(src="images/hd/main-rep-6.jpg", alt="alt")
+                .main-repertoire-item-info
+                  .main-repertoire-item-age 12+
+                  .main-repertoire-item-desc
+                    .main-repertoire-item-name Романтический возраст
+                    .main-repertoire-item-actors Актерско-режиссерская мастерская А.С. Кончаловского
+
+                        
+              
+    
+
+
+  include includes/footer.pug
