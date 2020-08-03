@@ -30,6 +30,20 @@ $(document).ready(function () {
     rows: 0
   });
 
+  // Средний слайдер на Главной
+  $('.main-slider-partners').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    rows: 0
+  });
+
+  // Нижний слайдер на главной
+  $('.main-slider-bottom').slick({
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    rows: 0
+  });
+
   // Верхний слайдер
   $('.project-slider-top').slick({
     slidesToShow: 1,
