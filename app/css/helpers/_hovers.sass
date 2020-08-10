@@ -1,4 +1,39 @@
-       
-          
+@media screen and ( min-width: 769px )
+  .main-bill-item:hover
+    .main-bill-item-date, 
+    .main-bill-item-day,
+    .main-bill-item-scene,
+    .main-bill-item-age,
+    .main-bill-item-title
+      color: $red
+      text-decoration: none
+    .main-bill-item-img
+      img 
+        transform: scale(1)
+    .main-bill-item-cover
+      &::after
+        height: 5px
+        background: $red
+        width: 410px
+    &::after
+      opacity: 1
+    &::before
+      opacity: 0            
+  .main-repertoire-item:hover
+    .main-repertoire-item-name
+      color: $red 
+    .main-repertoire-item-actors
+      &::after
+        height: 5px
+        background: $red
+        width: 317px
+    .main-repertoire-item-img
+      img 
+        transform: scale(1)             
+  .news-item:hover
+    &:after
+      transform: translateX(0)
+    .news-item-date
+      color: $red        
 
   

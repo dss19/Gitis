@@ -5,13 +5,14 @@ include includes/head.pug
 
 body
 
+  include includes/banner.pug
   include includes/header.pug
 
   main
     .main-cover
     .main-slider
       .container
-        .slider-wrapper
+        .slider-wrapper.slider-wrapper-mt
           .slick-slider.main-slider-top.slider-countable
             .slick-slider-slide.main-slider-top-slide          
               .row
@@ -54,7 +55,7 @@ body
         .main-section-content.main-bill-content
           .row
             .col-6
-              a(href="#", class="main-bill-item")
+              a(href="#", class="main-bill-item")                
                 .main-bill-item-info
                   .main-bill-item-date 25/05
                   .main-bill-item-day пт, 20:30
@@ -64,7 +65,11 @@ body
                   .main-bill-item-img
                     img(src="images/hd/main-bill-1.jpg", alt="проект-1")
                   .main-bill-item-title Бешеные деньги     
-                  .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского     
+                  .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского
+                  //- .main-bill-item-ticket
+                  //-   a(href="#")
+                    //- img(src="images/images/ticket-b.svg", class="main-bill-item-ticket-b" alt="alt")       
+                    //- img(src="images/images/ticket.svg", class="main-bill-item-ticket-w" alt="alt")       
             .col-6
               a(href="#", class="main-bill-item")
                 .main-bill-item-info
@@ -100,7 +105,32 @@ body
                   .main-bill-item-img
                     img(src="images/hd/main-bill-4.jpg", alt="проект-4")
                   .main-bill-item-title Над пропастью во ржи: сеанс психоанализа     
-                  .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского     
+                  .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского
+    .main-section.main-billboard      
+      .main-billboard-img 
+        img(src="images/hd/main-billboard.jpg", alt="alt")
+      .container
+        .main-billboard-title объявления <span>театра</span> 
+      .main-billboard-wrap
+        .main-billboard-content
+          .main-billboard-list
+            .main-billboard-row
+              .main-billboard-item
+                .main-billboard-item-date 30/05
+                .main-billboard-item-info
+                  .main-billboard-item-nums
+                    .main-billboard-item-time 20:30
+                    .main-billboard-item-day пт
+                    .main-billboard-item-age
+                  .main-billboard-item-text Весенние премьеры в учебном театре ГИТИС
+              .main-billboard-item
+                .main-billboard-item-date 30/05
+                .main-billboard-item-info
+                  .main-billboard-item-nums
+                    .main-billboard-item-time 20:30
+                    .main-billboard-item-day пт
+                    .main-billboard-item-age 16+
+                  .main-billboard-item-text Успейте приобрести билеты на театральные елки в этом году со скидками!
     .main-section.main-repertoire
       .container
         .main-section-title
@@ -188,13 +218,63 @@ body
                 .projects-list-item-info
                   .projects-list-item-img
                     img(src="images/hd/project-2.jpg", alt="проект-2")
-                  .projects-list-item-title По дорогам фронтовых театров              
+                  .projects-list-item-title По дорогам фронтовых театров
+    .main-section.main-news
+      .container
+        .main-section-title
+          .main-section-title-name Пресс-центр
+          .main-section-title-link
+            a(href="#") Смотреть все
+        .main-section-content.main-news-content
+          a.news-item.news-item-primary(href="#")
+            .row
+              .col-6.d-flex          
+                .news-item-date
+                  .news-item-date-day 25/05
+                  .news-item-date-time пт, 20:30              
+                .news-item-img
+                  img(src="images/hd/news-3.jpg", alt="новость")
+              .col-6 
+                .news-item-text
+                  .news-item-text-title Мастерская Миндаугаса Карбаускиса сыграла премьеру в Театре Маяковского, очень длинный заголовок новости
+                  .news-item-text-content Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. 
+                  .news-item-views.views
+                    img(src="images/images/views.svg", alt="views")
+                    span 1 457 896
+          a.news-item.news-item-secondary(href="#")
+            .row
+              .col-4.d-flex          
+                .news-item-date
+                  .news-item-date-day 25/05
+                  .news-item-date-time пт, 20:30              
+                .news-item-img
+                  img(src="images/hd/news-1.jpg", alt="новость")
+              .col-8 
+                .news-item-text
+                  .news-item-text-title Сыграли премьеру в Театре Маяковского
+                  .news-item-text-content Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. 
+                  .news-item-views.views
+                    img(src="images/images/views.svg", alt="views")
+                    span 1 457 896                            
+          a.news-item.news-item-secondary(href="#")
+            .row                        
+              .col-1
+                .news-item-date
+                  .news-item-date-day 25/05
+                  .news-item-date-time пт, 20:30
+              .col-8 
+                .news-item-text
+                  .news-item-text-title Сыграли премьеру в Театре Маяковского
+                  .news-item-text-content Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. 
+                  .news-item-views.views
+                    img(src="images/images/views.svg", alt="views")
+                    span 1 457 896                            
     .main-section.main-partners
       .container
         .main-section-title
           .main-section-title-name Партнеры          
         .main-section-content.main-partners-content
-          .slider-wrapper
+          .slider-wrapper.slider-wrapper-mm
             .slick-slider.main-slider-partners.slider-countable
               .slick-slider-slide
                 a(href="#", class="main-slider-partners-slide")        
@@ -234,94 +314,52 @@ body
                   img(src="files/main-partners-6.jpg", alt="alt")
     .main-theatre
       .container
-        .main-theatre-title Театр 
+        .main-theatre-title Театр
+          .main-theatre-canvas
+            img(src="images/images/canvas.svg", alt="alt") 
         .main-theatre-subtitle Молодые артисты не боятся экспериментировать и постоянно вносят что-то новое в много раз уже сыгранные спектакли. 
       .main-scenes
         .main-scenes-cover
           img(src="images/hd/main-theatre.jpg", alt="театр")
-        .main-scenes-primary
-          .main-scenes-primary-scene
+        .main-scenes-list
+          .main-scenes-list-item
             img(src="images/images/main-scene-1.jpg", alt="alt")
             a(href="#", class="main-scenes-content")
               .main-scenes-content-name Основная сцена
               .main-scenes-content-link Подробнее о площадке
-          .main-scenes-primary-scene
+          .main-scenes-list-item
             img(src="images/images/main-scene-2.jpg", alt="alt")
             a(href="#", class="main-scenes-content")
               .main-scenes-content-name Новая сцена
               .main-scenes-content-link Подробнее о площадке
-        .main-scenes-secondary
-          .main-scenes-secondary-scene
+          .main-scenes-list-item
             img(src="images/images/main-scene-3.jpg", alt="alt")
             a(href="#", class="main-scenes-content")
-              .main-scenes-content-name Учебный корпус ГИТИС, ауд. 39
+              .main-scenes-content-name
+                p Учебный корпус,
+                p ауд 2 6
               .main-scenes-content-link Подробнее о площадке
-          .main-scenes-secondary-scene
+          .main-scenes-list-item
             img(src="images/images/main-scene-4.jpg", alt="alt")
             a(href="#", class="main-scenes-content")
-              .main-scenes-content-name Учебный корпус ГИТИС, ауд. 42
+              .main-scenes-content-name 
+                p Учебный корпус,
+                p ауд 39
               .main-scenes-content-link Подробнее о площадке
-          .main-scenes-secondary-scene
+          .main-scenes-list-item
             img(src="images/images/main-scene-5.jpg", alt="alt")
             a(href="#", class="main-scenes-content")
-              .main-scenes-content-name Учебный корпус ГИТИС, ауд. 46Б
+              .main-scenes-content-name 
+                p Учебный корпус,
+                p ауд 46 A
               .main-scenes-content-link Подробнее о площадке
-    .page-slider-bottom
-      .container
-        .page-slider-bottom-title Пресс-служба
-        .slider-wrapper
-          .slick-slider.project-slider-bottom.slider-countable
-            .slick-slider-slide.project-slider-bottom-slide          
-              .col-12
-                a(href="#", class="projects-list-item")
-                  .projects-list-item-date
-                    p 25/05
-                    span
-                    p 25/07
-                  .projects-list-item-info
-                    .projects-list-item-img
-                      img(src="images/hd/project-1.jpg", alt="проект-1")
-                    .projects-list-item-title По дорогам фронтовых театров
-            .slick-slider-slide.project-slider-bottom-slide            
-              .col-12
-                a(href="#", class="projects-list-item")
-                  .projects-list-item-date
-                    p 30/10
-                  .projects-list-item-info
-                    .projects-list-item-img
-                      img(src="images/hd/project-2.jpg", alt="проект-2")
-                    .projects-list-item-title Театр ГИТИС и федеральная программа “Большие гастроли”
-            .slick-slider-slide.project-slider-bottom-slide          
-              .col-12
-                a(href="#", class="projects-list-item")
-                  .projects-list-item-date
-                    p 25/05
-                    span
-                    p 25/07
-                  .projects-list-item-info
-                    .projects-list-item-img
-                      img(src="images/hd/project-1.jpg", alt="проект-1")
-                    .projects-list-item-title По дорогам фронтовых театров
-            .slick-slider-slide.project-slider-bottom-slide            
-              .col-12
-                a(href="#", class="projects-list-item")
-                  .projects-list-item-date
-                    p 30/10
-                  .projects-list-item-info
-                    .projects-list-item-img
-                      img(src="images/hd/project-2.jpg", alt="проект-2")
-                    .projects-list-item-title Театр ГИТИС и федеральная программа “Большие гастроли”
-            .slick-slider-slide.project-slider-bottom-slide          
-              .col-12
-                a(href="#", class="projects-list-item")
-                  .projects-list-item-date
-                    p 25/05
-                    span
-                    p 25/07
-                  .projects-list-item-info
-                    .projects-list-item-img
-                      img(src="images/hd/project-1.jpg", alt="проект-1")
-                    .projects-list-item-title По дорогам фронтовых театров
-            .slick-slider-slide.project-slider-bottom-slide
-
+          .main-scenes-list-item
+            img(src="images/images/main-scene-2.jpg", alt="alt")
+            a(href="#", class="main-scenes-content")
+              .main-scenes-content-name 
+                p Учебный корпус,
+                p ауд 46 Б
+              .main-scenes-content-link Подробнее о площадке
+        
+    
   include includes/footer.pug

@@ -4,6 +4,9 @@
 a 
   text-decoration: none
   outline: none
+a:hover 
+  text-decoration: none
+  outline: none
 body 
   font-family: 'Museo Sans 500 Medium', sans-serif
 img 
@@ -18,6 +21,11 @@ form, input, button
   outline: none
 button
   cursor: pointer
+
+.banner
+  width: 100%
+  img 
+    width: 100%  
 
 .logo
   width: 301px
@@ -423,6 +431,11 @@ button
   &-sep, &-total
     font-size: 14px
     color: $red 
+.slider-wrapper-mt, .slider-wrapper-mm
+  .slider-count
+    bottom: -66px
+    &-cur
+      color: $black    
 
 .views 
   display: flex
