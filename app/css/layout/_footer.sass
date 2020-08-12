@@ -2,47 +2,67 @@
   padding: 91px 0 53px
   background: $brown
   &-scene
-    margin-bottom: 40px
-    &-title
-      +norm
-      font-size: 40px
-      line-height: 48px
-      color: $white
-      margin-bottom: 0
-  
-  &-contacts
-    display: flex    
-    border-top: 5px solid $white
-    border-bottom: 1px solid $white
-    padding: 43px 0 100px
+    position: relative
     margin-bottom: 92px
-    &-main 
-      flex-basis: 50%
-      &:nth-of-type(2)
-        padding-left: 15px         
-    &-phone a, &-adress, &-time
-      margin-bottom: 10px
-      +norm 
-      font-size: 16px
-      line-height: 26px
-      color: $white
-    &-phone
-      margin-bottom: 10px  
-    &-map     
-      margin-top: 30px
-      &-link
-        position: relative
+    &::after
+      position: absolute
+      content: ''
+      bottom: 0
+      left: 0
+      height: 1px
+      width: calc(100% + 30px)
+      background: $white
+    &.second
+      &::after
+          width: 100%
+    &-title
+      position: relative
+      padding-bottom: 46px
+      p 
         +norm
+        font-size: 40px
+        line-height: 48px
+        color: $white
+        margin-bottom: 0
+      &::after
+        position: absolute
+        content: ''
+        bottom: 0
+        left: 0
+        height: 5px
+        width: calc(100% + 30px)
+        background: $white
+      &.second
+        &::after
+          width: 100%          
+    &-contacts
+      min-height: 300px
+      padding: 43px 0 0         
+      &-phone a, &-adress, &-time
+        margin-bottom: 10px
+        +norm 
         font-size: 16px
-        font-weight: 300
-        color: $red
-        padding-left: 28px
-        &::before
-          position: absolute
-          top: 0
-          left: 0
-          content: url(../images/images/point.svg)
+        line-height: 26px
+        color: $white
+      &-phone
+        margin-bottom: 10px  
+      &-map     
+        margin-top: 30px
+        &-link
+          position: relative
+          +norm
+          font-size: 16px
+          font-weight: 300
+          color: $red
+          padding-left: 28px
+          &::before
+            position: absolute
+            top: 0
+            left: 0
+            content: url(../images/images/point.svg)
   &-social
+    display: flex
+    justify-content: flex-end
     &-text
       +norm
       font-size: 16px
@@ -50,12 +70,13 @@
       line-height: 20px
       color: $white
       text-align: right
-      transform: translate(8px, -8px)
+      padding-top: 130px
     &-icons
+      padding-top: 29px
       display: flex
       height: 235px
       flex-direction: column
-      transform: translateY(-48%)
+      margin-left: 30px
     &-link
       display: flex
       align-items: center
@@ -71,7 +92,13 @@
       color: $white
       max-width: 320px
       margin-bottom: 10px
+    .footer-menu-link-study
+      display: none  
   &-menu
+    display: flex
+    &-block
+      &:first-of-type
+        margin-right: 110px
     &-link       
       margin-bottom: 15px
       a 
@@ -80,8 +107,11 @@
         line-height: 30px
         color: $white
       &-study
-        margin-top: 107px
+        margin-top: 76px
         a
+          +norm
+          font-size: 20px
+          line-height: 30px
           position: relative
           color: $red
           padding-left: 20px
@@ -91,7 +121,10 @@
             left: 0
             top: -4px
   &-logo
-    transform: translate(-19px, -13px)        
+    width: 340px
+    transform: translate(-19px, -13px)
+    img 
+      width: 100%        
   &-tickets
     position: relative
     display: flex
@@ -114,10 +147,141 @@
         line-height: 40px
         color: $red
         margin-bottom: 0 
-    &-svg 
+    &-svg
+      display: none 
       position: absolute
       bottom: -70px
-      right: -75px    
+      right: -75px
+
+@media screen and ( max-width: 1439px )
+  .footer
+    &-logo 
+      width: 288px
+    &-menu
+      &-block
+        &:first-of-type
+          margin-right: 84px
+@media screen and ( max-width: 991px )
+  .footer
+    &-scene
+      padding-bottom: 60px
+      margin-bottom: 0
+      &::after
+        display: none      
+      &-title
+        display: flex
+        p
+          &:first-child
+            margin-right: 10px
+        &::after
+          width: 100%
+      &-contacts
+        min-height: auto                
+    &-social
+      justify-content: flex-start
+      padding-bottom: 44px
+      border-bottom: 1px solid $white
+      margin-bottom: 24px
+      &-text
+        text-align: left
+        padding-top: 20px              
+      &-icons
+        padding-top: 0
+        height: auto
+        flex-direction: row 
+        padding-top: 0              
+    .ordered
+      order: -1
+      .footer-menu-link-study
+        display: none
+    &-copyrights
+      margin-bottom: 50px
+      p 
+        max-width: none
+      .footer-menu-link-study
+        display: block
+        margin-top: 30px
+    &-tickets
+      flex-direction: row
+      align-items: center
+      &-link 
+        margin: 0 0 0 30px
+        padding-right: 0
+    &-logo  
+      transform: translate(0, 0)
+@media screen and ( max-width: 575px )
+  .footer
+    padding: 40px 0 48px
+    &-scene
+      padding-bottom: 40px
+      &.second
+        padding-bottom: 23px
+      &-title
+        padding-bottom: 25px
+        p 
+          font-size: 30px
+          line-height: 40px
+      &-contacts
+        padding-top: 20px
+        &-phone, &-adress, &-time
+          font-weight: 300
+          font-size: 16px
+          line-height: 30px          
+          margin-bottom: 0
+        &-map
+          margin-top: 19px  
+    &-social
+      padding-bottom: 34px
+      margin-bottom: 22px
+      &-text
+        font-weight: 300
+        font-size: 13px
+        line-height: 20px
+        min-width: 45%
+      &-icons
+        padding-top: 10px
+        margin-left: 0  
+      &-link 
+        &:last-child
+          display: none
+    &-menu
+      &-block
+        &:first-of-type
+          margin-right: 70px 
+      &-link
+        margin-bottom: 0
+        a  
+          font-size: 16px
+        &-study
+          margin-top: 16px
+          a 
+            font-size: 16px
+            line-height: 19px            
+    &-copyrights
+      margin-bottom: 30px
+      p 
+        font-size: 10px
+        line-height: 18px
+        font-weight: 300
+      .footer-menu-link-study        
+        margin-top: 16px
+        a 
+          &::before
+            font-size: 20px
+            top: 0  
+    &-logo
+      width: 190px
+      min-width: 190px
+      transform: translateY(8px)
+    &-tickets
+      &-link
+        margin-left: 18px 
+        p 
+          font-size: 20px
+          line-height: 24px
+                                                      
+
+
 
 
     

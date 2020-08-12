@@ -1,42 +1,43 @@
 footer.footer
   .container
     .row
-      .col-4      
+      .col-lg-4.col-12      
         .footer-scene
-          .footer-scene-title Основная
-          .footer-scene-title сцена
-      .col-4  
-        .footer-scene
-          .footer-scene-title Новая
-          .footer-scene-title сцена
-    .row
-      .col-8
-        .footer-contacts
-          .footer-contacts-main
-            .footer-contacts-phone
+          .footer-scene-title 
+            p Основная
+            p сцена
+          .footer-scene-contacts
+            .footer-scene-contacts-phone
               a(href="tel:+74956297087") +7 (495) 629-70-87
-            .footer-contacts-adress Б. Гнездниковский пер., 10
-            .footer-contacts-time Время работы кассы: 18.00-21.00            
-            .footer-contacts-map
-              a(href="#" class="footer-contacts-map-link") Смотреть на карте                
-          .footer-contacts-main
-            .footer-contacts-phone
+            .footer-scene-contacts-adress Б. Гнездниковский пер., 10
+            .footer-scene-contacts-time Время работы кассы: 18.00-21.00            
+            .footer-scene-contacts-map
+              a(href="#" class="footer-scene-contacts-map-link") Смотреть на карте
+      .col-lg-4.col-12  
+        .footer-scene.second
+          .footer-scene-title.second 
+            p Новая
+            p сцена
+          .footer-scene-contacts
+            .footer-scene-contacts-phone
               a(href="tel:+74991437618") +7 (499) 143-76-18
-            .footer-contacts-adress Ул. Академика Пилюгина, 2            
-            .footer-contacts-map
-              a(href="#" class="footer-contacts-map-link") Смотреть на карте
-      .footer-social-text.col-3 Театр ГИТИС в социальных сетях: 
-      .footer-social-icons.col-1
-        a.footer-social-link(href="#")
-          img(src="images/images/vk-w.svg", alt="vk")
-        a.footer-social-link(href="#")
-          img(src="images/images/fb-w.svg", alt="facebook")
-        a.footer-social-link(href="#")
-          img(src="images/images/inst-w.svg", alt="instagram")
-        a.footer-social-link(href="#")
-          img(src="images/images/youtube-w.svg", alt="youtube")
+            .footer-scene-contacts-adress Ул. Академика Пилюгина, 2            
+            .footer-scene-contacts-map
+              a(href="#" class="footer-scene-contacts-map-link") Смотреть на карте          
+      .col-lg-4.col-12
+        .footer-social
+          .footer-social-text Театр ГИТИС в&nbsp;социальных сетях:      
+          .footer-social-icons
+            a.footer-social-link(href="#")
+              img(src="images/images/vk-w.svg", alt="vk")
+            a.footer-social-link(href="#")
+              img(src="images/images/fb-w.svg", alt="facebook")
+            a.footer-social-link(href="#")
+              img(src="images/images/inst-w.svg", alt="instagram")
+            a.footer-social-link(href="#")
+              img(src="images/images/youtube-w.svg", alt="youtube")
     .row
-      .col-4
+      .col-lg-4.col-12
         .footer-copyrights
           p 
             |© 2019 Сайт teatr-gitis.net является основным 
@@ -49,25 +50,27 @@ footer.footer
           p   
             |При оформлении сайта были использованы
             |эскизы Сергея Куцевалова
-      .col-2
-        ul.footer-menu
-          li.footer-menu-link
-            a(href="#") Афиша    
-          li.footer-menu-link
-            a(href="#") Репертуар    
-          li.footer-menu-link
-            a(href="#") Площадки    
-          li.footer-menu-link.footer-menu-link-study
-            a(href="#") Институт ГИТИС    
-      .col-2
+          .footer-menu-link-study
+            a(href="#") Институт ГИТИС  
+      .col-lg-4.col-12.ordered
         .footer-menu
-          li.footer-menu-link
-            a(href="#") Новости    
-          li.footer-menu-link
-            a(href="#") Партнеры    
-          li.footer-menu-link
-            a(href="#") Контакты
-      .col-4
+          ul.footer-menu-block
+            li.footer-menu-link
+              a(href="#") Афиша    
+            li.footer-menu-link
+              a(href="#") Репертуар    
+            li.footer-menu-link
+              a(href="#") Площадки
+          ul.footer-menu-block
+            li.footer-menu-link
+              a(href="#") Новости    
+            li.footer-menu-link
+              a(href="#") Партнеры    
+            li.footer-menu-link
+              a(href="#") Контакты
+        .footer-menu-link-study
+          a(href="#") Институт ГИТИС      
+      .col-lg-4.col-12
         .footer-tickets
           a(href="/", class="footer-logo")
             img(src="images/images/logo-footer.png", alt="лого") 
