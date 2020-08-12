@@ -30,6 +30,8 @@ button
 .logo
   width: 301px
   height: 29px
+  img 
+    width: 100%
 
 .page
   &-header  
@@ -65,11 +67,17 @@ button
     color: $white
     max-width: 800px   
   &-content
+    &-bill, &-info
+      margin: 40px 0 45px
+      img 
+        width: 100%
+
     .breadcrumbs
       margin: 21px 0 46px
       &-link  
         color: $black 
     h1
+      max-width: 946px
       +bold
       font-size: 60px
       line-height: 65px
@@ -78,28 +86,28 @@ button
       transform: translateX(-5px)
       margin-bottom: 40px
     &-info
-      &-date
-        +lack
-        font-size: 60px
-        line-height: 35px
-        color: $black
-        margin-bottom: 15px
-      &-time 
-        +lack
-        font-size: 18px
-        line-height: 20px
-        color: $black
-        margin-bottom: 35px       
-      &-social
-        display: flex
-        align-items: center
-        &-text 
-          +norm
-          font-size: 13px
-          line-height: 30px
-          font-weight: 300
-          color: $black
-          margin-bottom: 7px
+      // &-date
+      //   +lack
+      //   font-size: 60px
+      //   line-height: 35px
+      //   color: $black
+      //   margin-bottom: 15px
+      // &-time 
+      //   +lack
+      //   font-size: 18px
+      //   line-height: 20px
+      //   color: $black
+      //   margin-bottom: 35px       
+      // &-social
+      //   display: flex
+      //   align-items: center
+      //   &-text 
+      //     +norm
+      //     font-size: 13px
+      //     line-height: 30px
+      //     font-weight: 300
+      //     color: $black
+      //     margin-bottom: 7px
         // .ya-share2__badge
         //   background: transparent    
         // a 
@@ -290,7 +298,7 @@ button
       &.top
         margin-top: 0
         border-top: none
-        border-bottom: 1px solid $black
+        // border-bottom: 1px solid $black
         padding: 30px 0
   &-ellipse
     display: flex
@@ -549,3 +557,12 @@ button
     justify-content: flex-end
     &-no 
       margin-left: 30px
+
+@media screen and ( max-width: 1199px )
+  .logo
+    width: 230px
+    height: 22px     
+@media screen and ( max-width: 575px )
+  .logo
+    width: 137px
+    height: 13px     

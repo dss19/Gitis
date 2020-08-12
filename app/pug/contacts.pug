@@ -20,42 +20,70 @@ body
         img(src="images/images/rounds.svg", alt="круги")
 
     .contacts
-      .container
-        .row  
-          .col-6
-            .contacts-item.contacts-item-left
-              .contacts-title
-                p Основная 
-                p сцена 
-              .contacts-phone
-                a(href="tel:+74956297087") +7 (495) 629-70-87
-              .contacts-adress Б. Гнездниковский пер., 10
+      .container        
+        .contacts-item
+          .contacts-title Основная сцена 
+          .row
+            .col-4              
+              .contacts-adress Москва, Б. Гнездниковский пер., д. 10
               .contacts-time
-                p Время работы кассы:
-                p 18:00-21:00
-              .contacts-email
-                .contacts-email-block
-                  a(href="mailto:teatr@gitis.ne") teatr@gitis.ne
-                .contacts-email-block
-                  a(href="mailto:gitistheatre@gmail.com") gitistheatre@gmail.com
-              #map.contacts-map
-              .contacts-img
-                img(src="images/hd/gitis-main-scene.jpg", alt="Основная сцена")
-          .col-6
-            .contacts-item.contacts-item-right
-              .contacts-title
-                p Новая 
-                p сцена 
+                p Время работы кассы 1: 18:00-21:00
+                p Время работы кассы 1: 18:00-21:00
+            .col-4
               .contacts-phone
-                a(href="tel:+74991347618") +7 (499) 134-76-18
-              .contacts-adress Ул. Академика Пилюгина, 2
+                .contacts-phone-block
+                  a(href="tel:+74956297087") +7 (495) 629-70-87    
+                .contacts-phone-block
+                  a(href="tel:+74956297087") +7 (495) 629-70-87    
               .contacts-email
                 .contacts-email-block
                   a(href="mailto:teatr@gitis.ne") teatr@gitis.ne
                 .contacts-email-block
                   a(href="mailto:gitistheatre@gmail.com") gitistheatre@gmail.com
-              #map-2.contacts-map
-              .contacts-img
-                img(src="images/hd/gitis-new-scene.jpg", alt="Новая сцена")
+          #map.contacts-map
+            img(src="images/hd/map.jpg", alt="alt")
+          .contacts-foto
+            .contacts-img
+              img(src="images/hd/gitis-main-scene.jpg", alt="Основная сцена")
+        .contacts-item
+          .contacts-title Новая сцена 
+          .row
+            .col-4              
+              .contacts-adress Москва, ул. Академика Пилюгина, 2
+              .contacts-time
+                p Время работы кассы 1: 18:00-21:00
+            .col-4
+              .contacts-phone
+                .contacts-phone-block
+                  a(href="tel:+74956297087") +7 (495) 629-70-87   
+              .contacts-email
+                .contacts-email-block
+                  a(href="mailto:gitistheatre@gmail.com") gitistheatre@gmail.com
+          #map.contacts-map
+            img(src="images/hd/map.jpg", alt="alt")
+          .contacts-foto
+            .contacts-img
+              img(src="images/hd/gitis-new-scene.jpg", alt="Основная сцена")
+        .contacts-item
+          .contacts-title Учебный корпус 
+          .row
+            .col-4              
+              .contacts-adress Москва, Малый Кисловский пер., 10
+              .contacts-time
+                p Время работы кассы 1: 18:00-21:00
+            .col-4
+              .contacts-phone
+                .contacts-phone-block    
+                .contacts-phone-block
+                  a(href="tel:+74956297087") +7 (495) 629-70-87    
+              .contacts-email
+                .contacts-email-block
+                  a(href="mailto:gitistheatre@gmail.com") gitistheatre@gmail.com
+          #map.contacts-map
+            img(src="images/hd/map.jpg", alt="alt")
+          .contacts-foto
+            .contacts-img
+              img(src="images/hd/gitis-new-scene2.jpg", alt="Основная сцена")
+          
 
   include includes/footer.pug

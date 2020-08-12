@@ -1,28 +1,21 @@
 .contacts
-  padding: 40px 0 107px
+  padding: 80px 0 107px
   &-item
     position: relative
-    height: 730px
-    &-right
-      padding-left: 30px
-    &-left
-      padding-right: 25px 
-      .contacts-img 
-        right: 25px 
+    margin-bottom: 90px 
   &-title
     padding-top: 4px
-    margin-bottom: 25px
-    p 
-      +bold
-      font-weight: 500
-      font-size: 50px
-      line-height: 55px
-      color: $black
-      margin-bottom: 0
+    margin-bottom: 25px 
+    +bold
+    font-weight: 500
+    font-size: 50px
+    line-height: 55px
+    color: $black
+    margin-bottom: 40px
   &-phone
     position: relative
     padding-left: 49px
-    margin-bottom: 10px
+    margin-bottom: 20px
     a 
       +norm
       font-size: 16px
@@ -40,7 +33,7 @@
     font-size: 16px
     line-height: 26px
     color: $black
-    margin-bottom: 10px
+    margin-bottom: 20px
     &::before
       position: absolute
       top: 1px
@@ -64,7 +57,7 @@
   &-email
     position: relative
     padding-left: 49px
-    margin-bottom: 10px    
+    margin-bottom: 30px    
     &-block
       a 
         +norm
@@ -76,24 +69,29 @@
       top: 6px
       left: 0
       content: url(../images/images/mail.svg) 
-  &-img
+  &-foto
     position: absolute
-    top: 46px
+    top: 0
     right: 0
-    width: 317px
+    width: 393px
     border-bottom: 30px solid $white 
-    border-left: 32px solid $white 
+    border-left: 30px solid $white 
     z-index: 2
+  &-img
+    position: relative
+    &::after
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      content: ''
+      background: $grad
     img 
       width: 100%  
   &-map
-    position: absolute
-    left: 0
-    bottom: 0
-    width: 580px
-    height: 350px
-    background: $red 
+    width: 100%
+    height: 400px  
     z-index: 1
-  &-map#map-2
-    left: 25px 
+  
            

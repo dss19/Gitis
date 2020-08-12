@@ -1,7 +1,9 @@
+include banner.pug
+
 header.header
   .header-info
     .container
-      .row.align-items-center.m-0
+      .header-info-content
         .logo
           a(href="/")
             img(src="images/images/logo.png", alt="лого")
@@ -24,7 +26,7 @@ header.header
         .header-study
           a(href="#")
             .header-study-text институт
-            .header-study-text гитис
+            .header-study-text гитис            
   .header-menu
     .container      
       ul.header-menu-list
@@ -60,6 +62,17 @@ header.header
           img(src="images/images/inst.svg", alt="инстаграм")
         a(href="#", class="header-aside-item header-aside-social-link")
           img(src="images/images/youtube.svg", alt="youtube")
+  .header-mobile
+    .header-mobile-humb
+      span
+    .header-mobile-ticket  
+      .header-mobile-ticket-img
+        img(src="images/images/ticket-w.svg", alt="alt")
+      .header-mobile-ticket-text
+        p купить билет          
+      .header-mobile-ticket-text-sm
+        p купить
+        p билет          
         
           
      

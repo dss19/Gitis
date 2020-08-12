@@ -5,7 +5,7 @@ include includes/head.pug
 
 body
 
-  include includes/banner.pug
+  
   include includes/header.pug
 
   main
@@ -321,45 +321,52 @@ body
       .main-scenes
         .main-scenes-cover
           img(src="images/hd/main-theatre.jpg", alt="театр")
-        .main-scenes-list
-          .main-scenes-list-item
-            img(src="images/images/main-scene-1.jpg", alt="alt")
-            a(href="#", class="main-scenes-content")
-              .main-scenes-content-name Основная сцена
-              .main-scenes-content-link Подробнее о площадке
-          .main-scenes-list-item
-            img(src="images/images/main-scene-2.jpg", alt="alt")
-            a(href="#", class="main-scenes-content")
-              .main-scenes-content-name Новая сцена
-              .main-scenes-content-link Подробнее о площадке
-          .main-scenes-list-item
-            img(src="images/images/main-scene-3.jpg", alt="alt")
-            a(href="#", class="main-scenes-content")
-              .main-scenes-content-name
-                p Учебный корпус,
-                p ауд 2 6
-              .main-scenes-content-link Подробнее о площадке
-          .main-scenes-list-item
-            img(src="images/images/main-scene-4.jpg", alt="alt")
-            a(href="#", class="main-scenes-content")
-              .main-scenes-content-name 
-                p Учебный корпус,
-                p ауд 39
-              .main-scenes-content-link Подробнее о площадке
-          .main-scenes-list-item
-            img(src="images/images/main-scene-5.jpg", alt="alt")
-            a(href="#", class="main-scenes-content")
-              .main-scenes-content-name 
-                p Учебный корпус,
-                p ауд 46 A
-              .main-scenes-content-link Подробнее о площадке
-          .main-scenes-list-item
-            img(src="images/images/main-scene-2.jpg", alt="alt")
-            a(href="#", class="main-scenes-content")
-              .main-scenes-content-name 
-                p Учебный корпус,
-                p ауд 46 Б
-              .main-scenes-content-link Подробнее о площадке
+      .container
+        .row.main-scenes-list
+          .col-6
+            .main-scenes-list-item
+              img(src="images/images/main-scene-1.jpg", alt="alt")
+              a(href="#", class="main-scenes-content")
+                .main-scenes-content-name Основная сцена
+                .main-scenes-content-link Подробнее о площадке
+          .col-6 
+            .main-scenes-list-item
+              img(src="images/images/main-scene-2.jpg", alt="alt")
+              a(href="#", class="main-scenes-content")
+                .main-scenes-content-name Новая сцена
+                .main-scenes-content-link Подробнее о площадке
+          .col-6 
+            .main-scenes-list-item
+              img(src="images/images/main-scene-3.jpg", alt="alt")
+              a(href="#", class="main-scenes-content")
+                .main-scenes-content-name
+                  p Учебный корпус,
+                  p ауд 2 6
+                .main-scenes-content-link Подробнее о площадке
+          .col-6 
+            .main-scenes-list-item
+              img(src="images/images/main-scene-4.jpg", alt="alt")
+              a(href="#", class="main-scenes-content")
+                .main-scenes-content-name 
+                  p Учебный корпус,
+                  p ауд 39
+                .main-scenes-content-link Подробнее о площадке
+          .col-6 
+            .main-scenes-list-item
+              img(src="images/images/main-scene-5.jpg", alt="alt")
+              a(href="#", class="main-scenes-content")
+                .main-scenes-content-name 
+                  p Учебный корпус,
+                  p ауд 46 A
+                .main-scenes-content-link Подробнее о площадке
+          .col-6 
+            .main-scenes-list-item
+              img(src="images/images/main-scene-2.jpg", alt="alt")
+              a(href="#", class="main-scenes-content")
+                .main-scenes-content-name 
+                  p Учебный корпус,
+                  p ауд 46 Б
+                .main-scenes-content-link Подробнее о площадке
         
     
   include includes/footer.pug
