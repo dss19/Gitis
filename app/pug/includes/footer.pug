@@ -3,39 +3,34 @@ footer.footer
     .row
       .col-lg-4.col-12      
         .footer-scene
-          .footer-scene-title 
-            p Основная
-            p сцена
+          .footer-scene-title Основная <br>сцена
           .footer-scene-contacts
             .footer-scene-contacts-phone
               a(href="tel:+74956297087") +7 (495) 629-70-87
-            .footer-scene-contacts-adress Б. Гнездниковский пер., 10
+            .footer-scene-contacts-adress Москва, Б. Гнездниковский пер., 10
             .footer-scene-contacts-time Время работы кассы: 18.00-21.00            
             .footer-scene-contacts-map
               a(href="#" class="footer-scene-contacts-map-link") Смотреть на карте
       .col-lg-4.col-12  
         .footer-scene.second
-          .footer-scene-title.second 
-            p Новая
-            p сцена
+          .footer-scene-title Новая <br>сцена
           .footer-scene-contacts
             .footer-scene-contacts-phone
               a(href="tel:+74991437618") +7 (499) 143-76-18
-            .footer-scene-contacts-adress Ул. Академика Пилюгина, 2            
+            .footer-scene-contacts-adress Москва, ул. Академика Пилюгина, 2
+            .footer-scene-contacts-time Время работы кассы: 18.00-21.00            
             .footer-scene-contacts-map
               a(href="#" class="footer-scene-contacts-map-link") Смотреть на карте          
-      .col-lg-4.col-12
-        .footer-social
-          .footer-social-text Театр ГИТИС в&nbsp;социальных сетях:      
-          .footer-social-icons
-            a.footer-social-link(href="#")
-              img(src="images/images/vk-w.svg", alt="vk")
-            a.footer-social-link(href="#")
-              img(src="images/images/fb-w.svg", alt="facebook")
-            a.footer-social-link(href="#")
-              img(src="images/images/inst-w.svg", alt="instagram")
-            a.footer-social-link(href="#")
-              img(src="images/images/youtube-w.svg", alt="youtube")
+      .col-lg-4.col-12  
+        .footer-scene.last
+          .footer-scene-title Главный <br>учебный корпус
+          .footer-scene-contacts
+            .footer-scene-contacts-phone
+              a(href="tel:+74991437618") +7 (499) 143-76-18
+            .footer-scene-contacts-adress Москва, Малый Кисловодский пер., 6
+            .footer-scene-contacts-time Время работы кассы: 18.00-21.00            
+            .footer-scene-contacts-map
+              a(href="#" class="footer-scene-contacts-map-link") Смотреть на карте     
     .row
       .col-lg-4.col-12
         .footer-copyrights
@@ -65,21 +60,33 @@ footer.footer
             li.footer-menu-link
               a(href="#") Новости    
             li.footer-menu-link
-              a(href="#") Партнеры    
+              a(href="#") Партнёры    
             li.footer-menu-link
               a(href="#") Контакты
+        .footer-social
+          .footer-social-text Театр ГИТИС в социальных сетях:      
+          .footer-social-icons
+            a.footer-social-link(href="#")
+              img(src="images/images/fb-w.svg", alt="facebook")
+            a.footer-social-link(href="#")
+              img(src="images/images/vk-w.svg", alt="vk")          
+            a.footer-social-link(href="#")
+              img(src="images/images/inst-w.svg", alt="instagram")
+            a.footer-social-link(href="#")
+              img(src="images/images/youtube-w.svg", alt="youtube")
         .footer-menu-link-study
           a(href="#") Институт ГИТИС      
-      .col-lg-4.col-12
+      .col-lg-4.col-12.footer-block
         .footer-tickets
           a(href="/", class="footer-logo")
             img(src="images/images/logo-footer.png", alt="лого") 
           a(href="#", class="footer-tickets-link")
-            img(src="images/images/ticket-r.svg", alt="билет")
+            .footer-tickets-link-img
+              img(src="images/images/ticket-r.svg", alt="билет")
             p Вернуть            
             p билет
-          .footer-tickets-svg
-            img(src="images/images/footer-svg.svg", alt="узор") 
+        .footer-block-svg
+          img(src="images/images/footer-svg.svg", alt="узор") 
 
 script(src="scripts/jquery-3.3.1.min.js")
 script(src="scripts/slick.min.js")

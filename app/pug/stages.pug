@@ -8,18 +8,18 @@ body
   include includes/header.pug
 
   main
-    .page-header.stages-header
+    .page-header
       .page-header-grad
         .container
-          ul.breadcrumbs
-            li
-              a(href="/", class="breadcrumbs-link") Главная 
-            li
-              a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") Площадки
-          h1.page-title Площадки
-          .page-subtitle Вы ищете площадку для интересного мероприятия? Театр ГИТИС готов вам помочь, это текст подводка
-      .page-header-icon
-        img(src="images/images/rounds.svg", alt="круги")
+          .page-header-content
+            ul.breadcrumbs
+              li
+                a(href="/", class="breadcrumbs-link") Главная 
+              li
+                a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") Площадки
+            h1.page-title Площадки
+            .page-header-icon
+              img(src="images/images/rounds.svg", alt="круги")
 
     .stages
       .container 
@@ -42,33 +42,25 @@ body
             .main-scenes-list-item
               img(src="images/images/main-scene-3.jpg", alt="alt")
               a(href="#", class="main-scenes-content")
-                .main-scenes-content-name
-                  p Учебный корпус,
-                  p ауд 26
+                .main-scenes-content-name Главный учебный корпус, ауд 26
                 .main-scenes-content-link Подробнее о площадке
           .col-6 
             .main-scenes-list-item
               img(src="images/images/main-scene-4.jpg", alt="alt")
               a(href="#", class="main-scenes-content")
-                .main-scenes-content-name 
-                  p Учебный корпус,
-                  p ауд 39
+                .main-scenes-content-name Главный учебный корпус, ауд 39
                 .main-scenes-content-link Подробнее о площадке
           .col-6 
             .main-scenes-list-item
               img(src="images/images/main-scene-5.jpg", alt="alt")
               a(href="#", class="main-scenes-content")
-                .main-scenes-content-name 
-                  p Учебный корпус,
-                  p ауд 46а
+                .main-scenes-content-name  Главный учебный корпус, ауд 46 A
                 .main-scenes-content-link Подробнее о площадке
           .col-6 
             .main-scenes-list-item
               img(src="images/images/main-scene-2.jpg", alt="alt")
               a(href="#", class="main-scenes-content")
-                .main-scenes-content-name 
-                  p Учебный корпус,
-                  p ауд 46б
+                .main-scenes-content-name Главный учебный корпус, ауд 46 Б
                 .main-scenes-content-link Подробнее о площадке           
 
 
