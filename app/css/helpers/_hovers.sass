@@ -29,11 +29,26 @@
         width: 317px
     .main-repertoire-item-img
       img 
-        transform: scale(1)             
+        transform: scale(1)
+  .main-slider-top
+    .slick-prev:hover:before
+      transform: translateX(0)                   
+    .slick-next:hover:before
+      transform: translateX(0)                   
   .news-item:hover
     &:after
       transform: translateX(0)
     .news-item-date
       color: $red        
 
-  
+  .show-bill-item:hover
+    color: $red
+    .show-bill-item-ticket
+      a 
+        color: $red
+    .show-bill-item-ticket a:before 
+      opacity: 0
+    .show-bill-item-ticket a:after 
+      opacity: 1
+  .show-bill-item.cancel:hover
+    color: $black    

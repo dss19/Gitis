@@ -1,5 +1,33 @@
 .news  
-  padding: 50px 0 
+  padding: 36px 0 50px
+  &-filter    
+    &-list
+      display: flex
+      align-items: center
+      padding-bottom: 30px
+      border-bottom: 1px solid #000
+    &-item
+      +norm
+      font-weight: 500
+      font-size: 27px
+      line-height: 35px 
+      color: $white
+      -webkit-text-stroke: 1px $black
+      text-transform: uppercase
+      margin-right: 50px
+      cursor: pointer
+      &.active
+        -webkit-text-stroke: 1px $red
+        position: relative
+        color: $red
+        &::after
+          position: absolute
+          bottom: 0
+          left: 0
+          content: ''
+          width: 100%
+          border-bottom: 1px solid $red
+
   &-item
     position: relative
     display: block
@@ -30,8 +58,8 @@
       +lack
       color: $black
       transition: 0.3s
-      padding: 0 13px 0 10px 
-      transform: translateY(-10px)
+      padding: 0 13px 0 0 
+      transform: translateY(-8px)
       &-day
         font-size: 30px
         line-height: 35px

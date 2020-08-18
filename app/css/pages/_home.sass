@@ -9,12 +9,13 @@
       padding: 50px 0 0
       margin-bottom: 75px
       .slick-arrow
+        overflow-x: hidden
         position: absolute
         font-size: 0
         line-height: 0
         width: 100%
         max-width: 533px
-        height: 25px 
+        height: 30px 
         background: transparent
         border: none
         outline: none
@@ -28,7 +29,9 @@
           position: absolute
           content: url(../images/images/next-red.svg) 
           top: 0
-          right: 0   
+          right: 0
+          transform: translateX(-350px)
+          transition: 0.3s   
       .slick-prev
         bottom: -62px
         left: 0
@@ -37,6 +40,8 @@
           content: url(../images/images/prev-red.svg) 
           top: 0
           left: 0
+          transform: translateX(350px)
+          transition: 0.3s
       .slider-count
         bottom: -62px
         &-cur
@@ -345,8 +350,16 @@
           transition: 3s
       &-info
         display: flex
+      &-aside
+        max-width: 76px
+        text-align: right
+        color: $black
+        font-size: 13px
+        line-height: 15px
+        +norm
+        margin-bottom: 6px
+        margin-right: 30px  
       &-age
-        min-width: 76px
         color: $grey2
         +lack 
         font-size: 20px

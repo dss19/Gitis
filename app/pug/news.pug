@@ -11,17 +11,24 @@ body
     .page-header
       .page-header-grad
         .container
-          ul.breadcrumbs
-            li
-              a(href="/", class="breadcrumbs-link") Главная 
-            li
-              a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") Новости
-          h1.page-title Новости
-      .page-header-icon
-        img(src="images/images/rounds.svg", alt="круги")
+          .page-header-content
+            ul.breadcrumbs
+              li
+                a(href="/", class="breadcrumbs-link") Главная 
+              li
+                a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") Пресс-центр
+            h1.page-title Пресс-центр
+            .page-header-icon
+              img(src="images/images/rounds.svg", alt="круги")
 
     .news
-      .container
+      .container        
+        .news-filter
+          .news-filter-list          
+            .news-filter-item.active все
+            .news-filter-item новости
+            .news-filter-item гастроли
+            .news-filter-item сми о нас
         a.news-item.news-item-secondary(href="#")
           .row
             .col-4.d-flex          
