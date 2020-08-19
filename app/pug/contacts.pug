@@ -15,8 +15,8 @@ body
               li
                 a(href="/", class="breadcrumbs-link") Главная 
               li
-                a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") Проекты
-            h1.page-title Проекты
+                a(href="/gitis", class="breadcrumbs-link breadcrumbs-link-disable") Контакты
+            h1.page-title Контакты
             .page-header-icon
               img(src="images/images/rounds.svg", alt="круги")
 
@@ -25,12 +25,12 @@ body
         .contacts-item
           .contacts-title Основная сцена 
           .row
-            .col-4              
+            .col-lg-4.col-md-8.col-12              
               .contacts-adress Москва, Б. Гнездниковский пер., д. 10
               .contacts-time
                 p Время работы кассы 1: 18:00-21:00
-                p Время работы кассы 1: 18:00-21:00
-            .col-4
+                p Время работы кассы 2: 18:00-21:00
+            .col-lg-4.col-md-8.col-12
               .contacts-phone
                 .contacts-phone-block
                   a(href="tel:+74956297087") +7 (495) 629-70-87    
@@ -41,38 +41,36 @@ body
                   a(href="mailto:teatr@gitis.ne") teatr@gitis.ne
                 .contacts-email-block
                   a(href="mailto:gitistheatre@gmail.com") gitistheatre@gmail.com
-          #map.contacts-map
-            img(src="images/hd/map.jpg", alt="alt")
-          .contacts-foto
-            .contacts-img
-              img(src="images/hd/gitis-main-scene.jpg", alt="Основная сцена")
+            .contacts-foto
+              .contacts-img(style="background: url(images/hd/gitis-main-scene.jpg) no-repeat center top/cover")      
+          #map.contacts-map(style="background: url(images/hd/map.jpg) no-repeat center center/cover")
+          
         .contacts-item
           .contacts-title Новая сцена 
           .row
-            .col-4              
+            .col-lg-4.col-md-8.col-12              
               .contacts-adress Москва, ул. Академика Пилюгина, 2
               .contacts-time
                 p Время работы кассы 1: 18:00-21:00
-            .col-4
+            .col-lg-4.col-md-8.col-12
               .contacts-phone
                 .contacts-phone-block
                   a(href="tel:+74956297087") +7 (495) 629-70-87   
               .contacts-email
                 .contacts-email-block
                   a(href="mailto:gitistheatre@gmail.com") gitistheatre@gmail.com
-          #map.contacts-map
-            img(src="images/hd/map.jpg", alt="alt")
-          .contacts-foto
-            .contacts-img
-              img(src="images/hd/gitis-new-scene.jpg", alt="Основная сцена")
+            .contacts-foto
+              .contacts-img(style="background: url(images/hd/gitis-new-scene.jpg) no-repeat center top/cover")      
+          #map.contacts-map(style="background: url(images/hd/map.jpg) no-repeat center center/cover")
+          
         .contacts-item
           .contacts-title Главный учебный корпус 
           .row
-            .col-4              
+            .col-lg-4.col-md-8.col-12              
               .contacts-adress Москва, Малый Кисловский пер., 10
               .contacts-time
                 p Время работы кассы 1: 18:00-21:00
-            .col-4
+            .col-lg-4.col-md-8.col-12
               .contacts-phone
                 .contacts-phone-block    
                 .contacts-phone-block
@@ -80,11 +78,10 @@ body
               .contacts-email
                 .contacts-email-block
                   a(href="mailto:gitistheatre@gmail.com") gitistheatre@gmail.com
-          #map.contacts-map
-            img(src="images/hd/map.jpg", alt="alt")
-          .contacts-foto
-            .contacts-img
-              img(src="images/hd/gitis-new-scene2.jpg", alt="Основная сцена")
+            .contacts-foto
+              .contacts-img(style="background: url(images/hd/gitis-new-scene2.jpg) no-repeat center top/cover")      
+          #map.contacts-map(style="background: url(images/hd/map.jpg) no-repeat center center/cover")
+          
           
 
   include includes/footer.pug
