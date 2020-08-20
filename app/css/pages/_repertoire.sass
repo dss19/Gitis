@@ -8,18 +8,19 @@
       +norm
       font-weight: 500
       font-size: 27px
-      line-height: 35px
+      line-height: 35px 
+      color: $white
+      -webkit-text-stroke: 1px $black
       text-transform: uppercase
-      color: $black
-      transition: 0.3s
       margin-right: 46px
       cursor: pointer
       &:last-of-type
         margin-right: 0
-    &-item.active
-      position: relative
-      color: $red
-      border-bottom: 1px solid $red
+      &.active
+        -webkit-text-stroke: 1px $red
+        position: relative
+        color: $red
+        border-bottom: 1px solid $red
   &-list
     &-item
       padding: 50px 0
