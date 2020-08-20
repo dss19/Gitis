@@ -19,11 +19,25 @@
       font-size: 30px
       line-height: 40px
       color: $black   
-      margin-bottom: 12px
+      margin-bottom: 4px
     &-about 
       +norm 
       font-size: 14px
       line-height: 24px
       font-weight: 300
       color: $black
-
+@media screen and ( max-width: 767px )
+  .partners
+    &-list
+      padding: 0
+    &-item
+      margin-bottom: 50px   
+@media screen and ( max-width: 539px )        
+  .partners
+    &-item
+      &-name 
+        font-size: 20px
+        line-height: 30px 
+      &-about 
+        font-size: 13px
+        line-height: 22px 
