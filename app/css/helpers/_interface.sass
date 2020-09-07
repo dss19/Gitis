@@ -270,6 +270,10 @@ button
       margin-bottom: 30px
       &-img
         margin-right: 81px
+        max-width: 100px 
+        min-width: 100px 
+        img 
+          width: 100%
       &-text
         padding-top: 5px 
         +norm
@@ -296,7 +300,8 @@ button
         font-weight: 300
         color: $black 
       &-foto
-        width: 100px
+        min-width: 100px
+        max-width: 100px
         height: 100px
         margin-left: 30px
         img 
@@ -357,6 +362,7 @@ button
         line-height: 32px
         color: $black        
     &-gallery
+      padding-top: 100px
       margin-bottom: 118px
       h3
         +norm
@@ -365,7 +371,7 @@ button
         font-weight: 500
         margin-bottom: 38px
         color: $black
-      .col-6
+      .col-sm-6
         &:nth-of-type(even)
           transform: translateY(50px)  
       &-item
@@ -390,7 +396,7 @@ button
         margin-bottom: 38px
         color: $black        
     &-extra
-      margin-bottom: 30px
+      margin: 50px 0 30px
       h4
         +norm
         font-size: 40px
@@ -413,10 +419,15 @@ button
             width: 6px
             height: 6px
             border-radius: 50%
-            background: $red
+            background: $red    
         p
           span 
-            +bold      
+            +bold
+      &-text.extra-actors
+        p 
+          padding-left: 0
+          &::before
+            display: none      
     &-social
       display: flex
       justify-content: space-between
@@ -487,21 +498,23 @@ button
     right: 0
     &::before
       position: absolute
-      content: url(../images/images/next-small.svg) 
-      top: 62px
-      right: 43px   
+      content: url(../images/images/next-small.svg)      
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)  
   .slick-prev
     bottom: 0
     right: 150px
     &::before
       position: absolute
       content: url(../images/images/prev-small.svg) 
-      top: 62px
-      left: 43px 
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%) 
 
 .page-slider-bottom
-  padding: 100px 0 150px
-  background: #181818  
+  background: #181818 
+  padding: 100px 0 150px  
   &-title
     +norm
     font-size: 60px
@@ -509,7 +522,6 @@ button
     font-weight: 500
     color: $white
     margin-bottom: 60px
-
 .project-slider-bottom, .news-img-slider-bottom
   .projects-list-item-date
     p 
@@ -517,37 +529,37 @@ button
   .projects-list-item-title
     color: $white
     &::after
-      background: $white        
+      background: $white 
   .slick-arrow
     position: absolute
     font-size: 0
     line-height: 0
-    width: 100%
-    max-width: 533px
-    height: 25px 
-    background: #181818
+    width: 100px
+    height: 100px
+    background: $red 
     border: none
     outline: none
     z-index: 20
     &:focus
       outline: none 
   .slick-next  
-    bottom: -50px
-    right: 0
+    top: -225px
+    right: 15px
     &::before
       position: absolute
-      content: url(../images/images/next.svg) 
-      top: 0
-      right: 0   
+      content: url(../images/images/next-small.svg)      
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)  
   .slick-prev
-    bottom: -50px
-    left: 0
+    top: -225px
+    right: 115px
     &::before
       position: absolute
-      content: url(../images/images/prev.svg) 
-      top: 0
-      left: 0
-
+      content: url(../images/images/prev-small.svg) 
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
 .slider-wrapper
   position: relative
 .slider-count
@@ -684,6 +696,35 @@ button
     &-no 
       margin-left: 30px
 
+@media screen and ( max-width: 1439px )
+  .page
+    &-content
+      &-bill
+        &-item
+          &-date
+            &-text
+              height: 52px
+          &-button
+            width: 100%
+      &-media
+        &-movie
+          &-pause
+            width: 100px
+            height: 100px
+            right: 100px      
+          &-full
+            width: 100px
+            height: 100px     
+
+  .project-slider-top, .news-img-slider-top, .stage-slider-top, .show-slider-top
+    .slick-arrow
+      width: 100px
+      height: 100px
+    .slick-prev
+      right: 100px
+      &::before            
+
+
 @media screen and ( max-width: 1199px )
   .logo
     width: 230px
@@ -691,6 +732,29 @@ button
   .page
     &-title
       font-size: 50px
+
+@media screen and ( max-width: 1023px )
+  .page-slider-top
+    .container
+      padding: 0
+@media screen and ( max-width: 991px )
+  .page
+    &-content
+      h1 
+        font-size: 50px
+        line-height: 55px
+      &-media
+        &-desc
+          min-height: 50px
+          margin-bottom: 30px
+      &-info-social-links
+        margin-bottom: 40px    
+    &-slider-bottom
+      &-title
+        font-size: 50px
+        line-height: 55px
+      .slick-prev, .slick-next
+        top: -215px                
 
 @media screen and ( max-width: 767px )
   .page    
@@ -717,9 +781,211 @@ button
       font-size: 40px
       line-height: 50px
     &-ellipse
-      padding: 34px 0 50px  
+      padding: 34px 0 50px
+    &-content
+      padding-top: 30px
+      .breadcrumbs
+        display: none
+      &-bill
+        &-item
+          margin-bottom: 30px
+          &:last-of-type
+            margin-bottom: 0
+          &-button 
+            max-width: 320px
+      &-media
+        &-movie
+          &-pause, &-full
+            width: 50px
+            height: 50px
+            img 
+              width: 20px
+              height: 20px 
+          &-pause
+            right: 50px
+      &-quote
+        &-img
+          margin-right: 40px                
+
+  .project-slider-bottom, .news-img-slider-bottom
+    .slick-dots
+      position: absolute
+      bottom: -70px
+      width: 100%
+      display: flex
+      justify-content: center
+      margin-bottom: 0
+      li
+        margin: 0 10px
+        button 
+          font-size: 0
+          width: 10px
+          height: 10px
+          background: transparent
+          border-radius: 50%
+          border: 2px solid $white
+          outline: none
+      li.slick-active
+        button
+          width: 12px
+          height: 12px
+          background: $red
+          border: none    
+  .page-slider-top
+    .slick-next
+      width: 50px
+      height: 50px
+      &::before
+        content: url(../images/images/next-mob.svg)
+    .slick-prev
+      width: 50px
+      height: 50px
+      right: 50px
+      &::before
+        content: url(../images/images/prev-mob.svg)
+
          
 @media screen and ( max-width: 575px )
   .logo
     width: 137px
-    height: 13px     
+    height: 13px
+  .page
+    &-content
+      h1 
+        font-size: 36px
+        line-height: 45px
+        margin-bottom: 30px
+      &-info
+        &-img
+          width: 134px
+          margin-bottom: 30px
+        &-web a
+          font-size: 24px
+          line-height: 30px
+          margin-bottom: 30px
+        &-phone a, &-adress, &-email a
+          font-size: 16px
+          line-height: 26px 
+        &-email
+          margin-bottom: 22px
+        &-social
+          font-size: 16px
+          line-height: 30px           
+      &-bill
+        padding: 25px 0
+        &-item
+          margin-bottom: 26px
+          &-date
+            &-day
+              font-size: 40px
+              margin-bottom: 5px
+            &-text
+              font-size: 16px
+              height: auto
+          &-button a 
+            font-size: 18px
+            line-height: 26px
+          &-info
+            font-size: 12px
+            line-height: 20px
+      &-desc
+        &-title
+          font-size: 20px
+          line-height: 30px
+          margin-bottom: 15px
+        &-bold, p 
+          font-size: 13px
+          line-height: 22px
+      &-quote
+        padding: 22px 0
+        &-img
+          min-width: 35px
+          max-width: 35px
+          margin-right: 14px
+        &-text
+          padding-top: 0
+          font-size: 20px
+          line-height: 30px  
+      &-director
+        margin-bottom: 30px
+        &-name
+          font-size: 16px
+          line-height: 26px
+        &-about
+          font-size: 12px
+          line-height: 18px
+        &-foto
+          max-width: 50px
+          min-width: 50px
+          margin-left: 20px
+      &-about
+        font-size: 13px
+        line-height: 22px
+        margin-bottom: 22px
+      &-media
+        h3 
+          font-size: 30px
+          line-height: 40px
+          margin-bottom: 22px
+        &-movie
+          margin-bottom: 22px
+        &-text
+          font-size: 13px
+          line-height: 22px
+      &-gallery
+        padding-top: 22px
+        margin-bottom: 12px
+        h3 
+          font-size: 30px
+          line-height: 40px
+          margin-bottom: 22px
+        &-item
+          margin-bottom: 10px
+        .col-sm-6
+          &:nth-of-type(even)
+            transform: translateY(0)
+      &-idea
+        h3
+          font-size: 30px
+          line-height: 40px
+          margin-bottom: 22px
+      &-extra
+        margin: 22px 0 6px
+        h4 
+          font-size: 24px
+          line-height: 30px
+          margin-bottom: 22px
+        &-text 
+          p 
+            font-size: 13px
+            line-height: 22px
+      &-social
+        padding: 22px 0 0
+        display: block
+        .page-content-info-social-text
+          font-size: 13px
+          line-height: 30px
+      &-news
+        padding: 0
+        .show-news-title
+          font-size: 30px
+          line-height: 40px
+          margin-bottom: 22px
+        &.show-news
+          padding-bottom: 50px
+    &-slider-bottom
+      padding: 50px 0 70px
+      &-title
+        font-size: 30px
+        line-height: 40px
+        margin-bottom: 60px 
+      .slick-dots
+        bottom: -20px       
+
+  .views
+    span 
+      font-size: 12px
+      line-height: 30px        
+
+
+
