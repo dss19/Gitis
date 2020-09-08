@@ -21,9 +21,14 @@
       display: flex
       margin-right: 45px
       &:last-of-type
-        margin-right: 0
+        margin: 0
       &-img 
         margin-right: 30px
+        svg 
+          width: 100%
+      &-pdf-svg
+        path
+          transition: 0.3s  
       &-desc
         transform: translateY(-5px)
         p 
@@ -33,12 +38,16 @@
           color: $black
           font-weight: 500
           margin-bottom: 0
+          transition: 0.3s
       &-buttons
         display: flex
         margin-top: 14px
       &-button 
         margin-right: 10px
-        opacity: 0
+        cursor: pointer
+        &-svg
+          circle, path
+            transition: 0.3s
   &-desc
     padding: 13px 0 98px 
     border-bottom: 5px solid $black
@@ -54,6 +63,9 @@
       line-height: 32px
       color: $black
       margin-bottom: 40px
+    &-img 
+      img 
+        width: 100%  
   &-parameters
     &-title
       +bold 
@@ -64,8 +76,25 @@
     &-img
       position: relative 
       margin-bottom: 36px
+      border-bottom: 1px solid $black
       &:last-of-type
         margin-bottom: 0
+      img 
+        width: 100%
+      &-button
+        position: absolute
+        right: 0
+        bottom: 0
+        width: 70px
+        height: 70px
+        background: $red
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 22px
+        opacity: 0.7
+        transition: 0.3s
+        cursor: pointer    
   &-equipment                            
     border-bottom: 5px solid $black
     margin-bottom: 100px
@@ -109,7 +138,7 @@
       line-height: 45px
       color: $white
       margin-bottom: 44px
-    .col-6
+    .col-sm-6
       &:nth-of-type(even)
         transform: translateY(50px)
   &-history
@@ -157,6 +186,8 @@
             margin-bottom: 0
         &-slash
           margin: 0 3px
+          img 
+            width: 100%
         &-line 
           width: 76px
           height: 1px
@@ -183,3 +214,157 @@
         line-height: 28px
         color: $red
          
+@media screen and ( max-width: 1439px )
+  .stage
+    &-downloads
+      &-item
+        margin-right: 28px
+    &-history
+      &-item
+        &-date
+          right: -8px
+          &-line
+            width: 40px 
+
+@media screen and ( max-width: 991px )
+  .stage
+    &-downloads
+      display: block
+      &-item
+        margin-bottom: 30px
+    &-parameters
+      &-title
+        font-size: 38px
+        line-height: 50px
+      &-img
+        &-button
+          width: 60px
+          height: 60px
+          padding: 18px
+
+@media screen and ( max-width: 767px )
+  .stage
+    &-downloads
+      display: flex
+      max-width: none
+      margin-bottom: 30px
+      &-item
+        margin-bottom: 0
+    &-desc
+      padding-bottom: 40px
+      margin-bottom: 40px
+    &-equipment
+      margin-bottom: 55px 
+    &-photos
+      padding-bottom: 55px
+    &-history
+      &-title
+        margin-bottom: 55px
+      &-content
+        margin-bottom: 0  
+      &-item
+        &-img 
+          max-width: none
+        &-date
+          right: auto
+          top: auto
+          left: 10%
+          bottom: 0
+          transform: translateY(50%)
+          &-line 
+            display: none
+        &-right
+          margin: 50px 0 
+
+@media screen and ( max-width: 575px )
+  .stage
+    &-name
+      font-size: 40px
+      line-height: 45px
+    .contacts-phone a,
+    .contacts-adress,
+    .contacts-email-block a
+      font-size: 16px
+      line-height: 30px  
+    .contacts-phone,
+    .contacts-adress,
+    .contacts-email
+      margin-bottom: 0
+    &-downloads
+      margin: 22px 0
+      padding: 30px 0 25px
+      &-item
+        display: block
+        width: 50%
+        &-img
+          margin-bottom: 10px
+          width: 50px
+        &-desc
+          p 
+            font-size: 16px
+            line-height: 22px  
+        &-buttons
+          display: none  
+    &-desc
+      padding-top: 0
+      &-title
+        font-size: 20px
+        line-height: 30px
+        margin-bottom: 12px
+      &-text 
+        font-size: 13px
+        line-height: 22px
+    &-parameters
+      &-title
+        font-size: 30px
+        line-height: 40px
+        margin-bottom: 16px
+    &-equipment
+      &-item
+        padding: 22px 0
+        &-title
+          font-size: 20px
+          line-height: 30px
+          margin-bottom: 6px 
+        &-name, &-desc p
+          font-size: 13px
+          line-height: 22px 
+    &-photos
+      padding: 40px 0 88px
+      &-title
+        font-size: 30px
+        line-height: 45px
+        margin-bottom: 16px
+      .col-sm-6
+        &:nth-of-type(even)
+          transform: translateY(0)
+    &-history
+      padding-bottom: 40px
+      &-title
+        font-size: 30px
+        line-height: 45px
+        margin-bottom: 16px
+      &-item
+        margin-bottom: 0
+        &-date
+          &-year
+            p
+              font-size: 40px
+              line-height: 35px
+          &-slash
+            width: 21px
+        &-right
+          margin: 0 0 50px
+          p 
+            font-size: 13px
+            line-height: 22px
+            &:last-of-type
+              margin-bottom: 0
+      &-on-top
+        display: none                        
+
+
+                  
+                 
+
+  
