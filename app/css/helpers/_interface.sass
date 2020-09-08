@@ -72,9 +72,18 @@ button
     color: $white
     max-width: 800px   
   &-content
-    // &-bill, &-info
-    //   margin: 40px 0 0
     &-info
+      &-date
+        +lack
+        font-size: 60px
+        line-height: 65px
+        color: $black
+      &-time 
+        +lack
+        font-size: 18px
+        line-height: 20px
+        color: $black
+        margin-bottom: 35px
       &-img
         width: 180px
         margin-bottom: 50px
@@ -747,7 +756,7 @@ button
         &-desc
           min-height: 50px
           margin-bottom: 30px
-      &-info-social-links
+      &-info-social-links, &-info-social-list
         margin-bottom: 40px    
     &-slider-bottom
       &-title
@@ -856,6 +865,14 @@ button
         line-height: 45px
         margin-bottom: 30px
       &-info
+        &-date
+          font-size: 40px
+          line-height: 35px
+          margin-bottom: 5px
+        &-time
+          font-size: 16px
+          line-height: 20px
+          margin-bottom: 22px  
         &-img
           width: 134px
           margin-bottom: 30px

@@ -80,7 +80,18 @@ $(document).ready(function () {
   $('.news-img-slider-bottom').slick({
     slidesToShow: 2,
     slidesToScroll: 2,
-    rows: 0
+    rows: 0,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
   });
 
   // Верхний слайдер Спектакля
