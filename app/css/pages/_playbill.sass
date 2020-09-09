@@ -5,7 +5,7 @@
   &-day
     padding-top: 6px 
     color: $black
-    &-number
+    &-number, &-letter
       +lack
       font-size: 60px
       line-height: 35px
@@ -127,6 +127,113 @@
       top: 0
       left: -14px    
   .playbill-item-time-age
-    margin-left: 4px      
-          
+    margin-left: 4px 
 
+@media screen and ( max-width: 1439px )
+  .playbill
+    &-day
+      &-number
+        font-size: 50px
+        line-height: 28px
+
+@media screen and ( max-width: 991px )
+  .playbill-day-number 
+    font-size: 38px
+    line-height: 20px
+                
+
+@media screen and ( max-width: 767px )
+  .playbill
+    &-day
+      &-number
+        font-size: 30px
+        line-height: 14px
+      &-name
+        font-size: 14px
+
+    &-item
+      display: block
+      &-img
+        max-width: none
+        margin-bottom: 22px
+      &-ticket
+        &-img
+          margin: 15px 0 0
+  .playbill.abc.noimg, .playbill.date.noimg
+    .playbill-item-time
+      display: flex
+      flex-wrap: wrap
+      margin-right: 0
+      &-info
+        position: relative
+        margin-left: 28px
+        margin-right: 0
+        &:first-child
+          margin-left: 0
+          &::before
+            display: none       
+        &::before
+          position: absolute
+          content: '/'
+          top: 0
+          left: -18px    
+      &-age
+        width: 100%
+        margin-left: 4px
+
+
+@media screen and ( max-width: 575px )
+  .playbill
+    &-date
+      padding: 30px 0  
+    &-day
+      &-letter
+        font-size: 40px
+        line-height: 25px
+      &-number
+        font-size: 20px
+        line-height: 6px
+      &-name
+        font-size: 8px    
+    &-item
+      padding: 0
+      &::before
+        left: -10px
+      &-img
+        margin-bottom: 12px
+      &-time
+        font-size: 12px
+        margin-bottom: 2px
+        &-age 
+          &::before
+            left: 2px
+      &-title
+        font-size: 20px
+        line-height: 26px
+        margin-bottom: 2px
+      &-info, &-scene
+        font-size: 12px
+        line-height: 18px        
+                
+  .playbill.abc.img 
+    .playbill-item-time-info::before
+      left: -12px
+
+  .playbill.abc.noimg, .playbill.date.noimg
+    .playbill-item
+      &::before
+        height: 32px
+      &-time
+        margin-bottom: 0
+        &-info
+          font-size: 16px
+          line-height: 20px
+          margin-left: 16px
+          margin-bottom: 0
+          &::before
+            left: -8px 
+        &-age
+          margin-left: 0
+          margin-bottom: 12px       
+
+  

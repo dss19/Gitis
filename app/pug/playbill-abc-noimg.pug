@@ -60,32 +60,31 @@ body
           .letter.empty я
     .filter
       .container
-        .filter-wrap
-          .row
-            .col-3
-              .filter-abc
-                .filter-abc-date.filter-abc-item.active 01-31
-                .filter-abc-abc.filter-abc-item а-я
-            .col-6
-              .filter-scene
-                .filter-scene-all.filter-scene-item.active все
-                .filter-scene-main.filter-scene-item основная сцена
-                .filter-scene-new.filter-scene-item новая сцена
-            .col-3
-              .filter-img
-                .filter-img-yes.filter-img-item.active
-                  img(src="images/images/filter-img.svg", alt="с фото")
-                .filter-img-no.filter-img-item
-                  img(src="images/images/filter-list.svg", alt="без фото")
-
+        .filter-wrap          
+          .filter-abc
+            .filter-abc-date.filter-abc-item.active 01-31
+            .filter-abc-abc.filter-abc-item а-я        
+          .filter-scene <span>выбрать сцену</span>
+            ul.filter-scene-menu
+              li.filter-scene-menu-link Основная сцена
+              li.filter-scene-menu-link Новая сцена
+              li.filter-scene-menu-link Учебный корпус ГИТИС, ауд. 26
+              li.filter-scene-menu-link Учебный корпус ГИТИС, ауд. 39
+              li.filter-scene-menu-link Учебный корпус ГИТИС, ауд. 46А
+              li.filter-scene-menu-link Учебный корпус ГИТИС, ауд. 46Б
+          .filter-img
+            .filter-img-yes.filter-img-item.active
+              img.svg-inline.filter-img-item-svg(src="images/images/filter-img.svg", alt="с фото")
+            .filter-img-no.filter-img-item
+              img.svg-inline.filter-img-item-svg(src="images/images/filter-list.svg", alt="без фото")
     .playbill.abc.noimg
       .container
         .playbill-date
           .row
-            .col-2
+            .col-sm-2.col-3
               .playbill-day 
-                .playbill-day-number а
-            .col-10
+                .playbill-day-letter а
+            .col-sm-10.col-9
               .playbill-item
                 .playbill-item-time
                   .playbill-item-time-info 18.04
@@ -103,10 +102,10 @@ body
                       img(src="images/images/bill-ticket.svg", alt="купить билет")  
         .playbill-date
           .row
-            .col-2
+            .col-sm-2.col-3
               .playbill-day 
-                .playbill-day-number б
-            .col-10
+                .playbill-day-letter б
+            .col-sm-10.col-9
               .playbill-item
                 .playbill-item-time
                   .playbill-item-time-info 18.04
@@ -146,10 +145,10 @@ body
                   .playbill-item-scene Основная сцена                  
         .playbill-date
           .row
-            .col-2
+            .col-sm-2.col-3
               .playbill-day 
-                .playbill-day-number в
-            .col-10
+                .playbill-day-letter в
+            .col-sm-10.col-9
               .playbill-item
                 .playbill-item-time
                   .playbill-item-time-info 18.04

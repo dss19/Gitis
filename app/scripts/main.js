@@ -115,6 +115,21 @@ $(document).ready(function () {
     rows: 0
   });
 
+  // Фильтры в афише
+  $('.filter-abc-item').click(function () {
+    $('.filter-abc-item').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('.filter-img-item').click(function () {
+    $('.filter-img-item').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  // Выпадающее меню фильтра в Афише
+  $('.filter-scene').click(function () {
+    $('.filter-scene, .filter-scene-menu').toggleClass('active');
+  });
+
   // Карты на странице контактов
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map-1', {
