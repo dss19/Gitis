@@ -119,8 +119,14 @@ function minify() {
 		.pipe(pug({
 			pretty: true
 		}))
-		.pipe(gulp.dest(options.pug.dest));
-}
+		.pipe(gulp.dest(options.pug.dest))
+		.pipe(
+				browsersync.reload({
+					stream: true
+				})
+		)		
+}			
+
 
 /* Images
  * ------ */
@@ -148,7 +154,12 @@ function files() {
 				})
 			)
 		)
-		.pipe(gulp.dest(options.files.dest));
+		.pipe(gulp.dest(options.files.dest))
+		.pipe(
+			browsersync.reload({
+				stream: true
+			})
+		);
 }
 
 /* Fonts

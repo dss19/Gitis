@@ -75,6 +75,19 @@ $(document).ready(function () {
     }
   }
 
+  $('.header-mobile-humb').click(function () {
+    $('.mobile-menu').addClass('active');
+  });
+  $('.mobile-menu-close').click(function () {
+    $('.mobile-menu').removeClass('active');
+  });
+  $('.mobile-menu').click(function (e) {
+    let popup = $('.mobile-menu-wrap');
+    if (!popup.is(e.target)) {
+      $('.mobile-menu').removeClass('active');
+    }
+  });
+
   // Верхний слайдер на Главной
   $('.main-slider-top').slick({
     slidesToShow: 1,
