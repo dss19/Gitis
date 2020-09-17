@@ -1,6 +1,8 @@
 .header
   position: relative
-  &-info    
+  &-info
+    position: relative
+    width: 100%    
     border-bottom: 1px solid $black
     padding: 21px 0 23px
     &-content
@@ -87,9 +89,10 @@
       line-height: 20px
       text-transform: uppercase
       padding: 32px 0 27px
-      // margin-right: 82px
       a
         color: $black
+  &-menu-fixed
+    display: none      
   &-aside
     position: absolute
     top: 0
@@ -125,7 +128,28 @@
       padding: 22px 0
       background: $white
       &-link
-        padding: 20px 0 
+        padding: 20px 0
+
+.header.fixed
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  display: flex
+  background: $white
+  z-index: 20
+  .header-scene,
+  .header-study,
+  .header-menu
+    display: none
+  .header-menu-fixed
+    display: block
+    flex: 1
+    margin-left: 200px
+  .header-menu-link
+    padding: 0 
+    font-size: 14px
+    line-height: 20px             
         
 @media screen and ( max-width: 1439px )
   .header
@@ -137,7 +161,12 @@
       display: none
     &-aside
       &-item
-        width: 84px      
+        width: 84px
+  .header.fixed
+    .header-menu-fixed
+      margin-left: 40px
+    .header-menu-link
+      font-size: 13px              
 @media screen and ( max-width: 1199px )
   .header
     &-info
@@ -165,7 +194,12 @@
         justify-content: center
         cursor: pointer
         &-text, &-text-sm
-          display: none      
+          display: none
+  .header.fixed
+    .header-info
+      padding: 29px 0
+    .header-menu-fixed
+      margin-right: 44px  
 @media screen and ( max-width: 1023px )
   .header
     &-info
@@ -183,10 +217,29 @@
         width: 50px
         height: 50px
         background: #EEEEEE
-        span 
+        cursor: pointer
+        span
+          position: relative 
           width: 18px
           height: 1px
           background: $black
+          &::after
+            position: absolute
+            width: 100%
+            height: 1px
+            background: $black
+            content: ''
+            left: 0
+            top: 7px
+          &::before
+            position: absolute
+            width: 100%
+            height: 1px
+            background: $black
+            content: ''
+            left: 0
+            bottom: 7px
+
       &-ticket
         height: 50px
         width: 150px
@@ -205,6 +258,11 @@
             text-transform: uppercase
             color: $white
             margin-bottom: 0
+  .header.fixed
+    .header-menu-fixed
+      display: none
+    .header-info
+      padding: 14px 0            
 @media screen and ( max-width: 575px )
   .header
     &-info
@@ -225,7 +283,9 @@
             text-transform: uppercase
             color: $white
             margin-bottom: 0
-  
+  .header.fixed
+    .header-info
+      padding: 19px 0 18px
 
 
 

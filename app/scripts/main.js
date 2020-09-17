@@ -23,6 +23,58 @@ $(document).ready(function () {
   //   });
   // });
 
+  
+
+  $(window).on("scroll touchmove resize", function () {
+    fixedHeader();
+    fixedCalendar();
+  });
+
+  function fixedHeader() {
+    let scrollPos = $(window).scrollTop(),
+      bannerHeight = $(".banner-img").outerHeight(),
+      headerHeight = $(".header").outerHeight(),
+      offsetPos = bannerHeight + headerHeight;
+    if (scrollPos > offsetPos) {
+      if (!$(".header").hasClass("fixed")) {
+        $("main").css({
+          marginTop: $("header").outerHeight(),
+        });
+        $(".header").addClass("fixed");
+      }
+    } else {
+      if ($(".header").hasClass("fixed")) {
+        $("main").css({
+          marginTop: 0,
+        });
+        $(".header").removeClass("fixed");
+      }
+    }
+  }
+
+  function fixedCalendar() {
+    let scrollPos = $(window).scrollTop(),
+      headerHeight = $(".header").outerHeight(),
+      calendarPos = $(".calendar").offset().top,
+      offsetPos = calendarPos - headerHeight;
+    console.log(offsetPos, scrollPos, calendarPos);
+    if (scrollPos >= offsetPos) {
+      if (!$(".calendar").hasClass("fixed")) {
+        $(".calendar").addClass("fixed");
+        $(".calendar").css({
+          top: headerHeight,
+        });        
+      }
+    } else {
+      if ($(".calendar").hasClass("fixed")) {
+        $(".calendar").removeClass("fixed");
+        $(".calendar").css({
+          top: "auto",
+        });        
+      }
+    }
+  }
+
   // Верхний слайдер на Главной
   $('.main-slider-top').slick({
     slidesToShow: 1,
@@ -31,10 +83,44 @@ $(document).ready(function () {
   });
 
   // Средний слайдер на Главной
-  $('.main-slider-partners').slick({
+  $(".main-slider-partners").slick({
     slidesToShow: 6,
     slidesToScroll: 6,
-    rows: 0
+    rows: 0,
+    responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: false,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+          dots: true,
+        },
+      },
+    ],
   });
 
   // Нижний слайдер на главной

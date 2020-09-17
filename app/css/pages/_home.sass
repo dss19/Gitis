@@ -8,44 +8,39 @@
     &-top
       padding: 50px 0 0
       margin-bottom: 75px
+      &-img
+        img 
+          width: 100%
       .slick-arrow
-        overflow-x: hidden
         position: absolute
         font-size: 0
         line-height: 0
-        width: 100%
-        max-width: 533px
-        height: 30px 
-        background: transparent
+        width: 100px
+        height: 100px
+        background: $red 
         border: none
         outline: none
         z-index: 20
         &:focus
           outline: none 
       .slick-next  
-        bottom: -62px
-        right: 0
+        bottom: 0
+        right: calc( 33.3334% + 10px )
         &::before
           position: absolute
-          content: url(../images/images/next-red.svg) 
-          top: 0
-          right: 0
-          transform: translateX(-350px)
-          transition: 0.3s   
+          content: url(../images/images/next-small.svg)      
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)  
       .slick-prev
-        bottom: -62px
-        left: 0
+        bottom: 0
+        right: calc( 33.3334% + 110px )
         &::before
           position: absolute
-          content: url(../images/images/prev-red.svg) 
-          top: 0
-          left: 0
-          transform: translateX(350px)
-          transition: 0.3s
-      .slider-count
-        bottom: -62px
-        &-cur
-          color: $black
+          content: url(../images/images/prev-small.svg) 
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
       &-info
         position: relative
         padding: 57px 30px 0 15px
@@ -124,7 +119,7 @@
             content: url(../images/images/main-link.svg)
   &-bill
     &-content
-      .col-6
+      .col-md-6
         &:nth-child(even)
           padding-top: 100px          
     &-item
@@ -409,35 +404,32 @@
       position: absolute
       font-size: 0
       line-height: 0
-      width: 100%
-      max-width: 533px
-      height: 25px 
-      background: transparent
+      width: 100px
+      height: 100px
+      background: $red 
       border: none
       outline: none
       z-index: 20
       &:focus
         outline: none 
     .slick-next  
-      bottom: -62px
+      bottom: calc(100% + 20px)
       right: 0
       &::before
         position: absolute
-        content: url(../images/images/next-black.svg) 
-        top: 0
-        right: 0   
+        content: url(../images/images/next-small.svg)      
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)  
     .slick-prev
-      bottom: -62px
-      left: 0
+      bottom: calc(100% + 20px)
+      right: 100px
       &::before
         position: absolute
-        content: url(../images/images/prev-black.svg) 
-        top: 0
-        left: 0
-    .slider-count
-      bottom: -62px
-      &-cur
-        color: $black
+        content: url(../images/images/prev-small.svg) 
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
     &-slide
       display: flex
       align-items: center
@@ -448,7 +440,8 @@
       img
         width: 100%
   &-theatre
-    padding-top: 15px    
+    padding-top: 15px
+    overflow: hidden    
     &-title
       position: relative
       +bold 
@@ -463,6 +456,7 @@
       right: 0
       top: 0
       z-index: 1
+      animation: geometric 20s linear infinite
       img
         width: 100%  
     &-subtitle
@@ -473,6 +467,7 @@
       margin-bottom: 45px
       max-width: 812px
   &-scenes
+    position: relative
     &-cover
       position: relative
       &::after
@@ -484,9 +479,19 @@
         height: 100%
         background: $grad
       img 
-        width: 100%         
+        width: 100%
     &-list
       padding: 100px 0 70px
+      position: relative
+      &-svg
+        position: absolute
+        width: 260px
+        top: 0
+        right: 15px
+        transform: translateY(-75%)
+        z-index: 10
+        img 
+          width: 100%
       &-item
         position: relative
         margin-bottom: 30px
@@ -554,28 +559,282 @@
   100% 
     transform: translateX(-66.6%)
 
+@keyframes geometric
+  0% 
+    transform: rotate3d(1, 1, 1, 0deg) 
+  100% 
+    transform: rotate3d(1, 1, 1, 360deg)
+
 @media screen and ( max-width: 1439px )
   .main
+    &-cover
+      height: 380px
+    &-slider-top
+      &-info
+        padding: 30px 15px 0 0
+      &-date
+        font-size: 38px
+        line-height: 28px
+        margin-bottom: 12px 
+      &-day
+        font-size: 18px
+        line-height: 18px
+        margin-bottom: 16px
+      &-name
+        font-size: 32px
+        line-height: 40px
+      &-age
+        margin-bottom: 16px       
     &-scenes
       &-content
         padding: 0 24px 44px 44px
+    &-repertoire
+      &-item
+        &-name
+          font-size: 28px
+          line-height: 38px
+    &-slider-partners
+      margin-bottom: 50px      
+    &-theatre
+      &-canvas
+        width: 450px      
+
+@media screen and ( max-width: 1023px )
+  .main
+    &-billboard
+      padding-top: 66px
+      &-title
+        font-size: 66px
+        line-height: 66px            
+
 @media screen and ( max-width: 991px )
   .main
+    &-cover
+      height: 300px
+    &-section
+      padding: 50px 0
+    &-billboard
+      padding-top: 60px
+      &-title
+        font-size: 60px
+        line-height: 60px  
     &-scenes
       &-content
         padding: 0 24px 44px 24px
+        &-link
+          &::after
+            left: 190px  
+    &-theatre
+      &-canvas
+        width: 400px
+
+@media screen and ( max-width: 767px )
+  .main
+    &-cover
+      display: none
+    &-bill
+      &-content
+        .col-md-6
+          margin-bottom: 50px
+          &:nth-child(even)
+            padding-top: 0        
+          &:last-child
+            margin-bottom: 0        
+    &-section
+      &-title
+        display: block
+        &-name
+          margin: 0 0 12px
+          font-size: 50px
+          line-height: 55px
+        
+    &-billboard
+      padding-top: 48px
+      margin-top: 12px
+      &-title
+        font-size: 48px
+        line-height: 48px
+    &-slider-partners
+      .slick-dots
+        position: absolute
+        bottom: -70px
+        width: 100%
+        display: flex
+        justify-content: center
+        margin-bottom: 0
+        li
+          margin: 0 10px
+          button 
+            font-size: 0
+            width: 5px
+            height: 5px
+            background: transparent
+            border-radius: 50%
+            border: 1px solid $black
+            outline: none
+        li.slick-active
+          button
+            width: 10px
+            height: 10px
+            background: $red
+            border: none
+    &-theatre
+      &-title
+        margin-bottom: 14px
+        font-size: 50px
+        line-height: 55px
+      &-subtitle
+        font-size: 28px
+        line-height: 40px  
+      &-canvas
+        display: none
+    &-scenes
+      &-list
+        padding: 50px 0 20px
+        &-svg
+          width: 130px 
+    &-projects
+      &-content
+        .row
+          .col-12
+            margin-bottom: 30px
+            &:last-child
+              margin-bottom: 0                          
         
 @media screen and ( max-width: 575px )
   .main
+    &-section
+      padding: 40px 0
+      &-title
+        font-size: 40px
+        line-height: 65px
+        padding-bottom: 20px
+        margin-bottom: 30px
+        &-name
+          font-size: 40px
+          line-height: 65px
+          margin-bottom: 5px
+        &-link
+          padding-top: 0
+          line-height: 0
+          a 
+            font-size: 13px
+            line-height: 16px
+            &::after
+              content: url(../images/images/main-link-mob.svg)
+              top: -3px
+              right: -74px
+    &-bill
+      &-item
+        &-info
+          min-width: 68px
+        &-date
+          font-size: 24px
+          line-height: 30px
+        &-day
+          font-size: 11px
+          line-height: 20px
+        &-scene
+          font-size: 12px
+          line-height: 15px
+          margin-bottom: 13px
+        &-age
+          font-size: 11px
+          line-height: 15px
+        &-cover
+          &::after
+            width: 100px  
+        &-img
+          margin-bottom: 14px
+        &-title
+          font-size: 20px
+          line-height: 26px
+          max-width: none
+        &-actors
+          font-size: 12px
+          line-height: 18px
+          max-width: none
+    &-billboard
+      padding-top: 26px
+      &-title
+        font-size: 26px
+        line-height: 26px
+      &-img
+        height: 150px
+        img 
+          height: 100%
+      &-wrap
+        height: 50px
+      &-item
+        margin-right: 70px
+        &-nums
+          margin-right: 14px          
+        &-date
+          padding-top: 0
+          margin-bottom: 15px
+        &-time, &-day, &-age
+          font-size: 16px
+          line-height: 20px
+        &-day
+          margin-bottom: 10px  
+        &-text
+          font-size: 16px
+          line-height: 24px
+          width: 230px
+          min-width: 230px
+    &-repertoire
+      &-item
+        &-aside
+          margin: 0 18px 0 0
+        &-scene
+          font-size: 12px
+          line-height: 15px
+        &-age
+          font-size: 16px
+          line-height: 35px
+        &-img
+          margin-bottom: 12px  
+        &-name
+          font-size: 20px
+          line-height: 30px
+        &-actors
+          max-width: none
+          padding-bottom: 20px
+          margin-bottom: 30px
+          &:after
+            width: 100px
+    &-slider-partners
+      &-slide
+        height: 135px 
+      .slick-dots
+        bottom: -40px
+    &-theatre
+      &-title
+        font-size: 40px
+        line-height: 65px
+        margin-bottom: 14px
+      &-subtitle
+        font-size: 20px
+        line-height: 30px
+        margin-bottom: 22px
+      .container
+        &:last-of-type
+          padding: 0  
     &-scenes
       &-content
-        padding: 0 18px 44px
+        padding: 0 18px 16px
         &-name
           font-size: 30px
           line-height: 40px
-          padding-bottom: 27px
-          margin-bottom: 27px
+          padding-bottom: 22px
+          margin-bottom: 22px
         &-link
+          font-size: 13px
           &::after
             content: url(../images/images/arrow-stages-sm.svg)
             left: 195px
+      &-list
+        padding-top: 10px 
+        &-item
+          height: 200px 
+          margin-bottom: 10px  

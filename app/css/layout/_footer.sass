@@ -147,8 +147,15 @@
       left: -76px
       bottom: -200px
       width: 616px
+      animation: round 30s linear infinite
       img 
-        width: 100%              
+        width: 100%
+
+@keyframes round 
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)                     
 
 @media screen and ( max-width: 1439px )
   .footer
