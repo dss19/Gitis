@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  stickyBlocks();
   
   // Счетчик в слайдерах
   // $(".slider-countable").each(function () {
@@ -27,7 +29,7 @@ $(document).ready(function () {
 
   $(window).on("scroll touchmove resize", function () {
     fixedHeader();
-    fixedCalendar();
+    //fixedCalendar();
   });
 
   function fixedHeader() {
@@ -289,3 +291,198 @@ $(document).ready(function () {
   });
 
 });
+
+function stickyBlocks() {
+
+  var stickyElements = $(".sticky-block").filter(function () {
+      return !$(this).find(".news-filter").length
+    }),
+    topOffset = 30,
+    topOffsetProgram = 0;
+
+  $(window).on("resize scroll touchmove", function () {
+
+    stickyElements.each(function () {
+
+      $(this).data("orig-width", $(this).outerWidth());
+
+      $(this).closest(".sticky-wrapper").css({
+        minHeight: $(this).outerHeight()
+      });
+
+      $(this).closest(".sticky-wrapper").css({
+        minHeight: $(this).outerHeight()
+      });
+
+      var extraHeight = 0;
+
+      if ($(".program-nav").length && $(".program-nav").hasClass("fixed")) {
+
+        extraHeight = $(".program-nav").outerHeight();
+
+      } else {
+
+        extraHeight = 0
+
+      }
+
+      if ($("header").hasClass("fixed")) {
+
+        var headerHeight = $("header").outerHeight() + extraHeight;
+
+      } else {
+
+        var headerHeight = 0 + extraHeight;
+
+      }
+
+      var el = $(this),
+        elHeight = $(this).outerHeight(),
+        elWrapper = $(this).closest(".sticky-wrapper"),
+        wrapperHeight = elWrapper.outerHeight(),
+        scrollPos = $(window).scrollTop();
+
+      if (el.hasClass("calendar")) {
+
+        topOffset = 0;
+
+      }
+
+      if (!el.hasClass("troupe-pic")) {
+
+        var scrollCondition = scrollPos > (elWrapper.offset().top - headerHeight - topOffset);
+
+        var stickCondition = elHeight < ($(window).height() - topOffset*2 - headerHeight) && elHeight < wrapperHeight;
+
+        var topPos = headerHeight + topOffset;
+
+      } else {
+
+        scrollCondition = scrollPos > elWrapper.offset().top;
+
+        stickCondition = true;
+
+        topOffset = 0;
+
+        var topPos = 0;
+
+      }
+
+
+      if (scrollCondition && stickCondition) {
+
+        el.addClass("fixed").css({
+
+          top: topPos,
+          width: el.data("orig-width")
+
+        });
+
+        if (scrollPos > (elWrapper.offset().top + wrapperHeight - elHeight - headerHeight - topOffset)) {
+
+          el.css({
+
+            marginTop: (elWrapper.offset().top + wrapperHeight - elHeight - headerHeight - topOffset) - scrollPos
+
+          });
+
+        } else {
+
+          el.css({
+            marginTop: 0
+          });
+
+        }
+
+      } else {
+
+        el.removeClass("fixed").css({
+
+          width: "auto",
+          marginTop: 0
+
+        })
+
+      }
+
+
+
+    });
+
+    $(".program-nav").each(function () {
+
+      $(this).data("orig-width", $(this).outerWidth());
+
+      $(this).closest(".page-wrapper").css({
+        minHeight: $(this).outerHeight()
+      });
+
+
+      if ($("header").hasClass("header-fixed")) {
+
+        var headerHeight = $("header").outerHeight();
+
+      } else {
+
+        var headerHeight = 0;
+
+      }
+
+      var el = $(this),
+        elHeight = $(this).outerHeight(),
+        elWrapper = $(this).closest(".page-wrapper"),
+        wrapperHeight = elWrapper.outerHeight(),
+        scrollPos = $(window).scrollTop();
+
+      if (scrollPos > (elWrapper.offset().top - headerHeight - topOffsetProgram) && elHeight < ($(window).height() - topOffsetProgram*2 - headerHeight) && elHeight < wrapperHeight) {
+
+        $(".program-nav-wrapper").css({
+          paddingTop: el.outerHeight()
+        });
+
+        el.addClass("fixed").css({
+
+          top: headerHeight + topOffsetProgram,
+          width: el.data("orig-width")
+
+        });
+
+
+        if (scrollPos > (elWrapper.offset().top + wrapperHeight - elHeight - headerHeight - topOffsetProgram)) {
+
+          el.css({
+
+            marginTop: (elWrapper.offset().top + wrapperHeight - elHeight - headerHeight - topOffsetProgram) - scrollPos
+
+          });
+
+        } else {
+
+          el.css({
+            marginTop: 0
+          });
+
+        }
+
+      } else {
+
+        $(".program-nav-wrapper").css({
+          paddingTop: 0
+        });
+
+        el.removeClass("fixed").css({
+
+          width: "auto"
+
+        });
+
+      }
+
+
+
+    });
+
+  });
+
+
+}
