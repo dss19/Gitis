@@ -84,6 +84,12 @@
         font-size: 16px
         line-height: 28px 
         color: $black
+main
+  .page-content-info-social.news-social
+    .ya-share2__list.ya-share2__list_direction_horizontal
+      .ya-share2__item
+        margin: 0 8px
+
 .news-item-secondary
   .news-item-img
     max-width: 287px        
@@ -135,7 +141,11 @@
         .news-item-text
           max-width: none    
       &-text 
-        max-width: 50%    
+        max-width: 50% 
+        
+@media screen and ( max-width: 991px )
+  .page-content-info-social.news-social
+    margin-bottom: 40px             
 
 @media screen and ( max-width: 767px )        
   .news

@@ -154,9 +154,13 @@ button
             top: 0
             left: -50px
       &-social
+        display: flex
+        align-items: center
         +norm 
         font-size: 16px
         line-height: 30px
+        // &-list
+        //   transform: translateY(5px)        
         &-links
           display: flex
           align-items: center
@@ -504,9 +508,10 @@ button
     line-height: 0
     width: 150px
     height: 150px
-    background: $red 
+    background: rgba($red, 0.7) 
     border: none
     outline: none
+    transition: .3s
     z-index: 20
     &:focus
       outline: none 
@@ -553,7 +558,7 @@ button
     line-height: 0
     width: 100px
     height: 100px
-    background: $red 
+    background: rgba($red, 0.7) 
     border: none
     outline: none
     z-index: 20
@@ -637,12 +642,15 @@ button
 .months-prev, .months-next
   width: 103px
   cursor: pointer
-  img 
-    width: 100%      
+  svg 
+    width: 100%
+    path 
+      transition: .3s      
 .days, .letters
   border-bottom: 5px solid $black
   margin-bottom: 15px
   padding-bottom: 12px
+  cursor: pointer
 .day
   +lack 
   font-size: 16px
@@ -660,6 +668,7 @@ button
     background: $red
     border-radius: 50%
     width: 35px
+    min-width: 35px
     margin: 0  
 .letter
   +bold 
@@ -679,6 +688,7 @@ button
     background: $red
     border-radius: 50%
     width: 35px
+    min-width: 35px
     margin: 0  
 .filter
   &-wrap
@@ -785,6 +795,11 @@ button
           stroke: $red 
           stroke-width: 2   
 
+main
+  .ya-share2__list.ya-share2__list_direction_horizontal
+    .ya-share2__item
+      margin: 0 20px  
+
 @media screen and ( max-width: 1439px )
   .page
     &-content
@@ -839,7 +854,7 @@ button
         &-desc
           min-height: 50px
           margin-bottom: 30px
-      &-info-social-links, &-info-social-list
+      &-info-social-links
         margin-bottom: 40px    
     &-slider-bottom
       &-title
@@ -994,7 +1009,10 @@ button
           margin-bottom: 22px
         &-social
           font-size: 16px
-          line-height: 30px           
+          line-height: 30px
+          &-text
+            font-size: 13px
+            line-height: 30px          
       &-bill
         padding: 25px 0
         &-item
@@ -1089,6 +1107,8 @@ button
         .page-content-info-social-text
           font-size: 13px
           line-height: 30px
+        &.top
+          padding-bottom: 0  
       &-news
         padding: 0
         .show-news-title
@@ -1149,6 +1169,9 @@ button
         &-link
           font-size: 14px                    
                      
-
+  main
+    .ya-share2__list.ya-share2__list_direction_horizontal
+      .ya-share2__item
+        margin: 0 10px
 
 

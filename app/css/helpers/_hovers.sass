@@ -1,4 +1,4 @@
-@media screen and ( min-width: 768px )
+@media screen and ( min-width: 991px )
   .main-bill-item:hover
     .main-bill-item-date, 
     .main-bill-item-day,
@@ -14,7 +14,7 @@
       &::after
         height: 5px
         background: $red
-        width: 410px
+        width: 80%
     &::after
       opacity: 1
     &::before
@@ -22,19 +22,24 @@
   .main-repertoire-item:hover
     .main-repertoire-item-name
       color: $red 
-    .main-repertoire-item-actors
+    .main-repertoire-item-desc
       &::after
         height: 5px
         background: $red
-        width: 317px
+        width: 100%
     .main-repertoire-item-img
       img 
         transform: scale(1)
-  // .main-slider-top
-  //   .slick-prev:hover:before
-  //     transform: translateX(0)                   
-  //   .slick-next:hover:before
-  //     transform: translateX(0)                   
+  .main-section-title-link:hover
+    .main-section-title-link-text
+      color: $red2
+    .main-section-title-link-text:after
+      opacity: 1
+    .main-section-title-link-img
+      svg 
+        path 
+          stroke: $red2          
+                     
   .news-item:hover
     &:after
       transform: translateX(0)
@@ -67,4 +72,72 @@
       stroke: $white
       stroke-width: 1
   .stage-parameters-img-button:hover
-    opacity: 1      
+    opacity: 1 
+
+  .header
+    &-menu-link:hover
+      color: $red
+    &-aside
+      &-item
+        &-ticket:hover
+          background: $red2 
+        &-blind:hover
+          background: $black
+          svg 
+            path
+              fill: $white
+      &-social-link:hover
+        svg 
+          path
+            fill: $red          
+    &-study:hover
+      &::after
+        background: $red2 
+      .header-study-text  
+        color: $red2
+
+  .project-slider-top,
+  .news-img-slider-top,
+  .stage-slider-top,
+  .show-slider-top,
+  .main-slider-partners,
+  .project-slider-bottom,
+  .news-img-slider-bottom
+    .slick-arrow:hover
+      background: $red
+
+  .months
+    &-prev, &-next
+      &:hover
+        svg 
+          path
+            stroke: $red           
+
+  .playbill-item:hover
+    .playbill-item-time-info,
+    .playbill-item-time-age,
+    .playbill-item-time-age:before,
+    .playbill-item-title,
+    .playbill-item-ticket-text
+      opacity: 1
+      color: $red
+    .playbill-item-ticket-img
+      svg 
+        path 
+          fill: $red
+    .playbill-item
+      &::before
+        display: none
+
+  .projects-list-item:hover
+    .projects-list-item-date p,
+    .projects-list-item-title
+      color: $red
+    .projects-list-item-title
+      &::after
+        height: 5px
+        width: 100%
+        background: $red
+    .projects-list-item-img
+      img 
+        transform: scale(1)    

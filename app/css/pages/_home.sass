@@ -106,17 +106,33 @@
         margin-right: 39px
       &-link
         padding-top: 8px
-        a 
-          position: relative
+        a           
+          display: flex
+          align-items: center
           +norm
           font-size: 16px
-          line-height: 16px
+          line-height: 16px          
+        &-text
+          position: relative
+          margin-right: 15px
+          transition: .3s
           color: $red
           &::after
             position: absolute
-            top: -4px
-            right: -142px
-            content: url(../images/images/main-link.svg)
+            bottom: 0
+            left: 0
+            content: ""
+            width: 100%
+            height: 1px
+            background: $red2
+            opacity: 0
+            transition: .3s
+        &-img
+          svg 
+            path 
+              transition: .3s
+          &-mob
+            display: none             
   &-bill
     &-content
       .col-md-6
@@ -325,7 +341,7 @@
         min-width: 394px
         width: 394px
   &-repertoire
-    &-item
+    &-item      
       &-img
         position: relative
         margin-bottom: 23px
@@ -345,6 +361,7 @@
           transition: 3s
       &-info
         display: flex
+        margin-bottom: 50px        
       &-aside
         max-width: 76px
         text-align: right
@@ -362,22 +379,7 @@
         text-transform: uppercase
       &-desc
         flex-grow: 1
-      &-name
-        +norm
-        font-size: 30px
-        line-height: 40px
-        color: $black
-        margin-bottom: 14px
-        transition: 0.3s
-      &-actors
         position: relative
-        +norm
-        font-size: 13px
-        line-height: 20px
-        color: $black 
-        max-width: 80%
-        padding-bottom: 25px
-        margin-bottom: 50px        
         &::after
           position: absolute
           content: ''
@@ -387,6 +389,20 @@
           width: 150px
           background: $black
           transition: 0.3s
+      &-name
+        +norm
+        font-size: 30px
+        line-height: 40px
+        color: $black
+        margin-bottom: 14px
+        transition: 0.3s
+      &-actors
+        +norm
+        font-size: 13px
+        line-height: 20px
+        color: $black 
+        max-width: 80%
+        margin-bottom: 25px
   &-projects
     padding-top: 0
   &-news
@@ -406,9 +422,10 @@
       line-height: 0
       width: 100px
       height: 100px
-      background: $red 
+      background: rgba($red, 0.7) 
       border: none
       outline: none
+      transition: .3s
       z-index: 20
       &:focus
         outline: none 
@@ -720,10 +737,12 @@
           a 
             font-size: 13px
             line-height: 16px
-            &::after
-              content: url(../images/images/main-link-mob.svg)
-              top: -3px
-              right: -74px
+          &-img
+            &-desc
+              display: none
+            &-mob 
+              display: block    
+            
     &-bill
       &-item
         &-info
@@ -793,14 +812,19 @@
           font-size: 16px
           line-height: 35px
         &-img
-          margin-bottom: 12px  
+          margin-bottom: 12px
+        &-info  
+          margin-bottom: 0  
+        &-desc
+          margin-bottom: 30px
+          &:after
+            width: 100px  
         &-name
           font-size: 20px
           line-height: 30px
         &-actors
           max-width: none
-          padding-bottom: 20px
-          margin-bottom: 30px
+          margin-bottom: 20px
           &:after
             width: 100px
     &-slider-partners
