@@ -90,7 +90,20 @@ $(document).ready(function () {
     }
   });
 
+
+
+
   // Верхний слайдер на Главной
+
+  $(".main-slider-top").on("init", function () {
+
+    console.log("init slider 123")
+
+    $(".slider-wrapper-mt").append('<div class="slick-arrow-fake slick-prev-fake"></div>');
+    $(".slider-wrapper-mt").append('<div class="slick-arrow-fake slick-next-fake"></div>');
+
+  });
+
   $('.main-slider-top').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
