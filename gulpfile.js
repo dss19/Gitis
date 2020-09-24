@@ -15,7 +15,7 @@ const plumber = require("gulp-plumber");
  * ------ */
 const options = {
 	pug: {
-		src: "app/pug/**/home.pug",
+		src: "app/pug/**/*.pug",
 		dest: "public"
 	},
 	scripts: {
@@ -93,15 +93,15 @@ function styles() {
 function scripts() {
 	return gulp
 		.src(options.scripts.src)
-		.pipe(
-			plumber(function (err) {
-				console.log("Scripts Task Error");
-				console.log(err);
-				this.emit("end");
-			})
-		)
-		.pipe(babel())
-		.pipe(uglify())
+		// .pipe(
+		// 	plumber(function (err) {
+		// 		console.log("Scripts Task Error");
+		// 		console.log(err);
+		// 		this.emit("end");
+		// 	})
+		// )
+		// .pipe(babel())
+		// .pipe(uglify())
 		.pipe(gulp.dest(options.scripts.dest))
 		.pipe(
 			browsersync.reload({
@@ -188,8 +188,8 @@ function watchFiles() {
 /* Build
  * ------ */
 const build = gulp.series(
-	//clean,
-	gulp.parallel(styles, minify, images, files, fonts)
+	clean,
+	gulp.parallel(styles, minify, scripts, images, files, fonts)
 );
 const watch = gulp.parallel(watchFiles, browserSync);
 // export tasks
@@ -198,7 +198,7 @@ exports.minify = minify;
 exports.scripts = scripts;
 exports.images = images;
 exports.fonts = fonts;
-//exports.clean = clean;
+exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;
