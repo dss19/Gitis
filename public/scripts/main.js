@@ -53,7 +53,7 @@ $(document).ready(function () {
       imgWidth = $(".main-slider-top-img").outerWidth(),
       btnWidth = $(".slick-arrow-fake").outerWidth(),
       btnPosLeft = imgWidth - btnWidth,
-      btnPosTop = imgHeight - btnWidth / 2,
+      btnPosTop = imgHeight - btnWidth,
       btnPosLeftPrev = imgWidth - btnWidth - btnWidth;
     $(".slick-next-fake").css({
       top: btnPosTop + "px",

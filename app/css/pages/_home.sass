@@ -6,7 +6,7 @@
     background-position: center top
   &-slider
     &-top
-      padding: 50px 0 0
+      margin-top: 50px
       &-img
         img 
           width: 100%
@@ -729,6 +729,9 @@
 
 @media screen and ( max-width: 575px )
   .main
+    &-slider
+      .container
+        padding: 0
     &-section
       padding: 40px 0
       &-title
@@ -751,7 +754,26 @@
               display: none
             &-mob 
               display: block    
-            
+    &-slider-top
+      margin-top: 0
+      &-info
+        padding: 10px 16px 0
+      &-date
+        font-size: 30px
+        line-height: 30px
+        margin-right: 5px
+        margin-bottom: 12px
+      &-day
+        font-size: 13px
+        line-height: 20px
+        margin-bottom: 0
+      &-name
+        font-size: 24px
+        line-height: 30px
+        margin-bottom: 8px
+      &-actors p, &-age
+        font-size: 13px
+        line-height: 20px              
     &-bill
       &-item
         &-info
