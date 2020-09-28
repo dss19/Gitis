@@ -463,6 +463,15 @@ button
     align-items: center
     justify-content: center
     padding: 36px 0 60px
+    &.active
+      img
+        animation: spin 2s linear infinite forwards
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)    
 
 .breadcrumbs
   display: flex
@@ -629,7 +638,6 @@ button
   display: flex
   justify-content: center
   align-items: center
-  margin-bottom: 26px
   &-current
     +lack
     font-size: 60px
@@ -648,8 +656,8 @@ button
       transition: .3s      
 .days, .letters
   border-bottom: 5px solid $black
-  margin-bottom: 15px
   padding-bottom: 12px
+  margin-top: 15px
   cursor: pointer
 .day
   +lack 
@@ -691,6 +699,7 @@ button
     min-width: 35px
     margin: 0  
 .filter
+  padding-top: 15px
   &-wrap
     width: 100%
     display: flex

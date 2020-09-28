@@ -1,35 +1,11 @@
 $(document).ready(function () {
 
 	stickyBlocks();
-
-	// Счетчик в слайдерах
-	// $(".slider-countable").each(function () {
-	//   $(this).on("init", function () {
-	//     var curSlider = $(this),
-	//       visibleSlides = $(this).find(".slick-slide.slick-active").length,
-	//       curSlide = $(this).find(".slick-slide.slick-current").data("slick-index") / visibleSlides + 1,
-	//       totalSlides = Math.round($(this).find(".slick-slide").not(".slick-cloned").length / visibleSlides);
-
-	//     curSlider.closest(".slider-wrapper").append('<div class="slider-count"><span class="slider-count-cur">' + ("0" + curSlide).slice(-2) + '</span><span class="slider-count-sep">/</span><span class="slider-count-total">' + ("0" + totalSlides).slice(-2) + '</span></div>');
-
-	//     if (totalSlides == 1) {
-	//       curSlider.closest(".slider-wrapper").find(".slider-count").hide();
-	//     }
-	//   });
-
-	//   $(this).on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-	//     var curSlider = $(this),
-	//       visibleSlides = $(this).find(".slick-slide.slick-active").length,
-	//       curSlide = nextSlide / visibleSlides + 1;
-	//     curSlider.closest(".slider-wrapper").find(".slider-count-cur").html(("0" + curSlide).slice(-2));
-	//   });
-	// });
-
-
+	sliderButtonsPos();
 
 	$(window).on("scroll touchmove resize", function () {
 		fixedHeader();
-		//fixedCalendar();
+		sliderButtonsPos();
 	});
 
 	function fixedHeader() {
@@ -54,29 +30,6 @@ $(document).ready(function () {
 		}
 	}
 
-	// function fixedCalendar() {
-	//   let scrollPos = $(window).scrollTop(),
-	//     headerHeight = $(".header").outerHeight(),
-	//     calendarPos = $(".calendar").offset().top,
-	//     offsetPos = calendarPos - headerHeight;
-	//   console.log(offsetPos, scrollPos, calendarPos);
-	//   if (scrollPos >= offsetPos) {
-	//     if (!$(".calendar").hasClass("fixed")) {
-	//       $(".calendar").addClass("fixed");
-	//       $(".calendar").css({
-	//         top: headerHeight,
-	//       });
-	//     }
-	//   } else {
-	//     if ($(".calendar").hasClass("fixed")) {
-	//       $(".calendar").removeClass("fixed");
-	//       $(".calendar").css({
-	//         top: "auto",
-	//       });
-	//     }
-	//   }
-	// }
-
 	$('.header-mobile-humb').click(function () {
 		$('.mobile-menu').addClass('active');
 	});
@@ -95,10 +48,33 @@ $(document).ready(function () {
 
 	// Верхний слайдер на Главной
 
+	function sliderButtonsPos() {
+		var imgHeight = $(".main-slider-top-img").outerHeight(),
+      imgWidth = $(".main-slider-top-img").outerWidth(),
+      btnWidth = $(".slick-arrow-fake").outerWidth(),
+      btnPosLeft = imgWidth - btnWidth,
+      btnPosTop = imgHeight - btnWidth / 2,
+      btnPosLeftPrev = imgWidth - btnWidth - btnWidth;
+    $(".slick-next-fake").css({
+      top: btnPosTop + "px",
+      left: btnPosLeft + "px",
+    });
+    $(".slick-prev-fake").css({
+      top: btnPosTop + "px",
+      left: btnPosLeftPrev + "px",
+    });
+	}
+
+	$(window).on("resize", function () {
+    sliderButtonsPos();
+  });
+
 	$(".main-slider-top").on("init", function () {
 
 		$(".slider-wrapper-mt").append('<div class="slick-arrow-fake slick-prev-fake"></div>');
 		$(".slider-wrapper-mt").append('<div class="slick-arrow-fake slick-next-fake"></div>');
+		
+		sliderButtonsPos();
 
 		$(".main-slider-top-img").each(function () {
 
@@ -111,6 +87,7 @@ $(document).ready(function () {
 	$(".main-slider-top").on("afterChange", function(event, slick, currentSlide){
 
 		mainPicIn(currentSlide);
+		sliderButtonsPos();
 
 	});
 
@@ -170,6 +147,7 @@ $(document).ready(function () {
 
 	});
 
+	
 	// Средний слайдер на Главной
 	$(".main-slider-partners").slick({
 		slidesToShow: 6,
@@ -274,30 +252,13 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		rows: 0
 	});
-
-	// Нижний слайдер Спектакля
-	// $('.show-slider-bottom').slick({
-	//   slidesToShow: 2,
-	//   slidesToScroll: 2,
-	//   rows: 0
-	// });
-
+	
 	// Верхний слайдер Площадки
 	$('.stage-slider-top').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		rows: 0
-	});
-
-	// Фильтры в афише
-	$('.filter-abc-item').click(function () {
-		$('.filter-abc-item').removeClass('active');
-		$(this).addClass('active');
-	});
-	$('.filter-img-item').click(function () {
-		$('.filter-img-item').removeClass('active');
-		$(this).addClass('active');
-	});
+	});	
 
 	// Выпадающее меню фильтра в Афише
 	$('.filter-scene').click(function () {
@@ -337,6 +298,121 @@ $(document).ready(function () {
 		);
 	});
 
+	// Ajax Афиши
+	$.ajax({
+		type: "GET",
+		cache: true,
+		success: function () {
+			$(".playbill-wrapper").load("loads/playbill-date-img.html");
+			$(".calendar-wrapper").load("loads/days.html");
+		},
+	});
+
+	$('.filter-abc-date').click(function () {
+		$('.filter-abc-item').removeClass('active');
+		$(this).addClass('active');
+		if ($('.playbill').hasClass('img')) {
+			$.ajax({
+				type: "GET",
+				cache: true,
+				success: function () {
+					$(".playbill-wrapper").load("loads/playbill-date-img.html");
+				},
+			});
+		} else {
+			$.ajax({
+				type: "GET",
+				cache: true,
+				success: function () {
+					$(".playbill-wrapper").load("loads/playbill-date-noimg.html");
+				},
+			});
+		}
+		if (!$('.playbill').hasClass('date')) {
+			$.ajax({
+				type: "GET",
+				cache: true,
+				success: function () {
+					$(".calendar-wrapper").load("loads/days.html");
+				},
+			});
+		}
+	})
+	$('.filter-abc-abc').click(function () {
+		$('.filter-abc-item').removeClass('active');
+		$(this).addClass('active');
+		if ($('.playbill').hasClass('img')) {
+			$.ajax({
+				type: "GET",
+				cache: true,
+				success: function () {
+					$(".playbill-wrapper").load("loads/playbill-abc-img.html");
+				},
+			});
+		} else {
+			$.ajax({
+				type: "GET",
+				cache: true,
+				success: function () {
+					$(".playbill-wrapper").load("loads/playbill-abc-noimg.html");
+				},
+			});
+		}
+		if (!$('.playbill').hasClass('abc')) {
+			$.ajax({
+				type: "GET",
+				cache: true,
+				success: function () {
+					$(".calendar-wrapper").load("loads/letters.html");
+				},
+			});
+		}
+	})
+	$('.filter-img-yes').click(function () {
+		$('.filter-img-item').removeClass('active');
+		$(this).addClass('active');
+		if ($('.playbill').hasClass('date')) {
+			$.ajax({
+				type: "GET",
+				cache: true,
+				success: function () {
+					$(".playbill-wrapper").load("loads/playbill-date-img.html");
+				},
+			});
+		} else {
+			$.ajax({
+				type: "GET",
+				cache: true,
+				success: function () {
+					$(".playbill-wrapper").load("loads/playbill-abc-img.html");
+				},
+			});
+		}
+	})
+	$('.filter-img-no').click(function () {
+		$('.filter-img-item').removeClass('active');
+		$(this).addClass('active');
+		if ($('.playbill').hasClass('date')) {
+			$.ajax({
+				type: "GET",
+				cache: true,
+				success: function () {
+					$(".playbill-wrapper").load("loads/playbill-date-noimg.html");
+				},
+			});
+		} else {
+			$.ajax({
+				type: "GET",
+				cache: true,
+				success: function () {
+					$(".playbill-wrapper").load("loads/playbill-abc-noimg.html");
+				},
+			});
+		}
+	})
+
+
+	// Конвертор свг
 	$('.svg-inline').each(function () {
 		var $img = jQuery(this);
 		var imgID = $img.attr('id');
@@ -610,3 +686,5 @@ function mainPicIn(slideIndex) {
 	$(".main-slider-top-info-inner").removeClass("closing");
 
 }
+
+
