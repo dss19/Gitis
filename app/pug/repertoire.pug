@@ -8,7 +8,7 @@ body
   include includes/header.pug
 
   main
-    .page-header
+    .page-header(style="background: url(images/hd/page-cover.jpg)")
       .page-header-grad
         .container
           .page-header-content
@@ -24,8 +24,10 @@ body
     .repertoire-filter
       .container
         .repertoire-filter-wrap
-          .repertoire-filter-item.active по популярности
-          .repertoire-filter-item по алфавиту
+          .repertoire-filter-item.active
+            a(href="#") по популярности
+          .repertoire-filter-item
+            a(href="#") по алфавиту
     .repertoire-list
       .container
         .repertoire-list-item

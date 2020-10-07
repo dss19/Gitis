@@ -156,16 +156,16 @@ body
           .show-photos-title Дополнительный вид галереи плиткой
           .row
             .col-sm-6.col-12
-              .page-content-gallery-item
+              a.page-content-gallery-item(data-fancybox="gallery-3", href="images/images/show-1.jpg")
                 img(src="images/images/show-1.jpg", alt="галерея")
             .col-sm-6.col-12
-              .page-content-gallery-item
+              a.page-content-gallery-item(data-fancybox="gallery-3", href="images/images/show-2.jpg")
                 img(src="images/images/show-2.jpg", alt="галерея")
             .col-sm-6.col-12
-              .page-content-gallery-item
+              a.page-content-gallery-item(data-fancybox="gallery-3", href="images/images/show-3.jpg")
                 img(src="images/images/show-3.jpg", alt="галерея")
             .col-sm-6.col-12
-              .page-content-gallery-item
+              a.page-content-gallery-item(data-fancybox="gallery-3", href="images/images/show-4.jpg")
                 img(src="images/images/show-4.jpg", alt="галерея")
         .page-content-social
           .page-content-info-social
@@ -222,7 +222,7 @@ body
       .container            
         .show-more
           .show-more-title Смотрите также
-          .show-more-item
+          a.show-more-item(href="https://yandex.ru/", target="_blank")
             .row
               .col-md-2.col-sm-3.col-12
                 .show-more-item-date
@@ -230,7 +230,8 @@ body
                   .show-more-item-date-day среда
               .col-md-3.col-sm-9.col-12
                 .show-more-item-img
-                  img(src="images/images/bill-10.jpg", alt="alt")
+                  .show-more-item-img-wrap
+                    img(src="images/images/bill-10.jpg", alt="alt")
               .col-md-7.col-sm-9.col-12.show-more-item-mob
                 .show-more-item-info
                   .show-more-item-info-time 20:30 / 16+
@@ -238,41 +239,51 @@ body
                   .show-more-item-info-actors Актерский состав
                   .show-more-item-info-scene Основная сцена
                   .show-more-item-info-ticket
-                    a(href="")
-                      img(src="images/images/ticket-w.svg", alt="билет")
-          .show-more-item.row
-            .col-md-2.col-sm-3.col-12
-              .show-more-item-date
-                .show-more-item-date-number 01/04
-                .show-more-item-date-day среда
-            .col-md-3.col-sm-9.col-12
-              .show-more-item-img
-                img(src="images/images/bill-2.jpg", alt="alt")
-            .col-md-7.col-sm-9.col-12.show-more-item-mob
-              .show-more-item-info
-                .show-more-item-info-time 20:30 / 16+
-                .show-more-item-info-name Романтический возраст
-                .show-more-item-info-actors Актерский состав
-                .show-more-item-info-scene Основная сцена
-                .show-more-item-info-ticket
-                  a(href="")
-                    img(src="images/images/ticket-w.svg", alt="билет")
-          .show-more-item.row
-            .col-md-2.col-sm-3.col-12
-              .show-more-item-date
-                .show-more-item-date-number 01/04
-                .show-more-item-date-day среда
-            .col-md-3.col-sm-9.col-12
-              .show-more-item-img
-                img(src="images/images/bill-1.jpg", alt="alt")
-            .col-md-7.col-sm-9.col-12.show-more-item-mob
-              .show-more-item-info
-                .show-more-item-info-time 20:30 / 16+
-                .show-more-item-info-name Романтический возраст
-                .show-more-item-info-actors Актерский состав
-                .show-more-item-info-scene Основная сцена
-                .show-more-item-info-ticket
-                  a(href="")
-                    img(src="images/images/ticket-w.svg", alt="билет")
+                    object
+                      a(href="https://google.com/", target="_blank")
+                        img.svg-inline(src="images/images/ticket-w.svg", alt="билет")
+                        span Купить билет
+          a.show-more-item(href="#")
+            .row
+              .col-md-2.col-sm-3.col-12
+                .show-more-item-date
+                  .show-more-item-date-number 01/04
+                  .show-more-item-date-day среда
+              .col-md-3.col-sm-9.col-12                
+                .show-more-item-img
+                  .show-more-item-img-wrap
+                    img(src="images/images/bill-2.jpg", alt="alt")
+              .col-md-7.col-sm-9.col-12.show-more-item-mob
+                .show-more-item-info
+                  .show-more-item-info-time 20:30 / 16+
+                  .show-more-item-info-name Романтический возраст
+                  .show-more-item-info-actors Актерский состав
+                  .show-more-item-info-scene Основная сцена
+                  .show-more-item-info-ticket
+                    object
+                      a(href="")
+                        img.svg-inline(src="images/images/ticket-w.svg", alt="билет")
+                        span Купить билет
+          a.show-more-item(href="#")
+            .row
+              .col-md-2.col-sm-3.col-12
+                .show-more-item-date
+                  .show-more-item-date-number 01/04
+                  .show-more-item-date-day среда
+              .col-md-3.col-sm-9.col-12
+                .show-more-item-img
+                  .show-more-item-img-wrap
+                    img(src="images/images/bill-1.jpg", alt="alt")
+              .col-md-7.col-sm-9.col-12.show-more-item-mob
+                .show-more-item-info
+                  .show-more-item-info-time 20:30 / 16+
+                  .show-more-item-info-name Романтический возраст
+                  .show-more-item-info-actors Актерский состав
+                  .show-more-item-info-scene Основная сцена
+                  .show-more-item-info-ticket
+                    object
+                      a(href="#")
+                        img.svg-inline(src="images/images/ticket-w.svg", alt="билет")
+                        span Купить билет
 
   include includes/footer.pug     

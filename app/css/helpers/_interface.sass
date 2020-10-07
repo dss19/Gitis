@@ -16,11 +16,17 @@ ul, li, p, h1, h2, h3, button
   padding: 0 
 ul, li 
   list-style: none  
-form, input, button
+form, input, button, textarea
   border: none
   outline: none
 button
   cursor: pointer
+button:focus
+  outline: 0!important
+
+// .fancybox-button
+//   opacity: 0
+//   cur    
 
 .banner
   width: 100%
@@ -37,7 +43,7 @@ button
   &-header  
     position: relative
     height: 250px
-    background: url(../images/hd/page-cover.jpg) no-repeat
+    background-repeat: no-repeat
     background-size: cover
     background-position: center top
     &-content
@@ -85,13 +91,14 @@ button
         color: $black
         margin-bottom: 20px
       &-tag
-        +norm
-        font-weight: 300
-        font-size: 13px
-        line-height: 30px
-        color: $red
-        margin-bottom: 20px
-        cursor: pointer  
+        margin-bottom: 20px 
+        a
+          +norm
+          font-weight: 300
+          font-size: 13px
+          line-height: 30px
+          color: $red
+         
       &-img
         width: 180px
         margin-bottom: 50px
@@ -175,6 +182,20 @@ button
       margin-bottom: 44px
       &-item
         &-date
+          display: flex
+          &-wrap
+            &.second
+              margin-left: 30px
+              position: relative
+              &::before
+                position: absolute
+                content: ""
+                left: -25px
+                top: 16px
+                height: 5px
+                width: 20px
+                background: $black
+
           &-day 
             +lack 
             font-size: 50px
@@ -207,14 +228,20 @@ button
             font-weight: 500
             font-size: 20px
             line-height: 26px
-          &-red
+          &.red
             background: $red
             a 
               color: $white          
-          &-white
+          &.white
             background: $white
             a 
-              color: $red          
+              color: $red
+        &.single
+          display: flex
+          .page-content-bill-item-button
+            margin: 0 43px 0 auto
+          .page-content-bill-item-date-text
+            margin-bottom: 0  
       &-info
         +norm
         font-weight: 300
@@ -396,6 +423,7 @@ button
         &:nth-of-type(even)
           transform: translateY(50px)  
       &-item
+        display: block
         position: relative
         margin-bottom: 30px
         img 
@@ -704,20 +732,20 @@ button
     width: 100%
     display: flex
     align-items: center
-    justify-content: space-between
     padding-bottom: 49px    
     border-bottom: 1px solid $black
   &-abc
     display: flex
     align-items: center
-    &-date
-      +lack
-      font-size: 30px
-      margin-right: 44px
-    &-abc
-      +norm
-      font-size: 27px
+    input
+      width: 1px
+      height: 1px
+      visibility: hidden
+    &-date      
+      margin-right: 20px
     &-item
+      +lack
+      font-size: 20px
       color: $white
       -webkit-text-stroke: 1px $black
       line-height: 35px
@@ -736,6 +764,8 @@ button
           width: 100%
           border-bottom: 1px solid $red
   &-scene
+    flex: 1
+    text-align: center
     +bold
     font-size: 27px
     line-height: 35px
@@ -743,23 +773,26 @@ button
     text-transform: uppercase
     color: $red
     position: relative
-    cursor: pointer
+    cursor: pointer    
     &::before
       display: none
       position: absolute
       top: -10px
       left: 0
-      content: url(../images/images/mark.svg)        
-    &::after
-      position: absolute
-      top: 50%
-      transform: translateY(-50%)
-      right: -30px
-      content: url(../images/images/drop.svg)
-      transition: .3s
-    &.active
+      content: url(../images/images/mark.svg)
+    span
+      position: relative          
       &::after
-        transform: translateY(-50%) rotate(180deg)
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: -30px
+        content: url(../images/images/drop.svg)
+        transition: .3s
+    &.active
+      span
+        &::after
+          transform: translateY(-50%) rotate(180deg)
     &-menu
       position: absolute
       left: 50%
@@ -788,6 +821,10 @@ button
     display: flex
     align-items: center
     justify-content: flex-end
+    input
+      width: 1px
+      height: 1px
+      visibility: hidden
     &-no 
       margin-left: 30px
     &-item
@@ -815,10 +852,18 @@ main
       &-bill
         &-item
           &-date
+            &-day
+              font-size: 48px
             &-text
               height: 52px
           &-button
             width: 100%
+          &.single
+            .page-content-bill-item-date-text
+              height: auto
+            .page-content-bill-item-button
+              margin-right: 0
+              width: 290px    
       &-media
         &-movie
           &-pause
@@ -864,7 +909,15 @@ main
           min-height: 50px
           margin-bottom: 30px
       &-info-social-links
-        margin-bottom: 40px    
+        margin-bottom: 40px
+      &-bill
+        &-item
+          &.single
+            display: block
+            .page-content-bill-item-button
+              width: 100%
+              max-width: 350px
+              margin: 20px 0 0      
     &-slider-bottom
       &-title
         font-size: 50px

@@ -79,11 +79,13 @@
       &-title
         font-size: 30px 
         line-height: 40px
-        color: $black 
+        color: $black
+        margin-bottom: 15px 
       &-content 
         font-size: 16px
         line-height: 28px 
         color: $black
+        margin-bottom: 15px
 main
   .page-content-info-social.news-social
     .ya-share2__list.ya-share2__list_direction_horizontal
@@ -149,8 +151,15 @@ main
 
 @media screen and ( max-width: 767px )        
   .news
+    padding-top: 15px
     &-filter
-      display: none
+      &-list
+        padding-bottom: 15px
+        overflow: auto
+      &-item
+        font-size: 20px
+        line-height: 35px
+        margin-right: 20px  
     &-item
       &-primary
         .news-item-img

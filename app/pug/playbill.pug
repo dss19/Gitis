@@ -5,7 +5,7 @@ body
   include includes/header.pug
 
   main
-    .page-header
+    .page-header(style="background: url(images/hd/page-cover.jpg)")
       .page-header-grad
         .container
           .page-header-content
@@ -32,10 +32,14 @@ body
       
       .filter
         .container
-          .filter-wrap
+          form.filter-wrap#filterForm
             .filter-abc
-              .filter-abc-date.filter-abc-item.active 01-31
-              .filter-abc-abc.filter-abc-item а-я
+              input(type="radio", name="VIEW_TYPE", value="DATE", id="DATE", checked)
+              label(for="DATE")
+                .filter-abc-date.filter-abc-item.active по дате
+              input(type="radio", name="VIEW_TYPE", value="ABC", id="ABC")
+              label(for="ABC")
+                .filter-abc-abc.filter-abc-item по алфавиту
             .filter-scene <span>выбрать сцену</span>
               ul.filter-scene-menu
                 li.filter-scene-menu-link Основная сцена
@@ -45,10 +49,14 @@ body
                 li.filter-scene-menu-link Учебный корпус ГИТИС, ауд. 46А
                 li.filter-scene-menu-link Учебный корпус ГИТИС, ауд. 46Б
             .filter-img
-              .filter-img-yes.filter-img-item.active
-                img.svg-inline.filter-img-item-svg(src="images/images/filter-img.svg", alt="с фото")
-              .filter-img-no.filter-img-item
-                img.svg-inline.filter-img-item-svg(src="images/images/filter-list.svg", alt="без фото")
+              input(type="radio", name="IMG_TYPE", value="IMG", id="IMG", checked)
+              label(for="IMG")
+                .filter-img-yes.filter-img-item.active
+                  img.svg-inline.filter-img-item-svg(src="images/images/filter-img.svg", alt="с фото")
+              input(type="radio", name="IMG_TYPE", value="NOIMG", id="NOIMG")
+              label(for="NOIMG")    
+                .filter-img-no.filter-img-item
+                  img.svg-inline.filter-img-item-svg(src="images/images/filter-list.svg", alt="без фото")
       .playbill-wrapper
       .container    
         .page-ellipse.active

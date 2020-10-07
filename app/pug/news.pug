@@ -8,7 +8,7 @@ body
   include includes/header.pug
 
   main  
-    .page-header
+    .page-header(style="background: url(images/hd/page-cover.jpg)")
       .page-header-grad
         .container
           .page-header-content
@@ -25,10 +25,10 @@ body
       .container        
         .news-filter
           .news-filter-list          
-            .news-filter-item.active все
-            .news-filter-item новости
-            .news-filter-item гастроли
-            .news-filter-item сми о нас
+            a.news-filter-item.active(href="#") все
+            a.news-filter-item(href="#") новости
+            a.news-filter-item(href="#") гастроли
+            a.news-filter-item(href="#") сми&nbsp;о&nbsp;нас
         a.news-item.news-item-secondary(href="#")
           .news-item-wrap                      
             .news-item-date

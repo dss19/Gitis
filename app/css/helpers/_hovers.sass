@@ -57,14 +57,33 @@
       opacity: 1
   .show-bill-item.cancel:hover
     color: $black
+  .show-more-item:hover
+    .show-more-item-info-time,  
+    .show-more-item-info-name,  
+    .show-more-item-info-actors,  
+    .show-more-item-info-scene
+      color: $red
+    .show-more-item-img:after
+      transform: scale(1)
+    .show-more-item-info-ticket
+      path
+        fill: $red
+      span 
+        opacity: 1        
 
   .stage-downloads-item:hover
     .stage-downloads-item-pdf-svg
       path 
         stroke: $red
+        fill: $red
     .stage-downloads-item-desc
       p 
-        color: $red    
+        color: $red
+    .stage-downloads-item-buttons
+      opacity: 1
+    .stage-downloads-item-img-type
+      color: $red
+      -webkit-text-stroke: 1px $red          
   .stage-downloads-item-button-svg:hover
     circle 
       fill: $red

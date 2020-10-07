@@ -86,9 +86,76 @@ footer.footer
             p Вернуть            
             p билет
         .footer-block-svg
-          img(src="images/images/footer-svg.svg", alt="узор") 
+          img(src="images/images/footer-svg.svg", alt="узор")
+
+.cookie-modal
+  .container
+    .cookie-modal-content
+      .cookie-modal-text Этот сайт использует файлы Cookie для хранения данных. Продолжая использовать сайт, Вы даете свое согласие на работу с этими файлами.
+      button.cookie-modal-agree Принять
+      button.cookie-modal-close
+        .cookie-modal-close-wrap
+          .cookie-modal-close-img
+            img(src="images/images/close.svg", alt="")
+
+.modal-form#modal-form(style="display: none")
+  button.modal-form-close.modal-close(data-fancybox-close)
+    img.svg-inline(src="images/images/close.svg", alt="alt")
+  .modal-form-ttl Я участник.<br>Подать заявку
+  .modal-form-sbttl Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?
+  .modal-form-content
+    form(id="invoiceForm", class="form-valid")
+      .row
+        .col-12
+          .input
+            input.field(type="text", name="f_i_o", id="modal-form-name", required)
+            label.label(for="modal-form-name") Представьтесь, пожалуйста
+        .col-6
+          .input
+            input.field(type="email", name="email", id="modal-form-email", required)
+            label.label(for="modal-form-email") Email
+        .col-6
+          .input
+            input.field.input-phone(type="tel", name="phone", id="modal-form-phone", required)
+            label.label(for="modal-form-phone") Телефон
+        .col-6
+          .input
+            input.field(type="text", name="city", id="modal-form-city")
+            label.label(for="modal-form-city") Город
+        .col-6
+          .input
+            input.field(type="text", name="region", id="modal-form-region")
+            label.label(for="modal-form-region") Регион/Область
+        .col-12
+          .input
+            input.field(type="text", name="chief", id="modal-form-chief")
+            label.label(for="modal-form-chief") Руководитель проекта
+        .col-12
+          .input
+            input.field(type="text", name="project", id="modal-form-project")
+            label.label(for="modal-form-project") Название проекта
+        .col-12
+          .input.input-textarea
+            textarea.input-comment.field(type="text", name="comment", id="modal-form-comment")
+            label.label(for="modal-form-comment") Комментарий
+        .col-6
+          button.button(type='submit') Отправить              
+        .col-6
+          .polici
+            p Нажимая кнопку "Отправить"<br>я даю свое согласие с
+            .polici-link
+              a(href="#") Политикой обработки персональных данных              
+
+.modal-form#modal-success(style="display: none")
+  button.modal-form-close.modal-close(data-fancybox-close)
+    img.svg-inline(src="images/images/close.svg", alt="alt")
+  .modal-form-ttl Благодарим за заявку
+  .modal-form-sbttl Мы обработаем запрос и свяжемся с Вами в ближайшее время
 
 script(src="scripts/jquery-3.3.1.min.js")
 script(src="scripts/slick.min.js")
-script(src="scripts/main.js")
+script(src="scripts/jquery.fancybox.min.js")
+script(src="scripts/jquery.validate.min.js")
+script(src="scripts/jquery.maskedinput.min.js")
 script(src="https://api-maps.yandex.ru/2.1/?apikey=<2090755b-f1a0-458a-b63b-a00abf7a7de5>&lang=ru_RU")
+script(src="scripts/main.js")

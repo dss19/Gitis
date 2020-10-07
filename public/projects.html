@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/extra.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
 </head>
 <body><a class="banner" href="#"><img class="banner-img" src="images/images/banner.jpg" alt="alt"></a>
   <header class="header">
@@ -41,7 +42,7 @@
                 <div class="header-study-text">гитис</div></a></div>
             <div class="header-menu-fixed">     
               <ul class="header-menu-list">
-                <li><a class="header-menu-link" href="playbill-abc-img.html">афиша</a></li>
+                <li><a class="header-menu-link" href="playbill.html">афиша</a></li>
                 <li><a class="header-menu-link" href="repertoire.html">репертуар</a></li>
                 <li><a class="header-menu-link" href="stages.html">площадки</a></li>
                 <li><a class="header-menu-link" href="news.html">пресс-центр</a></li>
@@ -57,7 +58,7 @@
     <div class="header-menu">
       <div class="container">     
         <ul class="header-menu-list">
-          <li><a class="header-menu-link" href="playbill-abc-img.html">афиша</a></li>
+          <li><a class="header-menu-link" href="playbill.html">афиша</a></li>
           <li><a class="header-menu-link" href="repertoire.html">репертуар</a></li>
           <li><a class="header-menu-link" href="stages.html">площадки</a></li>
           <li><a class="header-menu-link" href="news.html">пресс-центр</a></li>
@@ -93,7 +94,7 @@
       <div class="mobile-menu-close"><span></span></div>
       <div class="mobile-menu-logo"><a href="/"><img src="images/images/logo.png" alt="лого"></a></div>
       <ul class="mobile-menu-list">
-        <li class="mobile-menu-link"><a href="playbill-abc-img.html">афиша</a></li>
+        <li class="mobile-menu-link"><a href="playbill.html">афиша</a></li>
         <li class="mobile-menu-link"><a href="repertoire.html">репертуар</a></li>
         <li class="mobile-menu-link"><a href="stages.html">площадки</a></li>
         <li class="mobile-menu-link"><a href="news.html">пресс-центр</a></li>
@@ -129,7 +130,7 @@
     </div>
   </div>
   <main>
-    <div class="page-header">
+    <div class="page-header" style="background: url(images/hd/page-cover.jpg)">
       <div class="page-header-grad">
         <div class="container">
           <div class="page-header-content">
@@ -288,8 +289,97 @@
       </div>
     </div>
   </footer>
+  <div class="cookie-modal">
+    <div class="container">
+      <div class="cookie-modal-content">
+        <div class="cookie-modal-text">Этот сайт использует файлы Cookie для хранения данных. Продолжая использовать сайт, Вы даете свое согласие на работу с этими файлами.</div>
+        <button class="cookie-modal-agree">Принять</button>
+        <button class="cookie-modal-close">
+          <div class="cookie-modal-close-wrap">
+            <div class="cookie-modal-close-img"><img src="images/images/close.svg" alt=""></div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-form" id="modal-form" style="display: none">
+    <button class="modal-form-close modal-close" data-fancybox-close><img class="svg-inline" src="images/images/close.svg" alt="alt"></button>
+    <div class="modal-form-ttl">Я участник.<br>Подать заявку</div>
+    <div class="modal-form-sbttl">Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями?</div>
+    <div class="modal-form-content">
+      <form class="form-valid" id="invoiceForm">
+        <div class="row">
+          <div class="col-12">
+            <div class="input">
+              <input class="field" type="text" name="f_i_o" id="modal-form-name" required>
+              <label class="label" for="modal-form-name">Представьтесь, пожалуйста</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input">
+              <input class="field" type="email" name="email" id="modal-form-email" required>
+              <label class="label" for="modal-form-email">Email</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input">
+              <input class="field input-phone" type="tel" name="phone" id="modal-form-phone" required>
+              <label class="label" for="modal-form-phone">Телефон</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input">
+              <input class="field" type="text" name="city" id="modal-form-city">
+              <label class="label" for="modal-form-city">Город</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input">
+              <input class="field" type="text" name="region" id="modal-form-region">
+              <label class="label" for="modal-form-region">Регион/Область</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="input">
+              <input class="field" type="text" name="chief" id="modal-form-chief">
+              <label class="label" for="modal-form-chief">Руководитель проекта</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="input">
+              <input class="field" type="text" name="project" id="modal-form-project">
+              <label class="label" for="modal-form-project">Название проекта</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="input input-textarea">
+              <textarea class="input-comment field" type="text" name="comment" id="modal-form-comment"></textarea>
+              <label class="label" for="modal-form-comment">Комментарий</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <button class="button" type="submit">Отправить              </button>
+          </div>
+          <div class="col-6">
+            <div class="polici">
+              <p>Нажимая кнопку "Отправить"<br>я даю свое согласие с</p>
+              <div class="polici-link"><a href="#">Политикой обработки персональных данных              </a></div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-form" id="modal-success" style="display: none">
+    <button class="modal-form-close modal-close" data-fancybox-close><img class="svg-inline" src="images/images/close.svg" alt="alt"></button>
+    <div class="modal-form-ttl">Благодарим за заявку</div>
+    <div class="modal-form-sbttl">Мы обработаем запрос и свяжемся с Вами в ближайшее время</div>
+  </div>
   <script src="scripts/jquery-3.3.1.min.js"></script>
   <script src="scripts/slick.min.js"></script>
-  <script src="scripts/main.js"></script>
+  <script src="scripts/jquery.fancybox.min.js"></script>
+  <script src="scripts/jquery.validate.min.js"></script>
+  <script src="scripts/jquery.maskedinput.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=&lt;2090755b-f1a0-458a-b63b-a00abf7a7de5&gt;&amp;lang=ru_RU"></script>
+  <script src="scripts/main.js"></script>
 </body>

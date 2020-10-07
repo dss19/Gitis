@@ -53,19 +53,29 @@ body
             .page-content-bill
               .row                
                 .col-md-6.col-12.page-content-bill-item
-                  .page-content-bill-item-date
-                    .page-content-bill-item-date-day 20/08
-                    .page-content-bill-item-date-year 2020
+                  .page-content-bill-item-content
+                    .page-content-bill-item-date
+                      .page-content-bill-item-date-wrap
+                        .page-content-bill-item-date-day 20/08
+                        .page-content-bill-item-date-year 2020
+                      .page-content-bill-item-date-wrap.second
+                        .page-content-bill-item-date-day 20/08
+                        .page-content-bill-item-date-year 2020
                     .page-content-bill-item-date-text Дата проведения проекта
-                  .page-content-bill-item-button.page-content-bill-item-button-red
+                  .page-content-bill-item-button.red
                     a(href="#") Я зритель. Хочу пойти!
                 .col-md-6.col-12.page-content-bill-item
-                  .page-content-bill-item-date
-                    .page-content-bill-item-date-day 11/05
-                    .page-content-bill-item-date-year 2020
+                  .page-content-bill-item-content
+                    .page-content-bill-item-date
+                      .page-content-bill-item-date-wrap
+                        .page-content-bill-item-date-day 11/05
+                        .page-content-bill-item-date-year 2020
+                      .page-content-bill-item-date-wrap.second
+                        .page-content-bill-item-date-day 28/05
+                        .page-content-bill-item-date-year 2020
                     .page-content-bill-item-date-text Окончание подачи заявок участников
-                  .page-content-bill-item-button.page-content-bill-item-button-white
-                    a(href="#") Я участник. Подать заявку
+                  .page-content-bill-item-button.white
+                    a(data-fancybox="modal-form", data-src="#modal-form" href="javascript:;") Я участник. Подать заявку
               .page-content-bill-info Исходя из поданных заявок Оргкомитет фестиваля формирует программу и расписание Фестиваля, которые будут опубликованы на сайте ГИТИС не позднее 28 февраля 2020 года.
             .page-content-desc
               .page-content-desc-title
@@ -130,16 +140,16 @@ body
           h3 Дополнительный вид галереи плиткой
           .row
             .col-sm-6.col-12
-              .page-content-gallery-item
+              a.page-content-gallery-item(data-fancybox="gallery", href="images/hd/gallery-1.jpg")
                 img(src="images/hd/gallery-1.jpg", alt="галерея")
             .col-sm-6.col-12
-              .page-content-gallery-item
+              a.page-content-gallery-item(data-fancybox="gallery", href="images/hd/gallery-2.jpg")
                 img(src="images/hd/gallery-2.jpg", alt="галерея")
             .col-sm-6.col-12
-              .page-content-gallery-item
+              a.page-content-gallery-item(data-fancybox="gallery", href="images/hd/gallery-3.jpg")
                 img(src="images/hd/gallery-3.jpg", alt="галерея")
             .col-sm-6.col-12
-              .page-content-gallery-item
+              a.page-content-gallery-item(data-fancybox="gallery", href="images/hd/gallery-1.jpg")
                 img(src="images/hd/gallery-1.jpg", alt="галерея")
         .page-content-idea
           h3 Идея спектакля и творческая группа

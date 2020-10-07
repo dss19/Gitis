@@ -30,6 +30,27 @@ $(document).ready(function () {
 		}
 	}
 
+	setTimeout(function () {
+		$('.cookie-modal').addClass('vis');
+	}, 3000)
+
+	$('.cookie-modal-agree').click(function () {
+		$('.cookie-modal').removeClass('vis');
+	});
+	$('.cookie-modal-close').click(function () {
+		$('.cookie-modal').removeClass('vis');
+	});
+
+	// Модальное окно
+	$('[data-fancybox^="modal"]').fancybox({
+		animationEffect: "fade",
+		animationDuration: 300,
+		touch: false,
+		smallBtn: false,
+		modal: true,
+		clickOutside: true
+	});
+
 	$('.header-mobile-humb').click(function () {
 		$('.mobile-menu').addClass('active');
 	});
@@ -146,7 +167,6 @@ $(document).ready(function () {
 		}, 500);
 
 	});
-
 	
 	// Средний слайдер на Главной
 	$(".main-slider-partners").slick({
@@ -298,6 +318,18 @@ $(document).ready(function () {
 		);
 	});
 
+	$('.filter-scene-menu-link').click(function () {
+		var scene = $(this).text();
+		$('.filter-scene span').text(scene);
+	});
+	
+	// Отображение блоков с датами на странице Проекта
+	var billItem = $('.page-content-bill-item');
+	if (billItem.length < 2) {
+		billItem.removeClass('col-md-6').addClass('single');
+	}
+	
+
 	// Ajax Афиши
 	$.ajax({
 		type: "GET",
@@ -411,6 +443,79 @@ $(document).ready(function () {
 		}
 	})
 
+	// Форма заявки
+	$(".input").each(function () {
+    var label;
+    $(".input").focusin(function () {
+      label = $(this).children(".label");
+      label.addClass("focused");
+    });
+    $(".input").focusout(function () {
+      var input = $(this).children(".field");
+      if (input.val() === "") {
+        label.removeClass("focused");
+      }
+    });
+	});
+	
+	$(".input-comment").on("keyup input", function () {
+    $(this)
+      .css("height", "auto")
+      .css(
+        "height",
+        this.scrollHeight + (this.offsetHeight - this.clientHeight)
+      );
+	});
+	
+	$('.form-valid').each(function () {
+		form = $(this);
+		$('.input-phone').mask("+7 (999) 999-99-99");
+		form.validate({
+			rules: {
+					f_i_o: {
+						required: true,
+						minlength: 2
+					}
+				},
+				messages: {
+					f_i_o: {
+						required: 'Укажите имя',
+						minlength: 'Длина имени должна быть более 2-х символов'
+					},
+					email: {
+						required: 'Укажите почту',
+						minlength: 'Неверный формат почтового адреса'
+					},
+					phone: {
+						required: 'Укажите телефон'
+					}					
+				},
+			submitHandler: function (form) {
+				$.ajax({
+					url: '',
+					// type: 'POST',
+					contentType: false,
+					processData: false,
+					data: new FormData(form),
+					success: function () {
+						$(form).trigger('reset');
+						$.fancybox.close();
+						setTimeout(function() {
+							$.fancybox.open({
+							src: '#modal-success',
+							animationEffect: "fade",
+							animationDuration: 300,
+							touch: false,
+							smallBtn: false,
+							modal: true,
+							clickOutside: true
+							});
+						}, 300);
+					}
+				})	
+			}
+		})
+	})
 
 	// Конвертор свг
 	$('.svg-inline').each(function () {
