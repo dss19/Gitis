@@ -19,6 +19,8 @@ body
                 .col-lg-8.col-12
                   .main-slider-top-img
                     img(src="files/main-slide-1.jpg", alt="alt")
+                    .main-slider-top-img-cover
+                      span премьера
                 .col-lg-4.col-12
                   .main-slider-top-info
                     .main-slider-top-info-inner
@@ -29,8 +31,9 @@ body
                         p Актерский факультет, режиссерский факультет.
                         p Актерско-режиссерская мастерская А.С. Кончаловского
                       .main-slider-top-age Возрастное ограничение <span>16+</span>
-                      .main-slider-top-ticket
-                        img(src="images/images/ticket-b.svg", alt="alt")
+                      a.main-slider-top-ticket(href="#")
+                        img.svg-inline(src="images/images/ticket-b.svg", alt="alt")
+                        span Купить билет
             .slick-slider-slide.main-slider-top-slide
               .row
                 .col-lg-8.col-12
@@ -46,8 +49,9 @@ body
                         p Актерский факультет, режиссерский факультет.
                         p Актерско-режиссерская мастерская А.С. Кончаловского
                       .main-slider-top-age Возрастное ограничение <span>16+</span>
-                      .main-slider-top-ticket
-                        img(src="images/images/ticket-b.svg", alt="alt")
+                      a.main-slider-top-ticket(href="#")
+                        img.svg-inline(src="images/images/ticket-b.svg", alt="alt")
+                        span Купить билет
             .slick-slider-slide.main-slider-top-slide
               .row
                 .col-lg-8.col-12
@@ -63,8 +67,9 @@ body
                         p Актерский факультет, режиссерский факультет.
                         p Актерско-режиссерская мастерская А.С. Кончаловского
                       .main-slider-top-age Возрастное ограничение <span>16+</span>
-                      .main-slider-top-ticket
-                        img(src="images/images/ticket-b.svg", alt="alt")
+                      a.main-slider-top-ticket(href="#")
+                        img.svg-inline(src="images/images/ticket-b.svg", alt="alt")
+                        span Купить билет
     .main-section.main-bill
       .container
         .main-section-title
@@ -82,17 +87,18 @@ body
                 .main-bill-item-info
                   .main-bill-item-date 25/05
                   .main-bill-item-day пт, 20:30
-                  .main-bill-item-scene Основная сцена
+                  .main-bill-item-scene Учебный корпус, ауд. 46 А
                   .main-bill-item-age 16+
                 .main-bill-item-cover
                   .main-bill-item-img
                     img(src="images/hd/main-bill-1.jpg", alt="проект-1")
+                    .main-bill-item-img-cover
+                      span премьера
                   .main-bill-item-title Бешеные деньги     
                   .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского
-                  //- .main-bill-item-ticket
-                  //-   a(href="#")
-                    //- img(src="images/images/ticket-b.svg", class="main-bill-item-ticket-b" alt="alt")       
-                    //- img(src="images/images/ticket.svg", class="main-bill-item-ticket-w" alt="alt")       
+                object
+                  a.main-bill-item-ticket(href="#")
+                    img.svg-inline(src="images/images/ticket-b.svg", alt="alt")       
             .col-md-6.col-12
               a(href="#", class="main-bill-item")
                 .main-bill-item-info
@@ -104,7 +110,10 @@ body
                   .main-bill-item-img
                     img(src="images/hd/main-bill-2.jpg", alt="проект-2")
                   .main-bill-item-title Островский. Мечты     
-                  .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского     
+                  .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского
+                object
+                  a.main-bill-item-ticket(href="#")
+                    img.svg-inline(src="images/images/ticket-b.svg", alt="alt")
             .col-md-6.col-12
               a(href="#", class="main-bill-item")
                 .main-bill-item-info
@@ -116,7 +125,10 @@ body
                   .main-bill-item-img
                     img(src="images/hd/main-bill-3.jpg", alt="проект-3")
                   .main-bill-item-title Над пропастью во ржи: сеанс психоанализа     
-                  .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского     
+                  .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского
+                object
+                  a.main-bill-item-ticket(href="#")
+                    img.svg-inline(src="images/images/ticket-b.svg", alt="alt")
             .col-md-6.col-12
               a(href="#", class="main-bill-item")
                 .main-bill-item-info
@@ -129,6 +141,9 @@ body
                     img(src="images/hd/main-bill-4.jpg", alt="проект-4")
                   .main-bill-item-title Над пропастью во ржи: сеанс психоанализа     
                   .main-bill-item-actors Актерский факультет, Актерско-режиссерская мастерская А.С. Кончаловского
+                object
+                  a.main-bill-item-ticket(href="#")
+                    img.svg-inline(src="images/images/ticket-b.svg", alt="alt")
     .main-section.main-billboard      
       .main-billboard-img 
         img(src="images/hd/main-billboard.jpg", alt="alt")

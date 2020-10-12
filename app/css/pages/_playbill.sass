@@ -1,7 +1,10 @@
 .playbill
   &-date
-    padding: 50px 0
+    padding-bottom: 50px    
     border-bottom: 1px solid $black
+    a[name]
+      display: block
+      padding-top: 50px
   &-day
     padding-top: 6px 
     color: $black
@@ -19,25 +22,36 @@
     &.weekend
       color: $red          
   &-item
-    position: relative
     display: flex
-    padding-left: 30px
+    position: relative
     margin-bottom: 42px    
     &:before 
       position: absolute
       content: ''
       top: 0
-      left: 0
+      left: -30px
       width: 1px
       height: 50px
       background: $black
       transition: 0.3s
+    &::after
+      position: absolute
+      content: ''
+      top: 0
+      left: -32px
+      width: 5px
+      height: 50px
+      background: $red
+      transition: 0.3s
+      transform: scaleY(0)
+      transform-origin: center top
     &:last-of-type
       margin-bottom: 0
     &-img
       position: relative
-      width: 100%
-      max-width: 287px
+      display: block
+      min-width: 287px
+      width: 287px
       margin-right: 48px
       height: min-content
       img 
@@ -49,10 +63,14 @@
         content: ''
         top: 0
         left: 0
-        background: $grad   
+        background: $grad
+    &-wrap
+      display: flex             
     &-desc
       width: 100%
-      max-width: 450px
+      max-width: 369px
+      min-width: 369px
+
     &-time
       display: flex
       margin-bottom: 16px
@@ -89,35 +107,72 @@
       font-size: 13px
       line-height: 20px
       margin-bottom: 4px
+      color: $black
     &-ticket
-      margin-left: auto
-      a
-        display: flex
+      display: flex
+      align-items: center
       &-text
         opacity: 0
         +norm
         font-size: 18px
-        line-height: 16px
         color: $red
         transition: .3s
       &-img
-        margin-left: 28px
-        transform: translateY(-7px)
-        svg 
-          transition: .3s    
+        position: relative
+        margin-left: 20px
+        &::before
+          position: absolute
+          top: 0
+          left: 0
+          content: url(../images/images/ticket-r.svg)
+          opacity: 0
+          transition: .3s
+        img
+          transition: .3s
+    &-buy
+      position: relative
+      min-width: 286px
+      padding-left: 30px
+      margin-left: 30px
+      &::before 
+        position: absolute
+        content: ''
+        top: 5px
+        left: 0
+        width: 1px
+        height: 100px
+        background: $black
+      &-item
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 10px
+      &-date
+        +lack
+        font-size: 30px
+        line-height: 30px
+        color: $black
+        transition: .3s            
 
 .playbill.date.noimg, .playbill.abc.noimg
-  .playbill-item-time
-    display: block
-    min-width: 90px
-    margin-right: 64px
-  .playbill-item-time-info
-    font-size: 30px
-    margin: 0 0 14px 0
+
+  .playbill-item
+    width: 100%
+    padding-left: 30px
+    &::before
+      left: 0
+    &::after
+      left: -2px
+    &-wrap
+      width: 100%
   .playbill-item-desc
-    max-width: 640px
+    max-width: none
   .playbill-item-title
     line-height: 24px
+  .playbill-item-buy
+    margin-left: auto
+
 
 .playbill.abc.img
   .playbill-item-time-info
@@ -140,14 +195,37 @@
   .playbill
     &-day
       &-number
-        font-size: 50px
-        line-height: 28px
+        font-size: 40px
+        line-height: 16px
+    &-item
+      &-wrap
+        display: block
+      &-buy
+        padding-left: 0
+        margin-left: 0
+        margin-top: 15px
+        &::before
+          display: none 
+  .playbill.noimg
+    .playbill-item-wrap
+      display: flex
+
+@media screen and ( max-width: 1199px )
+  .playbill.noimg
+    .playbill-item-wrap
+      display: block                    
+
+@media screen and ( max-width: 1023px )
+  .playbill.date    
+    .playbill-item:before
+      left: -10px
 
 @media screen and ( max-width: 991px )
   .playbill-day-number 
     font-size: 38px
     line-height: 20px
-                
+  .playbill-item-buy
+    min-width: auto  
 
 @media screen and ( max-width: 767px )
   .playbill
@@ -161,11 +239,13 @@
     &-item
       display: block
       &-img
-        max-width: none
+        min-width: auto
+        width: 100%
         margin-bottom: 22px
       &-ticket
-        &-img
-          margin: 15px 0 0
+        &-text
+          display: none
+
   .playbill.abc.noimg, .playbill.date.noimg
     .playbill-item-time
       display: flex
@@ -187,7 +267,6 @@
       &-age
         width: 100%
         margin-left: 4px
-
 
 @media screen and ( max-width: 575px )
   .playbill

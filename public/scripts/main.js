@@ -2,10 +2,15 @@ $(document).ready(function () {
 
 	stickyBlocks();
 	sliderButtonsPos();
+	svgInline();
+	billNav();
+	billScroll();	
 
 	$(window).on("scroll touchmove resize", function () {
 		fixedHeader();
 		sliderButtonsPos();
+		billNav();
+		billScroll();
 	});
 
 	function fixedHeader() {
@@ -336,8 +341,7 @@ $(document).ready(function () {
 		cache: true,
 		success: function () {
 			$(".playbill-wrapper").load("loads/playbill-date-img.html");
-			$(".calendar-wrapper").load("loads/days.html");
-		},
+		},		
 	});
 
 	$('.filter-abc-date').click(function () {
@@ -360,15 +364,15 @@ $(document).ready(function () {
 				},
 			});
 		}
-		if (!$('.playbill').hasClass('date')) {
-			$.ajax({
-				type: "GET",
-				cache: true,
-				success: function () {
-					$(".calendar-wrapper").load("loads/days.html");
-				},
-			});
-		}
+		// if (!$('.playbill').hasClass('date')) {
+		// 	$.ajax({
+		// 		type: "GET",
+		// 		cache: true,
+		// 		success: function () {
+		// 			$(".calendar-wrapper").load("loads/days.html");
+		// 		},
+		// 	});
+		// }
 	})
 	$('.filter-abc-abc').click(function () {
 		$('.filter-abc-item').removeClass('active');
@@ -390,15 +394,15 @@ $(document).ready(function () {
 				},
 			});
 		}
-		if (!$('.playbill').hasClass('abc')) {
-			$.ajax({
-				type: "GET",
-				cache: true,
-				success: function () {
-					$(".calendar-wrapper").load("loads/letters.html");
-				},
-			});
-		}
+		// if (!$('.playbill').hasClass('abc')) {
+		// 	$.ajax({
+		// 		type: "GET",
+		// 		cache: true,
+		// 		success: function () {
+		// 			$(".calendar-wrapper").load("loads/letters.html");
+		// 		},
+		// 	});
+		// }
 	})
 	$('.filter-img-yes').click(function () {
 		$('.filter-img-item').removeClass('active');
@@ -517,31 +521,6 @@ $(document).ready(function () {
 		})
 	})
 
-	// Конвертор свг
-	$('.svg-inline').each(function () {
-		var $img = jQuery(this);
-		var imgID = $img.attr('id');
-		var imgClass = $img.attr('class');
-		var imgURL = $img.attr('src');
-		jQuery.get(imgURL, function (data) {
-			// Get the SVG tag, ignore the rest
-			var $svg = jQuery(data).find('svg');
-			// Add replaced image's ID to the new SVG
-			if (typeof imgID !== 'undefined') {
-				$svg = $svg.attr('id', imgID);
-			}
-			// Add replaced image's classes to the new SVG
-			if (typeof imgClass !== 'undefined') {
-				$svg = $svg.attr('class', imgClass + ' replaced-svg');
-			}
-			// Remove any invalid XML tags as per http://validator.w3.org
-			$svg = $svg.removeAttr('xmlns:a');
-			// Replace image with new SVG
-			$img.replaceWith($svg);
-		}, 'xml');
-	});
-
-
 	$(".main-billboard-list").each(function () {
 		var mList = $(this),
 			mClone1 = $(this).clone(),
@@ -557,7 +536,35 @@ $(document).ready(function () {
 		});
 	});
 
+	// Смотреть больше в Спектакле
+	$('.show-about-desc-more').click(function () {
+		$(this).toggleClass('active');
+		$('.show-about-desc-hidden').toggleClass('hidden');
+	});
+
 });
+
+function billScroll() {
+	$("ul.playbill-menu a").click(function (e) {
+		e.preventDefault();		
+		if (!$(this).hasClass("empty")) {
+			var topOffset;
+			if ($('.scroll-div').css("display") == "block") {
+				topOffset = $(".calendar").outerHeight() + 74;
+			} else if ($('.scroll-div').css("display") == "flex") {
+				topOffset = $(".calendar").outerHeight() + 81;
+			} else {
+				topOffset = $(".calendar").outerHeight() + 51;
+			}
+			console.log("scroll to" + topOffset);
+			$("body, html").animate({
+				scrollTop: $("a[name='" + $(this).attr("href").replace("#", "") + "']").offset().top - topOffset
+			}, 1000);
+		} else {
+			return false;
+		}
+	});
+}
 
 function stickyBlocks() {
 
@@ -792,4 +799,67 @@ function mainPicIn(slideIndex) {
 
 }
 
+// Конвертор свг
 
+function svgInline() {
+	$(".svg-inline").each(function () {
+    var $img = jQuery(this);
+    var imgID = $img.attr("id");
+    var imgClass = $img.attr("class");
+    var imgURL = $img.attr("src");
+    jQuery.get(
+      imgURL,
+      function (data) {
+        // Get the SVG tag, ignore the rest
+        var $svg = jQuery(data).find("svg");
+        // Add replaced image's ID to the new SVG
+        if (typeof imgID !== "undefined") {
+          $svg = $svg.attr("id", imgID);
+        }
+        // Add replaced image's classes to the new SVG
+        if (typeof imgClass !== "undefined") {
+          $svg = $svg.attr("class", imgClass + " replaced-svg");
+        }
+        // Remove any invalid XML tags as per http://validator.w3.org
+        $svg = $svg.removeAttr("xmlns:a");
+        // Replace image with new SVG
+        $img.replaceWith($svg);
+      },
+      "xml"
+    );
+  });
+}
+
+function billNav() {
+	var scrollPos = $(window).scrollTop();
+	$("a[name]").each(function () {
+		var topOffset;
+		if ($('.scroll-div').css("display") == "block") {
+			topOffset = $(".calendar").outerHeight() + 144;
+		} else if ($('.scroll-div').css("display") == "flex") {
+			topOffset = $(".calendar").outerHeight() + 151;
+		} else {
+			topOffset = $(".calendar").outerHeight() + 121;
+		}
+		// topOffset = $("header").outerHeight() + $(".calendar").outerHeight() + 70;
+		console.log(topOffset);
+		if (scrollPos >= $(this).offset().top - topOffset) {
+			if ($(".playbill-menu").length) {
+				$(".playbill-menu a").removeClass("current")
+				$(".playbill-menu a[href='#" + $(this).attr("name") + "']").addClass("current");
+			}
+			// if ($(".anchor-links").length) {
+			// 	$(".anchor-links a").removeClass("active")
+			// 	$(".anchor-links a[href='#" + $(this).attr("name") + "']").addClass("active");
+			// }
+			// if ($(".days-menu").length) {
+			// 	$(".days-menu a").removeClass("active")
+			// 	$(".days-menu a[href='#" + $(this).attr("name") + "']").addClass("active");
+			// }
+			// if ($(".alpha-menu").length) {
+			// 	$(".alpha-menu a").removeClass("active")
+			// 	$(".alpha-menu a[href='#" + $(this).attr("name") + "']").addClass("active");
+			// }
+		}		
+	});
+}

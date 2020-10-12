@@ -662,27 +662,42 @@ button:focus
   &.fixed
     position: fixed
     z-index: 15
-.months, .days, .letters
+    .playbill-menu
+      margin-bottom: 0
+.months, .playbill-menu
   display: flex
   justify-content: center
   align-items: center
   &-current
+    display: flex
+    align-items: center
     +lack
     font-size: 60px
     line-height: 35px
     color: $black
     text-transform: uppercase
     margin: 0 80px
-    span 
+    transform: translateY(7px)
+    span
+      display: block
+      margin: 0 10px 
       color: $red
+      transform: translateY(-7px)
+    &-month, &-year
+      &-item
+        display: none
+        &.current
+          display: block  
 .months-prev, .months-next
   width: 103px
   cursor: pointer
   svg 
     width: 100%
     path 
-      transition: .3s      
-.days, .letters
+      transition: .3s
+  &-m
+    display: none          
+.playbill-menu
   border-bottom: 5px solid $black
   padding-bottom: 12px
   margin-top: 15px
@@ -696,6 +711,8 @@ button:focus
   margin: 0 10.5px
   &.weekend
     color: $red
+  &.empty, &.weekend.empty
+    color: $grey2  
   &.current
     display: flex
     align-items: center
@@ -756,6 +773,7 @@ button:focus
         position: relative
         color: $red
         -webkit-text-stroke: 1px $red
+        z-index: 2
         &::after
           position: absolute
           bottom: 0
@@ -763,6 +781,10 @@ button:focus
           content: ''
           width: 100%
           border-bottom: 1px solid $red
+      span 
+        &:nth-of-type(2)
+          display: none
+              
   &-scene
     flex: 1
     text-align: center
@@ -924,14 +946,14 @@ main
         line-height: 55px
       .slick-prev, .slick-next
         top: -215px
-  .letters, .days
+  .playbill-menu
     width: 100%
     overflow: scroll
     justify-content: flex-start
   .months
     &-current
       font-size: 50px
-      margin: 0 66px                        
+      margin: 0 auto                       
 
 @media screen and ( max-width: 767px )
   .page    
@@ -1026,15 +1048,30 @@ main
       font-size: 42px
       margin: 0 auto
     &-prev, &-next
-      width: 80px
+      display: none
+      &-m
+        display: block
   .filter
     &-img-no
       margin-left: 20px
     &-abc-date
       margin-right: 20px
     &-scene
+      transform: translateY(-4px)
       &::after
-        right: -20px           
+        right: -20px
+      span
+        font-size: 22px
+        line-height: 30px  
+    &-abc-item
+      span 
+        &:nth-of-type(1)
+          display: none               
+        &:nth-of-type(2)
+          display: block
+    &-img
+      &-item
+        width: 21px                     
          
 @media screen and ( max-width: 575px )
   .logo
@@ -1205,6 +1242,7 @@ main
   .filter
     &-wrap
       padding-bottom: 20px
+      justify-content: space-between
     &-abc
       &-date
         font-size: 21px
@@ -1212,11 +1250,9 @@ main
       &-abc 
         font-size: 20px
       &-item
-        line-height: 30px
-    &-img
-      &-item
-        width: 21px
+        line-height: 30px    
     &-scene
+      flex: none
       span 
         display: none
       &::after

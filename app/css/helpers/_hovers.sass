@@ -15,10 +15,11 @@
         height: 5px
         background: $red
         width: 80%
-    &::after
-      opacity: 1
-    &::before
-      opacity: 0            
+    .main-bill-item-ticket
+      background: $red
+      svg 
+        path            
+          fill: $white
   .main-repertoire-item:hover
     .main-repertoire-item-name
       color: $red 
@@ -38,7 +39,13 @@
     .main-section-title-link-img
       svg 
         path 
-          stroke: $red2          
+          stroke: $red2
+  .main-slider-top-ticket:hover
+    svg 
+      path 
+        fill: $red
+    span
+      opacity: 1                      
                      
   .news-item:hover
     &:after
@@ -69,7 +76,13 @@
       path
         fill: $red
       span 
-        opacity: 1        
+        opacity: 1
+  .show-about-desc-more:hover
+    svg
+      circle
+        fill: $red
+      path
+        stroke: $white                
 
   .stage-downloads-item:hover
     .stage-downloads-item-pdf-svg
@@ -132,24 +145,31 @@
           path
             stroke: $red           
 
-  .playbill-item:hover
+  .playbill-item:hover    
     .playbill-item-time-info,
     .playbill-item-time-age,
     .playbill-item-time-age:before,
     .playbill-item-title,
     .playbill-item-ticket-text
-      opacity: 1
       color: $red
-    .playbill-item-ticket-img
-      svg 
-        path 
-          fill: $red
-    .playbill-item
-      &::before
-        display: none
+  .playbill-item:hover:after
+    transform: scaleY(1)
+        
 
+  .playbill-item-buy-item:hover
+    .playbill-item-buy-date
+      color: $red    
+    .playbill-item-ticket-text
+      opacity: 1
+    .playbill-item-ticket-img
+      img
+        opacity: 0
+    .playbill-item-ticket-img::before
+      opacity: 1    
+   
   .projects-list-item:hover
     .projects-list-item-date p,
+    .projects-list-item-date div,
     .projects-list-item-title
       color: $red
     .projects-list-item-title

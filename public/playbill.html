@@ -125,9 +125,10 @@
       </div>
       <div class="mobile-menu-study"><a href="#">
           <div class="mobile-menu-study-text">институт</div>
-          <div class="mobile-menu-study-text">гитис        </div></a></div>
+          <div class="mobile-menu-study-text">гитис</div></a></div>
     </div>
   </div>
+  <div class="scroll-div">               </div>
   <main>
     <div class="page-header" style="background: url(images/hd/page-cover.jpg)">
       <div class="page-header-grad">
@@ -148,10 +149,67 @@
         <div class="container">
           <div class="months">
             <div class="months-prev"><img class="svg-inline" src="images/images/calendar-prev.svg" alt="назад"/></div>
-            <div class="months-current">апрель <span>/</span> 2020</div>
+            <div class="months-prev-m"><img class="svg-inline" src="images/images/calendar-prev-m.svg" alt="назад"/></div>
+            <div class="months-current">
+              <ul class="months-current-month">
+                <li class="months-current-month-item">январь</li>
+                <li class="months-current-month-item">февраль</li>
+                <li class="months-current-month-item">март</li>
+                <li class="months-current-month-item">апрель</li>
+                <li class="months-current-month-item">май</li>
+                <li class="months-current-month-item">июнь</li>
+                <li class="months-current-month-item">июль</li>
+                <li class="months-current-month-item">август</li>
+                <li class="months-current-month-item current">сентябрь</li>
+                <li class="months-current-month-item">октябрь</li>
+                <li class="months-current-month-item">ноябрь</li>
+                <li class="months-current-month-item">декабрь</li>
+              </ul><span>/</span>
+              <ul class="months-current-year">
+                <li class="months-current-year-item current">2020</li>
+                <li class="months-current-year-item">2021</li>
+                <li class="months-current-year-item">2022</li>
+                <li class="months-current-year-item">2023</li>
+              </ul>
+            </div>
             <div class="months-next"><img class="svg-inline" src="images/images/calendar-next.svg" alt="вперед"/></div>
+            <div class="months-next-m"><img class="svg-inline" src="images/images/calendar-next-m.svg" alt="вперед"/></div>
           </div>
-          <div class="calendar-wrapper"></div>
+          <div class="calendar-wrapper">
+            <ul class="playbill-menu">
+              <li><a class="day" href="#day-1">1</a></li>
+              <li><a class="day" href="#day-2">2</a></li>
+              <li><a class="day" href="#day-3">3</a></li>
+              <li><a class="day weekend current" href="#day-4">4</a></li>
+              <li><a class="day weekend" href="#day-5">5</a></li>
+              <li><a class="day empty" href="#day-6">6</a></li>
+              <li><a class="day empty" href="#day-7">7</a></li>
+              <li><a class="day" href="#day-8">8</a></li>
+              <li><a class="day" href="#day-9">9</a></li>
+              <li><a class="day" href="#day-10">10</a></li>
+              <li><a class="day weekend" href="#day-11">11</a></li>
+              <li><a class="day weekend" href="#day-12">12</a></li>
+              <li><a class="day" href="#day-13">13</a></li>
+              <li><a class="day" href="#day-14">14</a></li>
+              <li><a class="day" href="#day-15">15</a></li>
+              <li><a class="day" href="#day-16">16</a></li>
+              <li><a class="day" href="#day-17">17</a></li>
+              <li><a class="day weekend" href="#day-18">18</a></li>
+              <li><a class="day weekend" href="#day-19">19</a></li>
+              <li><a class="day" href="#day-20">20</a></li>
+              <li><a class="day" href="#day-21">21</a></li>
+              <li><a class="day" href="#day-22">22</a></li>
+              <li><a class="day" href="#day-23">23</a></li>
+              <li><a class="day" href="#day-24">24</a></li>
+              <li><a class="day weekend" href="#day-25">25</a></li>
+              <li><a class="day weekend" href="#day-26">26</a></li>
+              <li><a class="day" href="#day-27">27</a></li>
+              <li><a class="day" href="#day-28">28</a></li>
+              <li><a class="day" href="#day-29">29</a></li>
+              <li><a class="day" href="#day-30">30</a></li>
+              <li><a class="day" href="#day-31">31</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="filter">
@@ -160,11 +218,11 @@
             <div class="filter-abc">
               <input type="radio" name="VIEW_TYPE" value="DATE" id="DATE" checked="checked"/>
               <label for="DATE">
-                <div class="filter-abc-date filter-abc-item active">по дате</div>
+                <div class="filter-abc-date filter-abc-item active"><span>по дате</span><span>01-31</span></div>
               </label>
               <input type="radio" name="VIEW_TYPE" value="ABC" id="ABC"/>
               <label for="ABC">
-                <div class="filter-abc-abc filter-abc-item">по алфавиту</div>
+                <div class="filter-abc-abc filter-abc-item"><span>по алфавиту</span><span>а-я</span></div>
               </label>
             </div>
             <div class="filter-scene"><span>выбрать сцену</span>
@@ -307,25 +365,25 @@
               <label class="label" for="modal-form-name">Представьтесь, пожалуйста</label>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="input">
               <input class="field" type="email" name="email" id="modal-form-email" required="required"/>
               <label class="label" for="modal-form-email">Email</label>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="input">
               <input class="field input-phone" type="tel" name="phone" id="modal-form-phone" required="required"/>
               <label class="label" for="modal-form-phone">Телефон</label>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="input">
               <input class="field" type="text" name="city" id="modal-form-city"/>
               <label class="label" for="modal-form-city">Город</label>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="input">
               <input class="field" type="text" name="region" id="modal-form-region"/>
               <label class="label" for="modal-form-region">Регион/Область</label>
@@ -349,10 +407,10 @@
               <label class="label" for="modal-form-comment">Комментарий</label>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <button class="button" type="submit">Отправить              </button>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <div class="polici">
               <p>Нажимая кнопку "Отправить"<br>я даю свое согласие с</p>
               <div class="polici-link"><a href="#">Политикой обработки персональных данных              </a></div>

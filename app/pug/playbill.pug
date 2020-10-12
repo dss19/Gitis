@@ -25,10 +25,34 @@ body
           .months
             .months-prev
               img(class="svg-inline", src="images/images/calendar-prev.svg", alt="назад")
-            .months-current апрель <span>/</span> 2020
+            .months-prev-m
+              img(class="svg-inline", src="images/images/calendar-prev-m.svg", alt="назад")
+            .months-current
+              ul.months-current-month
+                li.months-current-month-item январь
+                li.months-current-month-item февраль
+                li.months-current-month-item март
+                li.months-current-month-item апрель
+                li.months-current-month-item май
+                li.months-current-month-item июнь
+                li.months-current-month-item июль
+                li.months-current-month-item август
+                li.months-current-month-item.current сентябрь
+                li.months-current-month-item октябрь
+                li.months-current-month-item ноябрь
+                li.months-current-month-item декабрь
+              <span>/</span>
+              ul.months-current-year
+                li.months-current-year-item.current 2020
+                li.months-current-year-item 2021
+                li.months-current-year-item 2022
+                li.months-current-year-item 2023
             .months-next
               img(class="svg-inline", src="images/images/calendar-next.svg", alt="вперед")
+            .months-next-m
+              img(class="svg-inline", src="images/images/calendar-next-m.svg", alt="вперед")
           .calendar-wrapper
+            include loads/days.pug
       
       .filter
         .container
@@ -36,10 +60,10 @@ body
             .filter-abc
               input(type="radio", name="VIEW_TYPE", value="DATE", id="DATE", checked)
               label(for="DATE")
-                .filter-abc-date.filter-abc-item.active по дате
+                .filter-abc-date.filter-abc-item.active <span>по дате</span><span>01-31</span>
               input(type="radio", name="VIEW_TYPE", value="ABC", id="ABC")
               label(for="ABC")
-                .filter-abc-abc.filter-abc-item по алфавиту
+                .filter-abc-abc.filter-abc-item <span>по алфавиту</span><span>а-я</span>
             .filter-scene <span>выбрать сцену</span>
               ul.filter-scene-menu
                 li.filter-scene-menu-link Основная сцена

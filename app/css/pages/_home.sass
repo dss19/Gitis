@@ -8,8 +8,28 @@
     &-top
       margin-top: 50px
       &-img
+        position: relative
         img 
           width: 100%
+        &-cover
+          position: absolute
+          top: 0
+          left: 0
+          height: 100%
+          background: rgba($red, 0.7)
+          display: flex
+          align-items: center
+          justify-content: center
+          padding: 0 5px
+          span
+            color: $white
+            text-transform: uppercase
+            font-weight: 500
+            font-size: 20px
+            line-height: 40px
+            letter-spacing: .2em
+            writing-mode: tb-rl
+            transform: rotate(180deg)  
       .slick-arrow
         position: absolute
         font-size: 0
@@ -87,7 +107,20 @@
         color: $black
         margin-bottom: 40px
         span 
-          +bold 
+          +bold
+      &-ticket
+        display: flex
+        align-items: center
+        svg
+          margin-right: 15px 
+          path 
+            transition: .3s
+        span
+          +norm
+          font-size: 18px
+          color: $red
+          opacity: 0
+
   &-section
     padding: 82px 0 100px
     &-title
@@ -141,47 +174,21 @@
       position: relative
       display: flex
       color: $black      
-      &::before
+      object
         position: absolute
-        content: url(../images/images/ticket-b.svg)
+        right: -25px
+        bottom: -28px
+      &-ticket        
         display: flex
         align-items: center
         justify-content: center
         width: 70px
-        height: 70px
-        right: -25px
-        bottom: -28px
+        height: 70px        
         border-radius: 50%
         transition: 0.3s
-        opacity: 1
-      &::after
-        position: absolute
-        content: url(../images/images/ticket-w.svg)
-        display: flex
-        align-items: center
-        justify-content: center
-        width: 70px
-        height: 70px
-        background: $red
-        right: -25px
-        bottom: -28px
-        border-radius: 50%
-        transition: 0.3s
-        opacity: 0
-
-      // &-ticket
-      //   position: absolute
-      //   right: 0
-      //   bottom: -17px
-      //   width: 70px
-      //   height: 70px
-      //   background: $red
-      //   border-radius: 50%
-        // a 
-        //   width: 100%
-        //   height: 100%
-        //   position: relative
-        
+        svg 
+          path
+            transition: .3s        
       &-info
         min-width: 86px
         margin-right: 20px
@@ -226,6 +233,7 @@
           width: 180px
           background: $black
           transition: 0.3s
+        &-ticket  
       &-img
         position: relative
         margin-bottom: 23px
@@ -243,6 +251,26 @@
           width: 100%
           transform: scale(1.1)
           transition: 3s
+        &-cover  
+          position: absolute
+          top: 0
+          left: 0
+          height: 100%
+          background: rgba($red, 0.7)
+          display: flex
+          align-items: center
+          justify-content: center
+          padding: 0 5px
+          span
+            color: $white
+            text-transform: uppercase
+            font-weight: 500
+            font-size: 20px
+            line-height: 40px
+            letter-spacing: .2em
+            writing-mode: tb-rl
+            transform: rotate(180deg)
+            z-index: 1  
       &-title
         +norm
         font-size: 30px
@@ -621,7 +649,11 @@
       padding-top: 66px
       &-title
         font-size: 66px
-        line-height: 66px            
+        line-height: 66px
+    &-bill
+      &-item-img-cover
+        span
+          font-size: 16px                
 
 @media screen and ( max-width: 991px )
   .main
@@ -732,6 +764,10 @@
     &-slider
       .container
         padding: 0
+      &-top-img-cover
+        span 
+          font-size: 14px
+          line-height: 30px  
     &-section
       padding: 40px 0
       &-title
@@ -796,6 +832,10 @@
             width: 100px  
         &-img
           margin-bottom: 14px
+          &-cover
+            span
+              font-size: 14px
+              line-height: 30px
         &-title
           font-size: 20px
           line-height: 26px

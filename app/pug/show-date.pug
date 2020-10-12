@@ -87,8 +87,13 @@ body
                 p Действие происходит в маленьком городе Кьоджи, что в восьми милях от Венеции, населенном рыбаками и их семействами.
                 p Видимо, этот сюжет Гольдони взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить. 
                 p Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями? 
-                .show-about-desc-more
-                  img(src="images/images/more.svg", alt="читать больше")
+              .show-about-desc-hidden.hidden
+                p Действие происходит в маленьком городе Кьоджи, что в восьми милях от Венеции, населенном рыбаками и их семействами.
+                p Видимо, этот сюжет Гольдони взял из собственной биографии, ведь какое-то время он жил там и занимал должность судьи - знал о нравах рыбацких семейств не понаслышке. Наблюдая, как развиваются события в этот летний ветреный денек, понимаешь, насколько ему было непросто! Любовь и ревность, искренность и лукавство сдобренная крепким народным юмором, приводит два соседских семейства к нешуточному противостоянию, развивающемуся со скоростью урагана и затягивающему всех в весёлую и бесконечную неразбериху. Бурный темперамент рыбаков и их женщин, кажется, никто не может угомонить. 
+                p Чем закончится история, разгоревшаяся из-за крошечной ссоры? Смогут ли все достичь желаемого счастья, или так и не справятся со своими страстями? 
+              .show-about-desc-more
+                img.svg-inline.plus(src="images/images/more.svg", alt="")
+                img.svg-inline.minus(src="images/images/more-min.svg", alt="")
         .show-structure
           .row
             .col-md-6.col-12
@@ -250,10 +255,10 @@ body
                     img(src="images/images/views.svg", alt="views")
                     span 1 457 896            
     .show-bottom
-      .container            
+      .container
         .show-more
           .show-more-title Смотрите также
-          .show-more-item
+          a.show-more-item(href="https://yandex.ru/", target="_blank")
             .row
               .col-md-2.col-sm-3.col-12
                 .show-more-item-date
@@ -261,7 +266,8 @@ body
                   .show-more-item-date-day среда
               .col-md-3.col-sm-9.col-12
                 .show-more-item-img
-                  img(src="images/images/bill-10.jpg", alt="alt")
+                  .show-more-item-img-wrap
+                    img(src="images/images/bill-10.jpg", alt="alt")
               .col-md-7.col-sm-9.col-12.show-more-item-mob
                 .show-more-item-info
                   .show-more-item-info-time 20:30 / 16+
@@ -269,43 +275,51 @@ body
                   .show-more-item-info-actors Актерский состав
                   .show-more-item-info-scene Основная сцена
                   .show-more-item-info-ticket
-                    a(href="")
-                      img(src="images/images/ticket-w.svg", alt="билет")
-          .show-more-item.row
-            .col-md-2.col-sm-3.col-12
-              .show-more-item-date
-                .show-more-item-date-number 01/04
-                .show-more-item-date-day среда
-            .col-md-3.col-sm-9.col-12
-              .show-more-item-img
-                img(src="images/images/bill-2.jpg", alt="alt")
-            .col-md-7.col-sm-9.col-12.show-more-item-mob
-              .show-more-item-info
-                .show-more-item-info-time 20:30 / 16+
-                .show-more-item-info-name Романтический возраст
-                .show-more-item-info-actors Актерский состав
-                .show-more-item-info-scene Основная сцена
-                .show-more-item-info-ticket
-                  a(href="")
-                    img(src="images/images/ticket-w.svg", alt="билет")
-          .show-more-item.row
-            .col-md-2.col-sm-3.col-12
-              .show-more-item-date
-                .show-more-item-date-number 01/04
-                .show-more-item-date-day среда
-            .col-md-3.col-sm-9.col-12
-              .show-more-item-img
-                img(src="images/images/bill-1.jpg", alt="alt")
-            .col-md-7.col-sm-9.col-12.show-more-item-mob
-              .show-more-item-info
-                .show-more-item-info-time 20:30 / 16+
-                .show-more-item-info-name Романтический возраст
-                .show-more-item-info-actors Актерский состав
-                .show-more-item-info-scene Основная сцена
-                .show-more-item-info-ticket
-                  a(href="")
-                    img(src="images/images/ticket-w.svg", alt="билет")
-                        
-
+                    object
+                      a(href="https://google.com/", target="_blank")
+                        img.svg-inline(src="images/images/ticket-w.svg", alt="билет")
+                        span Купить билет
+          a.show-more-item(href="#")
+            .row
+              .col-md-2.col-sm-3.col-12
+                .show-more-item-date
+                  .show-more-item-date-number 01/04
+                  .show-more-item-date-day среда
+              .col-md-3.col-sm-9.col-12                
+                .show-more-item-img
+                  .show-more-item-img-wrap
+                    img(src="images/images/bill-2.jpg", alt="alt")
+              .col-md-7.col-sm-9.col-12.show-more-item-mob
+                .show-more-item-info
+                  .show-more-item-info-time 20:30 / 16+
+                  .show-more-item-info-name Романтический возраст
+                  .show-more-item-info-actors Актерский состав
+                  .show-more-item-info-scene Основная сцена
+                  .show-more-item-info-ticket
+                    object
+                      a(href="")
+                        img.svg-inline(src="images/images/ticket-w.svg", alt="билет")
+                        span Купить билет
+          a.show-more-item(href="#")
+            .row
+              .col-md-2.col-sm-3.col-12
+                .show-more-item-date
+                  .show-more-item-date-number 01/04
+                  .show-more-item-date-day среда
+              .col-md-3.col-sm-9.col-12
+                .show-more-item-img
+                  .show-more-item-img-wrap
+                    img(src="images/images/bill-1.jpg", alt="alt")
+              .col-md-7.col-sm-9.col-12.show-more-item-mob
+                .show-more-item-info
+                  .show-more-item-info-time 20:30 / 16+
+                  .show-more-item-info-name Романтический возраст
+                  .show-more-item-info-actors Актерский состав
+                  .show-more-item-info-scene Основная сцена
+                  .show-more-item-info-ticket
+                    object
+                      a(href="#")
+                        img.svg-inline(src="images/images/ticket-w.svg", alt="билет")
+                        span Купить билет
 
   include includes/footer.pug     
