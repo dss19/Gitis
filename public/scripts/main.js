@@ -3,14 +3,13 @@ $(document).ready(function () {
 	stickyBlocks();
 	sliderButtonsPos();
 	svgInline();
-	billNav();
-	billScroll();	
+	// billNav();
+	billScroll();
 
 	$(window).on("scroll touchmove resize", function () {
 		fixedHeader();
 		sliderButtonsPos();
-		billNav();
-		billScroll();
+		billNav();;
 	});
 
 	function fixedHeader() {
@@ -52,7 +51,8 @@ $(document).ready(function () {
 		animationDuration: 300,
 		touch: false,
 		smallBtn: false,
-		modal: true,
+		infobar: false,
+		toolbar: false,
 		clickOutside: true
 	});
 
@@ -290,30 +290,6 @@ $(document).ready(function () {
 		$('.filter-scene, .filter-scene-menu').toggleClass('active');
 	});
 
-	// Карты на странице контактов
-	ymaps.ready(function () {
-		var myMap = new ymaps.Map('map-1', {
-				center: [55.76343811803522, 37.60576528406144],
-				zoom: 17
-			}),
-			myPlacemark = new ymaps.Placemark([55.76343811803522, 37.60576528406144], null, {
-				iconLayout: 'default#image',
-				iconImageHref: './images/images/pin.svg'
-			});
-		myMap.geoObjects.add(myPlacemark);
-		myMap.behaviors.disable('scrollZoom');
-		var myMap2 = new ymaps.Map('map-2', {
-				center: [55.67402156903472, 37.542329499999994],
-				zoom: 17
-			}),
-			myPlacemark2 = new ymaps.Placemark([55.67402156903472, 37.542329499999994], null, {
-				iconLayout: 'default#image',
-				iconImageHref: './images/images/pin.svg'
-			});
-		myMap2.geoObjects.add(myPlacemark2);
-		myMap2.behaviors.disable('scrollZoom');
-	});
-
 	// Скролл наверх
 	$(".stage-history-on-top-button").click(function () {
 		$("html, body").animate({
@@ -471,29 +447,24 @@ $(document).ready(function () {
       );
 	});
 	
-	$('.form-valid').each(function () {
+	$('form').each(function () {
 		form = $(this);
 		$('.input-phone').mask("+7 (999) 999-99-99");
-		form.validate({
-			rules: {
-					f_i_o: {
-						required: true,
-						minlength: 2
-					}
-				},
-				messages: {
-					f_i_o: {
-						required: 'Укажите имя',
-						minlength: 'Длина имени должна быть более 2-х символов'
-					},
-					email: {
-						required: 'Укажите почту',
-						minlength: 'Неверный формат почтового адреса'
-					},
-					phone: {
-						required: 'Укажите телефон'
-					}					
-				},
+		var validationParams = {rules:{}, messages:{}};
+
+		var nameFieldName = $('#modal-form-name').attr('name');
+		validationParams['rules'][nameFieldName] = {required: true, minlength: 2};
+		validationParams['messages'][nameFieldName] = {required: 'Укажите имя', minlength: 'Длина имени должна быть более 2-х символов' };
+
+		var emailFieldName = $('#modal-form-email').attr('name');
+		validationParams['rules'][emailFieldName] = {required: true};
+		validationParams['messages'][emailFieldName] = {required: 'Укажите почту', email: 'Неверный формат почтового адреса' };
+
+		var phoneFieldName = $('#modal-form-phone').attr('name');
+		validationParams['rules'][phoneFieldName] = {required: true};
+		validationParams['messages'][phoneFieldName] = {required: 'Укажите телефон'};
+		
+		form.validate(validationParams, {			
 			submitHandler: function (form) {
 				$.ajax({
 					url: '',
@@ -511,7 +482,7 @@ $(document).ready(function () {
 							animationDuration: 300,
 							touch: false,
 							smallBtn: false,
-							modal: true,
+							toolbar: false,
 							clickOutside: true
 							});
 						}, 300);
@@ -541,6 +512,26 @@ $(document).ready(function () {
 		$(this).toggleClass('active');
 		$('.show-about-desc-hidden').toggleClass('hidden');
 	});
+
+	// Карты на странице контактов	
+
+	ymaps.ready(function () {
+		$(".contacts-map").each(function () {
+			var pointer = $(this).attr("data-geo").split(",");
+			var myMap = new ymaps.Map($(this).attr("id"), {
+				center: [pointer[0], pointer[1]],
+				zoom: 17,
+				controls: ['zoomControl']
+			}),
+				myPlacemark = new ymaps.Placemark([pointer[0], pointer[1]], null, {
+					iconLayout: 'default#image',
+					iconImageHref: './images/images/pin.svg',
+					iconImageSize: [29, 43]
+				});
+			myMap.geoObjects.add(myPlacemark);
+			myMap.behaviors.disable('scrollZoom');
+		});			
+	});		
 
 });
 
@@ -615,6 +606,10 @@ function stickyBlocks() {
 				elWrapper = $(this).closest(".sticky-wrapper"),
 				wrapperHeight = elWrapper.outerHeight(),
 				scrollPos = $(window).scrollTop();
+			
+			if (elWrapper.offset() == undefined) {
+				elWrapper = $('.sticky-wrapper')
+			}
 
 			if (el.hasClass("calendar")) {
 
@@ -651,6 +646,10 @@ function stickyBlocks() {
 					width: el.data("orig-width")
 
 				});
+				
+				$('.filter').css({
+					paddingTop: elHeight
+				});
 
 				if (scrollPos > (elWrapper.offset().top + wrapperHeight - elHeight - headerHeight - topOffset)) {
 
@@ -658,13 +657,13 @@ function stickyBlocks() {
 
 						marginTop: (elWrapper.offset().top + wrapperHeight - elHeight - headerHeight - topOffset) - scrollPos
 
-					});
+					});					
 
 				} else {
 
 					el.css({
 						marginTop: 0
-					});
+					});					
 
 				}
 
@@ -676,6 +675,10 @@ function stickyBlocks() {
 					marginTop: 0
 
 				})
+
+				$('.filter').css({
+					paddingTop: 0
+				});				
 
 			}
 
@@ -848,18 +851,7 @@ function billNav() {
 				$(".playbill-menu a").removeClass("current")
 				$(".playbill-menu a[href='#" + $(this).attr("name") + "']").addClass("current");
 			}
-			// if ($(".anchor-links").length) {
-			// 	$(".anchor-links a").removeClass("active")
-			// 	$(".anchor-links a[href='#" + $(this).attr("name") + "']").addClass("active");
-			// }
-			// if ($(".days-menu").length) {
-			// 	$(".days-menu a").removeClass("active")
-			// 	$(".days-menu a[href='#" + $(this).attr("name") + "']").addClass("active");
-			// }
-			// if ($(".alpha-menu").length) {
-			// 	$(".alpha-menu a").removeClass("active")
-			// 	$(".alpha-menu a[href='#" + $(this).attr("name") + "']").addClass("active");
-			// }
 		}		
 	});
 }
+
