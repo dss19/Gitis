@@ -218,6 +218,7 @@ button:focus
           width: 350px
           height: 55px
           border: 1px solid $red
+          transition: .3s
           a 
             display: flex
             align-items: center
@@ -231,11 +232,13 @@ button:focus
           &.red
             background: $red
             a 
-              color: $white          
+              color: $white
+              transition: .3s          
           &.white
             background: $white
             a 
               color: $red
+              transition: .3s
         &.single
           display: flex
           .page-content-bill-item-button
@@ -673,7 +676,7 @@ button:focus
     align-items: center
     +lack
     font-size: 60px
-    line-height: 35px
+    line-height: 60px
     color: $black
     text-transform: uppercase
     margin: 0 80px
@@ -682,12 +685,13 @@ button:focus
       display: block
       margin: 0 10px 
       color: $red
-      transform: translateY(-7px)
     &-month, &-year
       &-item
         display: none
         &.current
-          display: block  
+          display: block
+.months
+  margin-bottom: 10px            
 .months-prev, .months-next
   width: 103px
   cursor: pointer
@@ -749,7 +753,8 @@ button:focus
     width: 100%
     display: flex
     align-items: center
-    padding-bottom: 49px    
+    justify-content: space-between
+    padding: 15px 0 49px    
     border-bottom: 1px solid $black
   &-abc
     display: flex
@@ -762,7 +767,7 @@ button:focus
       margin-right: 20px
     &-item
       +lack
-      font-size: 20px
+      font-size: 26px
       color: $white
       -webkit-text-stroke: 1px $black
       line-height: 35px
@@ -786,59 +791,23 @@ button:focus
           display: none
               
   &-scene
-    flex: 1
-    text-align: center
-    +bold
-    font-size: 27px
-    line-height: 35px
-    font-weight: 500
-    text-transform: uppercase
-    color: $red
+    transform: translate(-50px, -4px)    
     position: relative
-    cursor: pointer    
+    z-index: 1    
     &::before
       display: none
       position: absolute
-      top: -10px
-      left: 0
-      content: url(../images/images/mark.svg)
-    span
-      position: relative          
-      &::after
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        right: -30px
-        content: url(../images/images/drop.svg)
-        transition: .3s
-    &.active
-      span
-        &::after
-          transform: translateY(-50%) rotate(180deg)
-    &-menu
-      position: absolute
+      top: 4px
       left: 50%
       transform: translateX(-50%)
-      opacity: 0
-      visibility: hidden
-      top: calc(100% + 10px)
-      width: 400px
-      background: $white
-      border-top: 5px solid $red
-      box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25)
-      z-index: 2
-      padding: 30px
-      transition: .3s
-      &-link 
-        +norm
-        font-size: 20px
-        line-height: 40px
-        color: $black
-        text-transform: none
-        transition: .3s
-      &.active
-        opacity: 1
-        visibility: visible
+      content: url(../images/images/mark.svg)          
+    &::after
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: -30px
+      content: url(../images/images/drop.svg)
+      transition: .3s    
   &-img
     display: flex
     align-items: center
@@ -861,7 +830,55 @@ button:focus
       svg
         path  
           stroke: $red 
-          stroke-width: 2   
+          stroke-width: 2
+
+.bootstrap-select
+  width: min-content!important
+.bootstrap-select .dropdown-toggle:focus,
+.bootstrap-select>select.mobile-device:focus+.dropdown-toggle 
+  outline: 0!important
+.filter-scene 
+  .btn
+    padding: 0!important
+    border: none!important
+  .btn-light
+    background: transparent!important
+  .dropdown-toggle::after
+    display: none
+  .filter-option-inner-inner
+    +bold
+    font-size: 27px
+    line-height: 35px
+    font-weight: 500
+    text-transform: uppercase
+    color: $red
+  .dropdown-menu
+    border-top: 5px solid $red
+    border-bottom: 0
+    border-right: 0
+    border-left: 0
+    border-radius: 0
+    box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25)
+    padding: 22px 0
+    min-width: auto
+    left: 50%!important
+    transform: translate3d(-50%, 35px, 0)!important
+  ul.dropdown-menu
+    transform: translate3d(0, 0, 0)!important 
+  .dropdown-item
+    color: $black
+    +norm
+    font-size: 20px
+    line-height: 40px
+    padding-top: 0
+    padding-bottom: 0
+    transition: .3s
+  .dropdown-item.active, .dropdown-item:active
+    background-color: $white
+.filter-scene .dropdown-item:hover,
+.filter-scene .dropdown-item:focus
+  color: $red
+  background: $white             
 
 main
   .ya-share2__list.ya-share2__list_direction_horizontal
@@ -907,7 +924,17 @@ main
     margin: 0 10px
   .day
     margin: 0 7.5px        
-
+  .filter
+    &-wrap
+      padding-bottom: 30px
+    &-abc-item
+      span 
+        &:nth-of-type(1)
+          display: none               
+        &:nth-of-type(2)
+          display: block
+    &-scene      
+      transform: translate(0px,-4px)      
 @media screen and ( max-width: 1199px )
   .logo
     width: 230px
@@ -953,8 +980,21 @@ main
   .months
     &-current
       font-size: 50px
-      margin: 0 auto                       
-
+      margin: 0 auto
+  .filter
+    &-img-no
+      margin-left: 20px
+    &-abc-date
+      margin-right: 20px
+    &-img
+      transform: translateY(-2px)
+      &-item
+        width: 21px
+    &-scene
+      &::after
+        display: none    
+    .filter-option-inner-inner
+      font-size: 24px    
 @media screen and ( max-width: 767px )
   .page    
     &-header
@@ -1051,24 +1091,13 @@ main
       display: none
       &-m
         display: block
-  .filter
-    &-img-no
-      margin-left: 20px
-    &-abc-date
-      margin-right: 20px
+  .filter    
     &-scene
-      transform: translateY(-4px)
-      &::after
-        right: -20px
-      span
-        font-size: 22px
-        line-height: 30px  
-    &-abc-item
-      span 
-        &:nth-of-type(1)
-          display: none               
-        &:nth-of-type(2)
-          display: block
+      &::before
+        display: block
+      .filter-option-inner-inner
+        font-size: 3px
+        opacity: 0    
     &-img
       &-item
         width: 21px                     
@@ -1252,20 +1281,15 @@ main
       &-item
         line-height: 30px    
     &-scene
-      flex: none
-      span 
-        display: none
-      &::after
-        display: none
-      &::before
-        display: block
-      &-menu
-        width: 300px
-        top: calc(100% + 20px)
-        transform: translateX(-60%)
-        padding: 20px
-        &-link
-          font-size: 14px                    
+      .filter-option-inner-inner
+        width: 15px!important
+      .dropdown-menu
+        transform: translate3d(-60%,40px,0)!important
+      .dropdown-item
+        font-size: 16px
+        line-height: 30px
+        padding: 0 15px
+
                      
   main
     .ya-share2__list.ya-share2__list_direction_horizontal

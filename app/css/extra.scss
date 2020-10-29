@@ -4,7 +4,7 @@
 	line-height: 0;
 	width: 100px;
 	height: 100px;
-	background: #ed4242;
+	background: #fff;
 	border: none;
 	outline: 0;
 	z-index: 20;
@@ -20,6 +20,12 @@
 // 	bottom: 0;
 // 	right: calc(33.3334% + 10px);
 // }
+
+.slider-wrapper-mt .slick-prev-fake,
+.slider-wrapper-mt .slick-next-fake {
+	background: rgba($color: #ED4242, $alpha: 0.7);
+	transition: .3s;
+}
 
 .slider-wrapper-mt .slick-prev-fake:before {
 	position: absolute;

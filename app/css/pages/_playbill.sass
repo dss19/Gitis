@@ -191,6 +191,9 @@
   .playbill-item-time-age
     margin-left: 4px 
 
+                
+    
+
 @media screen and ( max-width: 1439px )
   .playbill
     &-day
@@ -224,8 +227,12 @@
   .playbill-day-number 
     font-size: 38px
     line-height: 20px
+  .playbill-item-wrap
+    width: 100%
   .playbill-item-buy
-    min-width: auto  
+    min-width: 100% 
+  .playbill-item-ticket-text
+    opacity: 1   
 
 @media screen and ( max-width: 767px )
   .playbill
@@ -244,7 +251,9 @@
         margin-bottom: 22px
       &-ticket
         &-text
-          display: none
+          font-size: 14px
+        &-img
+          margin-left: 10px  
 
   .playbill.abc.noimg, .playbill.date.noimg
     .playbill-item-time

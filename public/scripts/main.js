@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+	$('select').selectpicker();
 	stickyBlocks();
 	sliderButtonsPos();
 	svgInline();
@@ -286,9 +287,9 @@ $(document).ready(function () {
 	});	
 
 	// Выпадающее меню фильтра в Афише
-	$('.filter-scene').click(function () {
-		$('.filter-scene, .filter-scene-menu').toggleClass('active');
-	});
+	// $('.filter-scene').click(function () {
+	// 	$(this).toggleClass('active');
+	// });
 
 	// Скролл наверх
 	$(".stage-history-on-top-button").click(function () {
@@ -299,11 +300,7 @@ $(document).ready(function () {
 		);
 	});
 
-	$('.filter-scene-menu-link').click(function () {
-		var scene = $(this).text();
-		$('.filter-scene span').text(scene);
-	});
-	
+		
 	// Отображение блоков с датами на странице Проекта
 	var billItem = $('.page-content-bill-item');
 	if (billItem.length < 2) {

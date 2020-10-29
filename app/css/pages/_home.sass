@@ -532,6 +532,8 @@
         background: $grad
       img 
         width: 100%
+      img:last-of-type
+        display: none  
     &-list
       padding: 100px 0 70px
       position: relative
@@ -926,6 +928,11 @@
         &:last-of-type
           padding: 0  
     &-scenes
+      &-cover
+        img:first-of-type
+          display: none
+        img:last-of-type
+          display: block
       &-content
         padding: 0 18px 16px
         &-name

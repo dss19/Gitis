@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Театр Гитис</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/extra.css">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-select.min.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/extra.css">
 </head>
 <body><a class="banner" href="#"><img class="banner-img" src="images/images/banner.jpg" alt="alt"></a>
   <header class="header">
@@ -156,12 +157,9 @@
     <div class="repertoire-list">
       <div class="container">
         <div class="repertoire-list-item">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="repertoire-list-item-img"><img src="images/images/bill-8.jpg" alt="спектакль"></div>
-            </div>
-            <div class="col-lg-9 col-md-6 col-12">
-              <div class="repertoire-list-item-block">
+          <div class="row"><a class="col-lg-3 col-md-6 col-12" href="#">
+              <div class="repertoire-list-item-img"><img src="images/images/bill-8.jpg" alt="спектакль"></div></a>
+            <div class="col-lg-9 col-md-6 col-12"><a class="repertoire-list-item-block" href="#">
                 <div class="repertoire-list-item-desc">
                   <div class="repertoire-list-item-title">Ах, Оффенбах!    </div>
                   <div class="repertoire-list-item-subtitle">Спектакль поставлен по комедии Карло Гольдони «Кьоджинские перепалки». Выпускная работа актерского факультета ГИТИСа, мастерской Андреева Владимира Алексеевича.   </div>
@@ -172,31 +170,34 @@
                   <div class="repertoire-list-item-genre">Мелодрама, комедия            </div>
                 </div>
                 <div class="repertoire-list-item-info">
-                  <div class="repertoire-list-item-length">2:30</div>
-                  <div class="repertoire-list-item-interval">с одним антрактом</div>
-                  <div class="repertoire-list-item-age">16+           </div>
-                </div>
-                <div class="repertoire-list-item-tickets">
-                  <div class="repertoire-list-item-date">
-                    <p>18.04              </p>
-                    <p>19.04              </p>
-                    <p>23.04</p>
+                  <div class="repertoire-list-item-info-wrap">
+                    <div class="repertoire-list-item-length">2:30</div>
+                    <div class="repertoire-list-item-interval">с одним антрактом</div>
+                    <div class="repertoire-list-item-age">16+           </div>
                   </div>
-                  <div class="repertoire-list-item-buy"><a href="#">
-                      <div class="repertoire-list-item-buy-text">Купить билет</div>
-                      <div class="repertoire-list-item-buy-img"> <img src="images/images/bill-ticket.svg" alt="купить билет"></div></a></div>
                 </div>
-              </div>
-            </div>
+                <object class="playbill-item-buy"><a class="playbill-item-buy-item" href="#">
+                    <div class="playbill-item-buy-date">18.04      </div>
+                    <div class="playbill-item-ticket">
+                      <div class="playbill-item-ticket-text">Купить билет</div>
+                      <div class="playbill-item-ticket-img"> <img src="images/images/bill-ticket.svg" alt=""></div>
+                    </div></a><a class="playbill-item-buy-item" href="#">
+                    <div class="playbill-item-buy-date">22.04      </div>
+                    <div class="playbill-item-ticket">
+                      <div class="playbill-item-ticket-text">Купить билет</div>
+                      <div class="playbill-item-ticket-img"> <img src="images/images/bill-ticket.svg" alt=""></div>
+                    </div></a><a class="playbill-item-buy-item" href="#">
+                    <div class="playbill-item-buy-date">30.04      </div>
+                    <div class="playbill-item-ticket">
+                      <div class="playbill-item-ticket-text">Купить билет</div>
+                      <div class="playbill-item-ticket-img"> <img src="images/images/bill-ticket.svg" alt=""></div>
+                    </div></a></object></a></div>
           </div>
         </div>
         <div class="repertoire-list-item">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="repertoire-list-item-img"><img src="images/images/bill-9.jpg" alt="спектакль"></div>
-            </div>
-            <div class="col-lg-9 col-md-6 col-12">
-              <div class="repertoire-list-item-block">
+          <div class="row"><a class="col-lg-3 col-md-6 col-12" href="#">
+              <div class="repertoire-list-item-img"><img src="images/images/bill-9.jpg" alt="спектакль"></div></a>
+            <div class="col-lg-9 col-md-6 col-12"><a class="repertoire-list-item-block" href="#">
                 <div class="repertoire-list-item-desc">
                   <div class="repertoire-list-item-title">Выстрел    </div>
                   <div class="repertoire-list-item-subtitle">Выпускная работа актерского факультета ГИТИСа.   </div>
@@ -206,29 +207,34 @@
                   <div class="repertoire-list-item-genre">Мелодрама, комедия</div>
                 </div>
                 <div class="repertoire-list-item-info">
-                  <div class="repertoire-list-item-length">2:30</div>
-                  <div class="repertoire-list-item-interval">с одним антрактом</div>
-                  <div class="repertoire-list-item-age">16+</div>
-                </div>
-                <div class="repertoire-list-item-tickets">
-                  <div class="repertoire-list-item-date">
-                    <p>30.04</p>
+                  <div class="repertoire-list-item-info-wrap">
+                    <div class="repertoire-list-item-length">2:30</div>
+                    <div class="repertoire-list-item-interval">с одним антрактом</div>
+                    <div class="repertoire-list-item-age">16+</div>
                   </div>
-                  <div class="repertoire-list-item-buy"><a href="#">
-                      <div class="repertoire-list-item-buy-text">Купить билет</div>
-                      <div class="repertoire-list-item-buy-img"> <img src="images/images/bill-ticket.svg" alt="купить билет"></div></a></div>
                 </div>
-              </div>
-            </div>
+                <object class="playbill-item-buy"><a class="playbill-item-buy-item" href="#">
+                    <div class="playbill-item-buy-date">18.04      </div>
+                    <div class="playbill-item-ticket">
+                      <div class="playbill-item-ticket-text">Купить билет</div>
+                      <div class="playbill-item-ticket-img"> <img src="images/images/bill-ticket.svg" alt=""></div>
+                    </div></a><a class="playbill-item-buy-item" href="#">
+                    <div class="playbill-item-buy-date">22.04      </div>
+                    <div class="playbill-item-ticket">
+                      <div class="playbill-item-ticket-text">Купить билет</div>
+                      <div class="playbill-item-ticket-img"> <img src="images/images/bill-ticket.svg" alt=""></div>
+                    </div></a><a class="playbill-item-buy-item" href="#">
+                    <div class="playbill-item-buy-date">30.04      </div>
+                    <div class="playbill-item-ticket">
+                      <div class="playbill-item-ticket-text">Купить билет</div>
+                      <div class="playbill-item-ticket-img"> <img src="images/images/bill-ticket.svg" alt=""></div>
+                    </div></a></object></a></div>
           </div>
         </div>
         <div class="repertoire-list-item">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="repertoire-list-item-img"><img src="images/images/bill-10.jpg" alt="спектакль"></div>
-            </div>
-            <div class="col-lg-9 col-md-6 col-12">
-              <div class="repertoire-list-item-block">
+          <div class="row"><a class="col-lg-3 col-md-6 col-12" href="#">
+              <div class="repertoire-list-item-img"><img src="images/images/bill-10.jpg" alt="спектакль"></div></a>
+            <div class="col-lg-9 col-md-6 col-12"><a class="repertoire-list-item-block" href="#">
                 <div class="repertoire-list-item-desc">
                   <div class="repertoire-list-item-title">Ах, Оффенбах!    </div>
                   <div class="repertoire-list-item-subtitle">Спектакль поставлен по комедии Карло Гольдони «Кьоджинские перепалки». Выпускная работа актерского факультета ГИТИСа, мастерской Андреева Владимира Алексеевича.   </div>
@@ -239,30 +245,34 @@
                   <div class="repertoire-list-item-genre">Мелодрама, комедия</div>
                 </div>
                 <div class="repertoire-list-item-info">
-                  <div class="repertoire-list-item-length">2:30</div>
-                  <div class="repertoire-list-item-interval">с одним антрактом</div>
-                  <div class="repertoire-list-item-age">16+</div>
-                </div>
-                <div class="repertoire-list-item-tickets">
-                  <div class="repertoire-list-item-date">
-                    <p>18.04              </p>
-                    <p>19.04</p>
+                  <div class="repertoire-list-item-info-wrap">
+                    <div class="repertoire-list-item-length">2:30</div>
+                    <div class="repertoire-list-item-interval">с одним антрактом</div>
+                    <div class="repertoire-list-item-age">16+</div>
                   </div>
-                  <div class="repertoire-list-item-buy"><a href="#">
-                      <div class="repertoire-list-item-buy-text">Купить билет</div>
-                      <div class="repertoire-list-item-buy-img"> <img src="images/images/bill-ticket.svg" alt="купить билет"></div></a></div>
                 </div>
-              </div>
-            </div>
+                <object class="playbill-item-buy"><a class="playbill-item-buy-item" href="#">
+                    <div class="playbill-item-buy-date">18.04      </div>
+                    <div class="playbill-item-ticket">
+                      <div class="playbill-item-ticket-text">Купить билет</div>
+                      <div class="playbill-item-ticket-img"> <img src="images/images/bill-ticket.svg" alt=""></div>
+                    </div></a><a class="playbill-item-buy-item" href="#">
+                    <div class="playbill-item-buy-date">22.04      </div>
+                    <div class="playbill-item-ticket">
+                      <div class="playbill-item-ticket-text">Купить билет</div>
+                      <div class="playbill-item-ticket-img"> <img src="images/images/bill-ticket.svg" alt=""></div>
+                    </div></a><a class="playbill-item-buy-item" href="#">
+                    <div class="playbill-item-buy-date">30.04      </div>
+                    <div class="playbill-item-ticket">
+                      <div class="playbill-item-ticket-text">Купить билет</div>
+                      <div class="playbill-item-ticket-img"> <img src="images/images/bill-ticket.svg" alt=""></div>
+                    </div></a></object></a></div>
           </div>
         </div>
         <div class="repertoire-list-item">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="repertoire-list-item-img"><img src="images/images/bill-11.jpg" alt="спектакль"></div>
-            </div>
-            <div class="col-lg-9 col-md-6 col-12">
-              <div class="repertoire-list-item-block">
+          <div class="row"><a class="col-lg-3 col-md-6 col-12" href="#">
+              <div class="repertoire-list-item-img"><img src="images/images/bill-11.jpg" alt="спектакль"></div></a>
+            <div class="col-lg-9 col-md-6 col-12"><a class="repertoire-list-item-block" href="#">
                 <div class="repertoire-list-item-desc">
                   <div class="repertoire-list-item-title">Над пропастью во ржи: сеанс психоанализа    </div>
                   <div class="repertoire-list-item-subtitle">Спектакль поставлен по комедии Карло Гольдони «Кьоджинские перепалки». Выпускная работа актерского факультета ГИТИСа, мастерской Андреева Владимира Алексеевича.   </div>
@@ -273,21 +283,18 @@
                   <div class="repertoire-list-item-genre">Мелодрама, комедия</div>
                 </div>
                 <div class="repertoire-list-item-info">
-                  <div class="repertoire-list-item-length">2:30</div>
-                  <div class="repertoire-list-item-interval">с одним антрактом</div>
-                  <div class="repertoire-list-item-age">16+</div>
-                </div>
-              </div>
-            </div>
+                  <div class="repertoire-list-item-info-wrap">
+                    <div class="repertoire-list-item-length">2:30</div>
+                    <div class="repertoire-list-item-interval">с одним антрактом</div>
+                    <div class="repertoire-list-item-age">16+</div>
+                  </div>
+                </div></a></div>
           </div>
         </div>
         <div class="repertoire-list-item">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="repertoire-list-item-img"><img src="images/images/bill-6.jpg" alt="спектакль"></div>
-            </div>
-            <div class="col-lg-9 col-md-6 col-12">
-              <div class="repertoire-list-item-block">
+          <div class="row"><a class="col-lg-3 col-md-6 col-12" href="#">
+              <div class="repertoire-list-item-img"><img src="images/images/bill-6.jpg" alt="спектакль"></div></a>
+            <div class="col-lg-9 col-md-6 col-12"><a class="repertoire-list-item-block" href="#">
                 <div class="repertoire-list-item-desc">
                   <div class="repertoire-list-item-title">Романтический возраст    </div>
                   <div class="repertoire-list-item-subtitle">Спектакль поставлен по комедии Карло Гольдони «Кьоджинские перепалки».    </div>
@@ -298,12 +305,12 @@
                   <div class="repertoire-list-item-genre">Мелодрама, комедия</div>
                 </div>
                 <div class="repertoire-list-item-info">
-                  <div class="repertoire-list-item-length">2:30</div>
-                  <div class="repertoire-list-item-interval">с одним антрактом</div>
-                  <div class="repertoire-list-item-age">16+</div>
-                </div>
-              </div>
-            </div>
+                  <div class="repertoire-list-item-info-wrap">
+                    <div class="repertoire-list-item-length">2:30</div>
+                    <div class="repertoire-list-item-interval">с одним антрактом</div>
+                    <div class="repertoire-list-item-age">16+</div>
+                  </div>
+                </div></a></div>
           </div>
         </div>
       </div>
@@ -482,6 +489,8 @@
     <div class="modal-form-sbttl">Мы обработаем запрос и свяжемся с Вами в ближайшее время</div>
   </div>
   <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script src="scripts/bootstrap.bundle.min.js"></script>
+  <script src="scripts/bootstrap-select.min.js"></script>
   <script src="scripts/slick.min.js"></script>
   <script src="scripts/jquery.fancybox.min.js"></script>
   <script src="scripts/jquery.validate.min.js"></script>
