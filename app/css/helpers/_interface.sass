@@ -34,9 +34,8 @@ button:focus
     width: 100%  
 
 .logo
-  width: 301px
-  height: 29px
-  img 
+  width: 314px
+  svg 
     width: 100%
 
 .page
@@ -70,7 +69,7 @@ button:focus
     font-size: 60px
     line-height: 65px
     color: $white
-    transform: translate(-5px, -11px)
+    transform: translate(-5px, 0px)
   &-subtitle 
     +norm 
     font-size: 40px
@@ -431,14 +430,14 @@ button:focus
         margin-bottom: 30px
         img 
           width: 100%
-        &::after
-          position: absolute
-          content: ''
-          top: 0
-          left: 0
-          width: 100%
-          height: 100%
-          background: $grad  
+        // &::after
+        //   position: absolute
+        //   content: ''
+        //   top: 0
+        //   left: 0
+        //   width: 100%
+        //   height: 100%
+        //   background: $grad  
     &-idea 
       h3 
         +bold
@@ -534,14 +533,14 @@ button:focus
       position: relative
       img 
         width: 100%
-      &::after
-        position: absolute
-        content: ''
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        background: $grad  
+      // &::after
+      //   position: absolute
+      //   content: ''
+      //   top: 0
+      //   left: 0
+      //   width: 100%
+      //   height: 100%
+      //   background: $grad  
   .slick-arrow
     position: absolute
     font-size: 0
@@ -622,6 +621,12 @@ button:focus
       top: 50%
       left: 50%
       transform: translate(-50%, -50%)
+
+.news-img-slider-bottom
+  .projects-list-item-title
+    font-size: 20px
+    line-height: 30px  
+
 .slider-wrapper
   position: relative
 .slider-count
@@ -886,6 +891,8 @@ main
       margin: 0 20px  
 
 @media screen and ( max-width: 1439px )
+  .logo
+    width: 230px
   .page
     &-content
       &-bill
@@ -935,10 +942,7 @@ main
           display: block
     &-scene      
       transform: translate(0px,-4px)      
-@media screen and ( max-width: 1199px )
-  .logo
-    width: 230px
-    height: 22px
+@media screen and ( max-width: 1199px )  
   .page
     &-title
       font-size: 50px
@@ -999,14 +1003,14 @@ main
   .page    
     &-header
       height: 150px
-      &::after
-        position: absolute
-        top: 0
-        left: 0
-        content: ''
-        width: 100%
-        height: 100%
-        background: $grad
+      // &::after
+      //   position: absolute
+      //   top: 0
+      //   left: 0
+      //   content: ''
+      //   width: 100%
+      //   height: 100%
+      //   background: $grad
       &-icon
         display: none
       &-content
@@ -1104,8 +1108,7 @@ main
          
 @media screen and ( max-width: 575px )
   .logo
-    width: 137px
-    height: 13px
+    width: 156px
   .page
     &-content
       h1 

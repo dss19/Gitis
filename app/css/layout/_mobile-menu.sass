@@ -55,7 +55,7 @@
     width: 300px
     margin-bottom: 30px
     a 
-      img
+      svg
         width: 100%      
   &-link
     padding: 15px 0
@@ -73,6 +73,8 @@
     display: flex
     margin-left: 0
     margin-bottom: 20px
+    &.long
+      align-items: center
     &:last-of-type
       margin-bottom: 0
   .header-scene-title
@@ -85,8 +87,7 @@
       font-weight: 600
       font-size: 15px
       line-height: 20px
-      color: $red
-      text-transform: uppercase      
+      color: $red      
     &::after
       position: absolute
       content: ''

@@ -56,14 +56,14 @@
       height: min-content
       img 
         width: 100%      
-      &::after
-        position: absolute
-        width: 100%
-        height: 100%
-        content: ''
-        top: 0
-        left: 0
-        background: $grad
+      // &::after
+      //   position: absolute
+      //   width: 100%
+      //   height: 100%
+      //   content: ''
+      //   top: 0
+      //   left: 0
+      //   background: $grad
     &-wrap
       display: flex             
     &-desc
@@ -191,9 +191,6 @@
   .playbill-item-time-age
     margin-left: 4px 
 
-                
-    
-
 @media screen and ( max-width: 1439px )
   .playbill
     &-day
@@ -203,6 +200,7 @@
     &-item
       &-wrap
         display: block
+        flex: 1
       &-buy
         padding-left: 0
         margin-left: 0

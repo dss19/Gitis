@@ -4,7 +4,6 @@ $(document).ready(function () {
 	stickyBlocks();
 	sliderButtonsPos();
 	svgInline();
-	// billNav();
 	billScroll();
 
 	$(window).on("scroll touchmove resize", function () {
@@ -256,10 +255,16 @@ $(document).ready(function () {
 
 	// Нижний слайдер Новости
 	$('.news-img-slider-bottom').slick({
-		slidesToShow: 2,
-		slidesToScroll: 2,
+		slidesToShow: 3,
+		slidesToScroll: 1,
 		rows: 0,
 		responsive: [
+			{
+				breakpoint: 1440,
+				settings: {
+					slidesToShow: 2
+				}
+			},
 			{
 				breakpoint: 768,
 				settings: {
@@ -309,116 +314,116 @@ $(document).ready(function () {
 	
 
 	// Ajax Афиши
-	$.ajax({
-		type: "GET",
-		cache: true,
-		success: function () {
-			$(".playbill-wrapper").load("loads/playbill-date-img.html");
-		},		
-	});
+	// $.ajax({
+	// 	type: "GET",
+	// 	cache: true,
+	// 	success: function () {
+	// 		$(".playbill-wrapper").load("loads/playbill-date-img.html");
+	// 	},		
+	// });
 
-	$('.filter-abc-date').click(function () {
-		$('.filter-abc-item').removeClass('active');
-		$(this).addClass('active');
-		if ($('.playbill').hasClass('img')) {
-			$.ajax({
-				type: "GET",
-				cache: true,
-				success: function () {
-					$(".playbill-wrapper").load("loads/playbill-date-img.html");
-				},
-			});
-		} else {
-			$.ajax({
-				type: "GET",
-				cache: true,
-				success: function () {
-					$(".playbill-wrapper").load("loads/playbill-date-noimg.html");
-				},
-			});
-		}
-		// if (!$('.playbill').hasClass('date')) {
-		// 	$.ajax({
-		// 		type: "GET",
-		// 		cache: true,
-		// 		success: function () {
-		// 			$(".calendar-wrapper").load("loads/days.html");
-		// 		},
-		// 	});
-		// }
-	})
-	$('.filter-abc-abc').click(function () {
-		$('.filter-abc-item').removeClass('active');
-		$(this).addClass('active');
-		if ($('.playbill').hasClass('img')) {
-			$.ajax({
-				type: "GET",
-				cache: true,
-				success: function () {
-					$(".playbill-wrapper").load("loads/playbill-abc-img.html");
-				},
-			});
-		} else {
-			$.ajax({
-				type: "GET",
-				cache: true,
-				success: function () {
-					$(".playbill-wrapper").load("loads/playbill-abc-noimg.html");
-				},
-			});
-		}
-		// if (!$('.playbill').hasClass('abc')) {
-		// 	$.ajax({
-		// 		type: "GET",
-		// 		cache: true,
-		// 		success: function () {
-		// 			$(".calendar-wrapper").load("loads/letters.html");
-		// 		},
-		// 	});
-		// }
-	})
-	$('.filter-img-yes').click(function () {
-		$('.filter-img-item').removeClass('active');
-		$(this).addClass('active');
-		if ($('.playbill').hasClass('date')) {
-			$.ajax({
-				type: "GET",
-				cache: true,
-				success: function () {
-					$(".playbill-wrapper").load("loads/playbill-date-img.html");
-				},
-			});
-		} else {
-			$.ajax({
-				type: "GET",
-				cache: true,
-				success: function () {
-					$(".playbill-wrapper").load("loads/playbill-abc-img.html");
-				},
-			});
-		}
-	})
-	$('.filter-img-no').click(function () {
-		$('.filter-img-item').removeClass('active');
-		$(this).addClass('active');
-		if ($('.playbill').hasClass('date')) {
-			$.ajax({
-				type: "GET",
-				cache: true,
-				success: function () {
-					$(".playbill-wrapper").load("loads/playbill-date-noimg.html");
-				},
-			});
-		} else {
-			$.ajax({
-				type: "GET",
-				cache: true,
-				success: function () {
-					$(".playbill-wrapper").load("loads/playbill-abc-noimg.html");
-				},
-			});
-		}
-	})
+	// $('.filter-abc-date').click(function () {
+	// 	$('.filter-abc-item').removeClass('active');
+	// 	$(this).addClass('active');
+	// 	if ($('.playbill').hasClass('img')) {
+	// 		$.ajax({
+	// 			type: "GET",
+	// 			cache: true,
+	// 			success: function () {
+	// 				$(".playbill-wrapper").load("loads/playbill-date-img.html");
+	// 			},
+	// 		});
+	// 	} else {
+	// 		$.ajax({
+	// 			type: "GET",
+	// 			cache: true,
+	// 			success: function () {
+	// 				$(".playbill-wrapper").load("loads/playbill-date-noimg.html");
+	// 			},
+	// 		});
+	// 	}
+	// 	if (!$('.playbill').hasClass('date')) {
+	// 		$.ajax({
+	// 			type: "GET",
+	// 			cache: true,
+	// 			success: function () {
+	// 				$(".calendar-wrapper").load("loads/days.html");
+	// 			},
+	// 		});
+	// 	}
+	// })
+	// $('.filter-abc-abc').click(function () {
+	// 	$('.filter-abc-item').removeClass('active');
+	// 	$(this).addClass('active');
+	// 	if ($('.playbill').hasClass('img')) {
+	// 		$.ajax({
+	// 			type: "GET",
+	// 			cache: true,
+	// 			success: function () {
+	// 				$(".playbill-wrapper").load("loads/playbill-abc-img.html");
+	// 			},
+	// 		});
+	// 	} else {
+	// 		$.ajax({
+	// 			type: "GET",
+	// 			cache: true,
+	// 			success: function () {
+	// 				$(".playbill-wrapper").load("loads/playbill-abc-noimg.html");
+	// 			},
+	// 		});
+	// 	}
+	// 	// if (!$('.playbill').hasClass('abc')) {
+	// 	// 	$.ajax({
+	// 	// 		type: "GET",
+	// 	// 		cache: true,
+	// 	// 		success: function () {
+	// 	// 			$(".calendar-wrapper").load("loads/letters.html");
+	// 	// 		},
+	// 	// 	});
+	// 	// }
+	// })
+	// $('.filter-img-yes').click(function () {
+	// 	$('.filter-img-item').removeClass('active');
+	// 	$(this).addClass('active');
+	// 	if ($('.playbill').hasClass('date')) {
+	// 		$.ajax({
+	// 			type: "GET",
+	// 			cache: true,
+	// 			success: function () {
+	// 				$(".playbill-wrapper").load("loads/playbill-date-img.html");
+	// 			},
+	// 		});
+	// 	} else {
+	// 		$.ajax({
+	// 			type: "GET",
+	// 			cache: true,
+	// 			success: function () {
+	// 				$(".playbill-wrapper").load("loads/playbill-abc-img.html");
+	// 			},
+	// 		});
+	// 	}
+	// })
+	// $('.filter-img-no').click(function () {
+	// 	$('.filter-img-item').removeClass('active');
+	// 	$(this).addClass('active');
+	// 	if ($('.playbill').hasClass('date')) {
+	// 		$.ajax({
+	// 			type: "GET",
+	// 			cache: true,
+	// 			success: function () {
+	// 				$(".playbill-wrapper").load("loads/playbill-date-noimg.html");
+	// 			},
+	// 		});
+	// 	} else {
+	// 		$.ajax({
+	// 			type: "GET",
+	// 			cache: true,
+	// 			success: function () {
+	// 				$(".playbill-wrapper").load("loads/playbill-abc-noimg.html");
+	// 			},
+	// 		});
+	// 	}
+	// })
 
 	// Форма заявки
 	$(".input").each(function () {
@@ -503,6 +508,15 @@ $(document).ready(function () {
 			width: mList.outerWidth() * 3
 		});
 	});
+
+	$(".main-billboard-item").mouseenter(function() {
+		$(this).closest(".main-billboard-content").css("-webkit-animation-play-state", "paused");
+		$(this).find(".main-billboard-item-text").css("color", "#DF0000");
+	})
+	$(".main-billboard-item").mouseleave(function() {
+		$(this).closest(".main-billboard-content").css("-webkit-animation-play-state", "running");
+		$(this).find(".main-billboard-item-text").css("color", "#000000");
+	})
 
 	// Смотреть больше в Спектакле
 	$('.show-about-desc-more').click(function () {

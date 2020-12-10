@@ -126,7 +126,6 @@
           +norm
           font-size: 18px
           color: $red
-          opacity: 0
 
   &-section
     padding: 82px 0 100px
@@ -152,22 +151,12 @@
           font-size: 16px
           line-height: 16px          
         &-text
-          position: relative
           margin-right: 15px
           transition: .3s
           color: $red
-          &::after
-            position: absolute
-            bottom: 0
-            left: 0
-            content: ""
-            width: 100%
-            height: 1px
-            background: $red2
-            opacity: 0
-            transition: .3s
         &-img
-          svg 
+          svg
+            transition: .3s 
             path 
               transition: .3s
           &-mob
@@ -180,7 +169,7 @@
     &-item
       position: relative
       display: flex
-      color: $black      
+      color: $black     
       object
         position: absolute
         right: -25px
@@ -240,21 +229,11 @@
           height: 1px
           width: 180px
           background: $black
-          transition: 0.3s
-        &-ticket  
+          transition: 0.3s  
       &-img
         position: relative
         margin-bottom: 23px
         overflow: hidden
-        &::before
-          position: absolute
-          content: ''
-          top: 0
-          left: 0
-          width: 100%
-          height: 100%
-          background: $grad
-          z-index: 1
         img 
           width: 100%
           transform: scale(1.1)
@@ -308,14 +287,6 @@
     &-img
       width: 100%
       position: relative
-      &::after
-        position: absolute
-        content: ''
-        left: 0
-        top: 0
-        width: 100%
-        height: 100%
-        background: $grad
       img 
         width: 100%
     &-wrap
@@ -332,6 +303,7 @@
       display: flex
       flex-wrap: nowrap
     &-item
+      display: block
       margin-right: 140px
       &-date
         padding-top: 3px
@@ -370,26 +342,28 @@
         line-height: 35px
         color: $grey2
       &-text 
+        color: $black
         +norm 
         font-size: 24px
         line-height: 34px
         min-width: 394px
         width: 394px
+        transition: .3s
   &-repertoire
     &-item      
       &-img
         position: relative
         margin-bottom: 23px
         overflow: hidden
-        &::before
-          position: absolute
-          content: ''
-          top: 0
-          left: 0
-          width: 100%
-          height: 100%
-          background: $grad
-          z-index: 1
+        // &::before
+        //   position: absolute
+        //   content: ''
+        //   top: 0
+        //   left: 0
+        //   width: 100%
+        //   height: 100%
+        //   background: $grad
+        //   z-index: 1
         img 
           width: 100%
           transform: scale(1.1)
@@ -519,17 +493,18 @@
       margin-bottom: 45px
       max-width: 812px
   &-scenes
+    overflow: hidden
     position: relative
     &-cover
       position: relative
-      &::after
-        position: absolute
-        content: ''
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        background: $grad
+      // &::after
+      //   position: absolute
+      //   content: ''
+      //   top: 0
+      //   left: 0
+      //   width: 100%
+      //   height: 100%
+      //   background: $grad
       img 
         width: 100%
       img:last-of-type
@@ -559,14 +534,14 @@
           width: 100%
           height: 100%
           background: $grad2
-        &::after
-          position: absolute
-          content: ''
-          top: 0
-          left: 0
-          width: 100%
-          height: 100%
-          background: $grad
+        // &::after
+        //   position: absolute
+        //   content: ''
+        //   top: 0
+        //   left: 0
+        //   width: 100%
+        //   height: 100%
+        //   background: $grad
     &-content
       position: absolute
       content: ''
@@ -600,12 +575,13 @@
         +norm 
         font-size: 16px
         line-height: 16px
-        color: $red
+        color: $white
         &::after
           position: absolute
           top: -4px
           left: 210px
-          content: url(../images/images/main-link.svg)  
+          content: url(../images/images/main-link-w.svg)
+          transition: .3s  
 
 @keyframes marquee 
   0% 
@@ -661,9 +637,14 @@
         font-size: 66px
         line-height: 66px
     &-bill
-      &-item-img-cover
-        span
-          font-size: 16px                
+      &-item
+        object 
+          right: 0
+        &-ticket
+          justify-content: flex-end  
+        &-img-cover
+          span
+            font-size: 16px                
 
 @media screen and ( max-width: 991px )
   .main
@@ -671,6 +652,11 @@
       height: 300px
     &-section
       padding: 50px 0
+    &-bill
+      &-item
+        &-img
+          img 
+            transform: scale(1)  
     &-billboard
       padding-top: 60px
       &-title

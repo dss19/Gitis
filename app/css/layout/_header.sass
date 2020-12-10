@@ -9,6 +9,22 @@
       display: flex
       align-items: center
       margin: 0
+    &-name
+      position: relative
+      +norm
+      font-size: 12px
+      line-height: 16px
+      text-transform: uppercase
+      color: $black
+      margin-left: 37px
+      &::before
+        position: absolute
+        content: ''
+        top: 4px
+        left: -21px
+        width: 1px
+        height: 41px
+        background: $black  
   &-scene
     display: flex
     margin-left: 85px
@@ -34,6 +50,9 @@
         width: 1px
         height: 35px
         background: $black
+      &.long
+        &::after
+          top: 28px  
     &-info
       margin-left: 38px
       transform: translateY(-3px)
@@ -54,15 +73,13 @@
         transform: translateY(-1px) 
   &-study
     position: relative
-    margin-left: 110px
-    transform: translateY(3px)
+    margin: 0 152px 0 auto
     a
       +norm
       font-weight: 600
       font-size: 15px
       line-height: 20px
       color: $red
-      text-transform: uppercase
       transition: .3s
     &-text
       transition: .3s          
@@ -72,7 +89,7 @@
       left: -23px
       top: 50%
       transform: translateY(-50%)
-      width: 5px
+      width: 3px
       height: 35px
       background: $red
       transition: .3s
@@ -96,6 +113,8 @@
       padding: 32px 0 27px
       color: $black
       transition: 0.3s
+      &.selected
+        color: $red
   &-menu-fixed
     display: none      
   &-aside
@@ -154,6 +173,7 @@
   z-index: 25
   .header-scene,
   .header-study,
+  .header-info-name,
   .header-menu
     display: none
   .header-menu-fixed
@@ -176,7 +196,7 @@
       &-second
         margin-left: 40px
     &-study
-      display: none
+      margin: 0 0 0 auto
     &-aside
       &-item
         width: 84px
@@ -190,7 +210,9 @@
     display: flex
   .header
     &-info
-      padding: 17px 0         
+      padding: 17px 0 16px 
+    &-study
+      margin: 0 50px 0 auto         
     &-menu
       &-list
         max-width: none    
@@ -224,8 +246,10 @@
   .scroll-div
     display: none
   .header
+    &-study, &-info-name
+      display: none
     &-info
-      padding: 14px 0
+      padding: 13px 0
       border-bottom: none
     &-menu 
       display: none
@@ -284,12 +308,12 @@
     .header-menu-fixed
       display: none
     .header-info
-      padding: 14px 0
+      padding: 13px 0
       border-bottom: 1px solid $black            
 @media screen and ( max-width: 575px )
   .header
     &-info
-      padding: 19px 0 18px            
+      padding: 13px 0            
     &-mobile
       &-ticket
         width: 102px
@@ -308,7 +332,7 @@
             margin-bottom: 0
   .header.fixed
     .header-info
-      padding: 19px 0 18px
+      padding: 13px 0 
 
 
 

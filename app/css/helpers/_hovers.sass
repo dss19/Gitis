@@ -1,4 +1,4 @@
-@media screen and ( min-width: 991px )
+@media screen and ( min-width: 1023px )
   .main-bill-item:hover
     .main-bill-item-date, 
     .main-bill-item-day,
@@ -34,18 +34,17 @@
   .main-section-title-link:hover
     .main-section-title-link-text
       color: $red2
-    .main-section-title-link-text:after
-      opacity: 1
     .main-section-title-link-img
       svg 
+        transform: translateX(15px)
         path 
           stroke: $red2
   .main-slider-top-ticket:hover
     svg 
       path 
-        fill: $red
+        fill: $red2
     span
-      opacity: 1
+      color: $red2
   .main-slider-top-info-link:hover
     .main-slider-top-date,
     .main-slider-top-day,
@@ -53,7 +52,10 @@
     .main-slider-top-actors p,
     .main-slider-top-age
       color: $red                          
-                     
+  .main-scenes-content:hover .main-scenes-content-link:after
+    transform: translateX(15px)
+
+
   .news-item:hover
     &:after
       transform: translateX(0)
@@ -212,5 +214,17 @@
   .page-content-bill-item-button.white:hover a
     color: $white
 
-     
+  .footer-scene-contacts-map-link:hover
+    color: $red3
+  .footer-menu-link:hover a
+    color: $red3 
+  .footer-menu-link-study:hover a  
+    color: $red3
+  .footer-tickets-link:hover p
+    color: $red3
+  .footer-tickets-link:hover .footer-tickets-link-img svg path
+    fill: $red3
+
+  .cookie-modal-agree:hover
+    background: $red2    
       
