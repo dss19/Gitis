@@ -4,7 +4,9 @@ $(document).ready(function () {
 	stickyBlocks();
 	sliderButtonsPos();
 	svgInline();
+	// billNav();
 	billScroll();
+	
 
 	$(window).on("scroll touchmove resize", function () {
 		fixedHeader();
@@ -96,6 +98,29 @@ $(document).ready(function () {
   });
 
 	$(".main-slider-top").on("init", function () {
+
+		t = setInterval(function () {
+
+			nextSlide();
+
+		},5000);
+
+
+		$(".main-slider-top").closest(".slider-wrapper").on("mouseover", function () {
+
+			if (t) {
+				clearInterval(t);
+			}
+
+		}).on("mouseout", function () {
+
+			t = setInterval(function () {
+
+				nextSlide();
+
+			},5000);
+
+		});
 
 		$(".slider-wrapper-mt").append('<div class="slick-arrow-fake slick-prev-fake"></div>');
 		$(".slider-wrapper-mt").append('<div class="slick-arrow-fake slick-next-fake"></div>');
@@ -222,11 +247,34 @@ $(document).ready(function () {
 	});
 
 	// Верхний слайдер
+	$(".project-slider-top").on("init", function () {
+
+		// Clone images
+
+		$(this).find(".slick-slide").each(function () {
+
+			var picClone1 = $(this).find("img").clone(),
+				picClone2 = $(this).find("img").clone();
+
+			$(this).append('<div class="blur-pic blur-pic-l"></div>');
+			$(this).append('<div class="blur-pic blur-pic-r"></div>');
+
+			$(this).find(".blur-pic-l").append(picClone1);
+			$(this).find(".blur-pic-r").append(picClone2);
+
+		});
+		
+
+		// Clone images END
+
+	});
+	
 	$('.project-slider-top').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		rows: 0
 	});
+
 
 	// Нижний слайдер
 	$('.project-slider-bottom').slick({
@@ -247,11 +295,33 @@ $(document).ready(function () {
 	});
 
 	// Верхний слайдер Новости
+	$('.news-img-slider-top').on("init", function () {
+
+		// Clone images
+
+		$(this).find(".slick-slide").each(function () {
+
+			var picClone1 = $(this).find("img").clone(),
+				picClone2 = $(this).find("img").clone();
+
+			$(this).append('<div class="blur-pic blur-pic-l"></div>');
+			$(this).append('<div class="blur-pic blur-pic-r"></div>');
+
+			$(this).find(".blur-pic-l").append(picClone1);
+			$(this).find(".blur-pic-r").append(picClone2);
+
+		});
+
+
+		// Clone images END
+
+	});
+
 	$('.news-img-slider-top').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		rows: 0
-	});
+	});	
 
 	// Нижний слайдер Новости
 	$('.news-img-slider-bottom').slick({
@@ -277,11 +347,54 @@ $(document).ready(function () {
 		]
 	});
 
+	$(".show-slider-top").on("init", function () {
+
+		// Clone images
+
+		$(this).find(".slick-slide").each(function () {
+
+			var picClone1 = $(this).find("img").clone(),
+				picClone2 = $(this).find("img").clone();
+
+			$(this).append('<div class="blur-pic blur-pic-l"></div>');
+			$(this).append('<div class="blur-pic blur-pic-r"></div>');
+
+			$(this).find(".blur-pic-l").append(picClone1);
+			$(this).find(".blur-pic-r").append(picClone2);
+
+		});
+
+
+		// Clone images END
+
+	});
+
 	// Верхний слайдер Спектакля
 	$('.show-slider-top').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		rows: 0
+	});
+
+	$(".stage-slider-top").on("init", function () {
+
+		// Clone images
+
+		$(this).find(".slick-slide").each(function () {
+
+			var picClone1 = $(this).find("img").clone(),
+				picClone2 = $(this).find("img").clone();
+
+			$(this).append('<div class="blur-pic blur-pic-l"></div>');
+			$(this).append('<div class="blur-pic blur-pic-r"></div>');
+
+			$(this).find(".blur-pic-l").append(picClone1);
+			$(this).find(".blur-pic-r").append(picClone2);
+
+		});
+
+		// Clone images END
+
 	});
 	
 	// Верхний слайдер Площадки
@@ -319,7 +432,7 @@ $(document).ready(function () {
 	// 	cache: true,
 	// 	success: function () {
 	// 		$(".playbill-wrapper").load("loads/playbill-date-img.html");
-	// 	},		
+	// 	},
 	// });
 
 	// $('.filter-abc-date').click(function () {
@@ -342,15 +455,15 @@ $(document).ready(function () {
 	// 			},
 	// 		});
 	// 	}
-	// 	if (!$('.playbill').hasClass('date')) {
-	// 		$.ajax({
-	// 			type: "GET",
-	// 			cache: true,
-	// 			success: function () {
-	// 				$(".calendar-wrapper").load("loads/days.html");
-	// 			},
-	// 		});
-	// 	}
+		// if (!$('.playbill').hasClass('date')) {
+		// 	$.ajax({
+		// 		type: "GET",
+		// 		cache: true,
+		// 		success: function () {
+		// 			$(".calendar-wrapper").load("loads/days.html");
+		// 		},
+		// 	});
+		// }
 	// })
 	// $('.filter-abc-abc').click(function () {
 	// 	$('.filter-abc-item').removeClass('active');
@@ -372,15 +485,15 @@ $(document).ready(function () {
 	// 			},
 	// 		});
 	// 	}
-	// 	// if (!$('.playbill').hasClass('abc')) {
-	// 	// 	$.ajax({
-	// 	// 		type: "GET",
-	// 	// 		cache: true,
-	// 	// 		success: function () {
-	// 	// 			$(".calendar-wrapper").load("loads/letters.html");
-	// 	// 		},
-	// 	// 	});
-	// 	// }
+		// if (!$('.playbill').hasClass('abc')) {
+		// 	$.ajax({
+		// 		type: "GET",
+		// 		cache: true,
+		// 		success: function () {
+		// 			$(".calendar-wrapper").load("loads/letters.html");
+		// 		},
+		// 	});
+		// }
 	// })
 	// $('.filter-img-yes').click(function () {
 	// 	$('.filter-img-item').removeClass('active');
@@ -866,3 +979,8 @@ function billNav() {
 	});
 }
 
+function nextSlide() {
+
+	$(".slider-wrapper-mt .slick-next-fake").click();
+
+}

@@ -306,6 +306,7 @@ button:focus
         font-size: 18px
         line-height: 32px
         color: $black
+        margin-bottom: 15px
       &-bold
         font-size: 18px
         +bold
@@ -410,7 +411,9 @@ button:focus
         +norm
         font-size: 18px
         line-height: 32px
-        color: $black        
+        color: $black 
+        p 
+          margin-bottom: 15px       
     &-gallery
       padding-top: 100px
       margin-bottom: 118px
@@ -665,7 +668,7 @@ button:focus
     color: $black               
 
 .calendar
-  padding-top: 54px
+  padding-top: 20px
   background: $white
   &.fixed
     position: fixed
@@ -695,8 +698,11 @@ button:focus
         display: none
         &.current
           display: block
+
 .months
-  margin-bottom: 10px            
+  margin-bottom: 10px
+  &-current
+    transform: translateY(0) !important            
 .months-prev, .months-next
   width: 103px
   cursor: pointer
@@ -1109,6 +1115,7 @@ main
 @media screen and ( max-width: 575px )
   .logo
     width: 156px
+    // height: 24px
   .page
     &-content
       h1 
@@ -1263,7 +1270,7 @@ main
       line-height: 30px
 
   .calendar
-    padding-top: 20px
+    padding-top: 10px
   .months
     margin-bottom: 10px
     &-prev, &-next 

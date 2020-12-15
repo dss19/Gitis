@@ -9,7 +9,10 @@ body
   include includes/header.pug
 
   main
-    .main-cover(style="background: url(images/hd/page-cover.jpg)")
+    #mobile-indicator
+    .main-cover
+      .prlx-cover
+        img(src="files/home-top-pic.jpg", alt="alt")
     .main-slider
       .container
         .slider-wrapper.slider-wrapper-mt

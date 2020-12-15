@@ -80,7 +80,7 @@ footer.footer
         .footer-tickets
           a(href="/", class="footer-logo")
             img.svg-inline(src="images/images/logo-footer.svg", alt="лого") 
-          a(href="#", class="footer-tickets-link")
+          a(data-fancybox="modal-return" href="#modal-return", class="footer-tickets-link")
             .footer-tickets-link-img
               img.svg-inline(src="images/images/ticket-r.svg", alt="билет")
             p Вернуть            
@@ -151,6 +151,22 @@ footer.footer
     img.svg-inline(src="images/images/close.svg", alt="alt")
   .modal-form-ttl Благодарим за заявку
   .modal-form-sbttl Мы обработаем запрос и свяжемся с Вами в ближайшее время
+  
+.modal-form#modal-return(style="display: none")
+  button.modal-form-close.modal-close(data-fancybox-close)
+    img.svg-inline(src="images/images/close.svg", alt="alt")
+  .modal-form-ttl Как вернуть билет?
+  .modal-form-text Согласно поправкам  к закону N193-ФЗ "О внесении изменений в Закон Российской Федерации "Основы законодательства Российской Федерации о культуре".
+  .modal-form-text В случае отмены, замены либо переноса спектакля посетителю возмещается полная стоимость билета, при условии личного обращения.
+  .modal-form-text В случае отказа посетителя от посещения спектакля по личной инициативе, посетитель имеет право при возврате билета:
+  .modal-form-text
+    p - не позднее, чем за десять дней до дня проведения спектакля получить обратно 100 процентов цены билета;
+    p - менее чем за десять дней, но не позднее, чем за пять дней до дня проведения спектакля получить обратно 50 процентов цены билета;
+    p - менее чем за пять дней, но не позднее, чем за три дня до дня проведения спектакля получить обратно 30 процентов цены билета.
+  .modal-form-text В случае отказа посетителя от посещения менее чем за три дня до дня проведения спектакля театр вправе не возвращать посетителю стоимость билета. Билеты, приобретенные по скидке, в том числе льготные билеты не принимаются к возврату.
+  .modal-form-text-bold При возврате билета необходимо предъявить кассовый чек и бланк билета.
+  .modal-form-text-bold Возврат билетов осуществляется по месту их приобретения.
+  .modal-form-return-close(data-fancybox-close) Закрыть
 
 script(src="scripts/jquery-3.3.1.min.js")
 script(src="scripts/bootstrap.bundle.min.js")
@@ -159,5 +175,15 @@ script(src="scripts/slick.min.js")
 script(src="scripts/jquery.fancybox.min.js")
 script(src="scripts/jquery.validate.min.js")
 script(src="scripts/jquery.maskedinput.min.js")
+script(src="scripts/greensock/TweenMax.min.js")
+script(src="scripts/greensock/plugins/CSSRulePlugin.min.js")
+script(src="scripts/greensock/plugins/ScrollToPlugin.min.js")
+script(src="scripts/iscroll-probe.js")
+script(src="scripts/scrollmagic/ScrollMagic.min.js")
+script(src="scripts/scrollmagic/plugins/animation.gsap.min.js")
+script(src="scripts/jquery.mousewheel.js")
 script(src="https://api-maps.yandex.ru/2.1/?apikey=660f63e1-e566-486f-a764-f4e6777a2dbf&lang=ru_RU")
 script(src="scripts/main.js")
+script(src="scripts/animations.js")
+
+

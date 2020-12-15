@@ -79,14 +79,14 @@
         margin-bottom: 8px
         max-width: 404px
         p 
-          +norm
+          +thin
           font-weight: 300
           font-size: 13px
           line-height: 20px
           color: $black
           margin-bottom: 0
       &-genre
-        +norm
+        +thin
         font-weight: 300
         font-size: 13px
         line-height: 20px
@@ -148,7 +148,7 @@
         color: $black
         transition: .3s
       &-interval
-        +norm
+        +thin
         font-weight: 300
         font-size: 13px
         line-height: 16px
@@ -209,7 +209,7 @@
     &-list
       &-item
         &-desc
-          padding-left: 0
+          padding: 0
           max-width: 50%
         &-title,
         &-subtitle,
@@ -257,27 +257,26 @@
         &-genre
           margin-bottom: 10px
         &-info
-          order: -1
           padding: 0
-          max-width: none
-          &::before, &::after
-            display: none 
+          margin-top: 10px
+          margin-left: 15px
+          transform: translateY(0)
+          max-width: 66px
+          min-width: 66px
+          min-height: 100px
+          &::before
+            top: 0
           &-wrap
-            display: flex
-            align-items: center
-            &::before, &::after
-              display: none
+            &::before
+              top: 0
+        &-length
+          line-height: 18px
+          margin-bottom: 10px      
         &-interval
-          margin-bottom: 0
+          margin-bottom: 15px
           order: 1
         &-age
-          position: relative
-          margin: 0 15px 0 25px
-          &::before
-            position: absolute
-            left: -15px
-            top: 0
-            content: '/'                 
+          margin: 0                 
         &-tickets
           max-width: 65%                          
         &-buy
@@ -286,8 +285,8 @@
           &-img
             margin-left: 15px
         .playbill-item-buy
-          min-width: 100%
-          margin-left: 0
+          // min-width: 100%
+          margin-left: auto
           transform: translateY(0)
         .playbill-item-ticket
           margin-left: auto  
@@ -302,16 +301,31 @@
           transform: translateY(0)
         &-info
           margin-left: 0
+          padding-left: 15px
           &::before
             left: 0
+          &-wrap
+            min-width: 66px  
         &-tickets
-          padding-left: 18px        
+          padding-left: 18px 
+        // .playbill-item-buy
+        //   margin-left: 0
+        //   min-width: auto
+        //   flex: 1         
 @media screen and ( max-width: 575px )
   .repertoire
     &-filter
-      display: none
+      &-item
+        margin-right: 20px
+      &-item a
+        font-size: 15px
+        line-height: 35px
+      &-wrap
+        border: none
+        padding: 8px 0 10px  
     &-list
       &-item
+        padding: 0 0 50px
         &-img
           margin-bottom: 22px
         &-title
@@ -321,7 +335,7 @@
           font-size: 15px
           line-height: 26px
         &-interval
-          margin-bottom: 6px  
+            
         &-date
           p
             font-size: 24px
@@ -330,7 +344,23 @@
           &::before
             height: 80px
         &-info
+          min-height: 80px
           min-width: 100px
+          &-wrap
+            &::before
+              height: 80px
+        &-length
+          margin-bottom: 5px
+        &-interval
+          margin-bottom: 8px        
+        .playbill-item-buy
+          min-width: 130px
+          &-date
+            font-size: 24px
+          &-item
+            margin-bottom: 7px  
+  .repertoire-list-item .playbill-item-ticket-text
+    display: none
         
 
 

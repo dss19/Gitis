@@ -5,7 +5,10 @@ body
   include includes/header.pug
 
   main
-    .page-header(style="background: url(images/hd/page-cover.jpg)")
+    #mobile-indicator
+    .page-header
+      .prlx-cover
+        img(src="images/hd/page-cover.jpg", alt="")
       .page-header-grad
         .container
           .page-header-content
